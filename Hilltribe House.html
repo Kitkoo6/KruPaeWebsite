@@ -79,7 +79,8 @@
 
   /* Gallery */
   .hh-gallery { display:grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
-  @media (max-width: 760px){ .hh-gallery { grid-template-columns: 1fr; max-width: 420px; margin-inline:auto; } }
+  @media (max-width: 760px){ .hh-gallery { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 440px){ .hh-gallery { grid-template-columns: 1fr; max-width: 420px; margin-inline:auto; } }
   .hh-gallery .hh-frame { aspect-ratio: 3/4; }
 
   /* Reels */
