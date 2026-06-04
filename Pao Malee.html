@@ -61,20 +61,29 @@
       display: flex !important;
       flex-direction: row !important;
       align-items: flex-start;
-      gap: 1rem;
+      gap: 0.6rem;
     }
     #hero .relative.z-10 > div:first-child {
       flex: 1 1 0;
       min-width: 0;
     }
     #hero .relative.z-10 > div:last-child {
-      flex: 0 0 44%;
-      max-width: 44%;
+      flex: 0 0 48%;
+      max-width: 48%;
     }
     #hero .pm-frame {
       width: 100% !important;
       max-width: none !important;
     }
+    .pm-hero-logo {
+      width: clamp(90px, 18vw, 160px) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    #hero h1 { font-size: clamp(1.3rem, 4.2vw, 2.3rem) !important; }
+    #hero .hero-sub { font-size: 0.82rem !important; line-height: 1.55 !important; margin-top: 0.5rem !important; }
+    #hero .mt-9 { margin-top: 0.6rem !important; gap: 0.5rem !important; font-size: 0.78rem !important; }
+    #hero .mt-9 .font-serif { font-size: 1.1rem !important; }
   }
 
   .pm-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
@@ -199,13 +208,8 @@
     <div>
       <a href="Rattiya Homepage.html#work" class="pm-back mb-8"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
 
-      <img src="assets/bfpm/paomalee-logo.png" alt="เปามาลี Pao Malee" class="reveal" data-y="18"
+      <img src="assets/bfpm/paomalee-logo.png" alt="เปามาลี Pao Malee" class="reveal pm-hero-logo" data-y="18"
         style="width: clamp(180px,24vw,280px); height: auto; display: block; margin: 0.5rem 0 1.6rem; filter: drop-shadow(0 14px 26px rgba(92,68,53,0.22));" />
-
-      <div class="hero-eyebrow flex items-center gap-3 mb-6 mt-2">
-        <span class="deco-dot"></span>
-        <span class="eyebrow">Case Study · Food Brand · ซาลาเปา</span>
-      </div>
 
       <h1 class="font-thaihead font-medium text-ink leading-[1.18] text-[clamp(2.3rem,5vw,4.2rem)]">
         <span class="hero-mask mask-line"><span class="whitespace-nowrap">ซาลาเปาที่<span class="gold-text font-sriracha" style="font-size:1.08em;">มีตัวตน</span></span></span>
