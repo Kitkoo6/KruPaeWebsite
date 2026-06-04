@@ -3,327 +3,250 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Butterfly — Food Brand · Power Branding™</title>
+<title>Butterfly — ผลงานการสร้างแบรนด์ · Power Branding™</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          kanit: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+
 <link rel="stylesheet" href="styles.css" />
 <style>
-  :root { --accent: #8DC63F; --accentdim: rgba(141,198,63,0.22); --bg: #0b0d08; }
-  body { background: var(--bg); color: #F5EEE5; }
-  html, body, * { cursor: auto; }
-  a, button { cursor: pointer; }
-
-  /* ── NAV ─────────────────────────────── */
-  .pg-nav {
-    position: fixed; top: 0; inset-inline: 0; z-index: 50;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.1rem clamp(1.5rem,4vw,3rem);
-    background: linear-gradient(to bottom, rgba(11,13,8,.88), transparent);
-    transition: background .4s, backdrop-filter .4s;
+  .bf-hero { position: relative; overflow: hidden; }
+  .bf-watermark {
+    font-family: "Cormorant Garamond", serif; font-weight: 700; text-transform: uppercase;
+    color: var(--cream-deep); letter-spacing: .02em; line-height: .82; user-select: none;
   }
-  .pg-nav.solid { background: rgba(11,13,8,.93); backdrop-filter: blur(12px); }
-  .pg-back {
-    display: inline-flex; align-items: center; gap: .55rem;
-    color: #F5EEE5; font-family: "Kanit",sans-serif; font-weight: 300;
-    font-size: .95rem; transition: gap .3s, color .3s;
+  .bf-frame {
+    border-radius: 26px; overflow: hidden; position: relative;
+    box-shadow: 0 50px 90px -42px rgba(92,68,53,0.6);
+    border: 1px solid rgba(184,149,106,0.25);
   }
-  .pg-back:hover { gap: .9rem; color: var(--accent); }
-  .pg-nav-brand { font-family: "Cormorant Garamond",serif; letter-spacing: .4em; font-size: .68rem; text-transform: uppercase; color: rgba(245,238,229,.55); }
+  .bf-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  /* ── HERO ─────────────────────────────── */
-  .pg-hero { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; }
-  .pg-hero-bg { position: absolute; inset: 0; }
-  .pg-hero-bg img { width: 100%; height: 100%; object-fit: cover; transform-origin: center; }
-  .pg-hero-bg::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(11,13,8,.55) 0%, rgba(11,13,8,.12) 40%, rgba(11,13,8,.88) 100%);
+  .bf-back {
+    display: inline-flex; align-items: center; gap: .5rem; font-size: .92rem;
+    color: var(--brown); font-family: "Kanit", sans-serif; transition: gap .35s ease, color .35s ease;
   }
-  .pg-hero-inner { position: relative; z-index: 2; text-align: center; padding: 8rem 1.5rem 5rem; }
+  .bf-back:hover { gap: .85rem; color: var(--gold-deep); }
 
-  @keyframes floatLogo {
-    0%,100% { transform: translateY(0) rotate(-1.5deg); }
-    50%      { transform: translateY(-16px) rotate(1.5deg); }
+  .bf-story { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(2rem,5vw,4.5rem); align-items: stretch; }
+  @media (max-width: 900px) { .bf-story { grid-template-columns: 1fr; } }
+
+  .bf-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
+  .bf-row.videos .bf-tile { width: clamp(230px, 26vw, 300px); }
+  .bf-row.pics   .bf-tile { width: clamp(180px, 21vw, 250px); }
+  .bf-tile {
+    aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; background: #16110d;
+    border: 1px solid rgba(184,149,106,0.22);
+    box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6);
   }
-  .pg-logo {
-    width: clamp(80px,11vw,130px); margin: 0 auto 1.6rem; display: block;
-    border-radius: 18px; padding: 10px; background: rgba(255,255,255,.95);
-    animation: floatLogo 5s ease-in-out infinite;
-    box-shadow: 0 20px 48px -16px rgba(141,198,63,.5);
+  .bf-tile img   { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.3,0,.2,1); }
+  .bf-tile:hover img { transform: scale(1.05); }
+  .bf-tile iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .bf-pullquote {
+    font-family: "Cormorant Garamond", serif; font-style: italic;
+    font-size: clamp(1.5rem,3.2vw,2.4rem); line-height: 1.4; color: var(--brown);
   }
-
-  @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
-  .pg-eyebrow { font-family:"Cormorant Garamond",serif; letter-spacing:.5em; text-transform:uppercase; color:var(--accent); font-size:clamp(.7rem,1.5vw,.88rem); opacity:0; animation:fadeUp .9s .25s forwards; }
-  .pg-hero-title { font-family:"Cormorant Garamond",serif; font-weight:600; color:#fff; line-height:.9; font-size:clamp(4rem,13vw,9.5rem); letter-spacing:-.02em; opacity:0; animation:fadeUp .9s .5s forwards; }
-  .pg-hero-title .a { color:var(--accent); }
-  .pg-hero-sub { font-family:"Kanit",sans-serif; font-weight:300; color:rgba(255,255,255,.7); font-size:clamp(.9rem,1.9vw,1.12rem); margin-top:1.3rem; opacity:0; animation:fadeUp .9s .75s forwards; }
-  .pg-hero-badge {
-    display:inline-flex; align-items:center; gap:.55rem; margin-top:1.9rem;
-    padding:.5rem 1.3rem; border-radius:999px; border:1px solid rgba(141,198,63,.38);
-    color:var(--accent); font-family:"Kanit",sans-serif; font-weight:300; font-size:.85rem;
-    opacity:0; animation:fadeUp .9s 1s forwards;
-  }
-
-  .pg-scroll-hint { position:absolute; bottom:1.8rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:.5rem; color:rgba(255,255,255,.45); }
-  .pg-scroll-hint span { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:.75rem; letter-spacing:.2em; }
-  .pg-scroll-hint .ln { width:1px; height:32px; background:linear-gradient(to bottom, var(--accent), transparent); }
-
-  /* ── SHARED LAYOUT ──────────────────── */
-  .pg-sec { padding: clamp(4rem,9vw,8rem) clamp(1.5rem,5vw,4rem); }
-  .pg-wrap { max-width: 1180px; margin: 0 auto; }
-  .pg-band { background: #111408; border-block: 1px solid rgba(141,198,63,.1); }
-
-  .pg-kicker { display:inline-flex; align-items:center; gap:.7rem; font-family:"Cormorant Garamond",serif; text-transform:uppercase; letter-spacing:.32em; font-size:.72rem; color:var(--accent); }
-  .pg-kicker::before { content:""; width:28px; height:1px; background:var(--accent); display:inline-block; }
-  .pg-h2 { font-family:"Kanit",sans-serif; font-weight:500; color:#F5EEE5; line-height:1.18; font-size:clamp(1.9rem,4vw,3.1rem); margin-top:.9rem; }
-  .pg-h2 .a { color:var(--accent); }
-  .pg-body { color:rgba(245,238,229,.7); font-family:"Kanit",sans-serif; font-weight:300; line-height:1.88; font-size:1.03rem; }
-  .pg-body p + p { margin-top:1rem; }
-
-  /* ── SPLIT ──────────────────────────── */
-  .pg-split { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:center; }
-  @media(max-width:860px){ .pg-split { grid-template-columns:1fr; } }
-
-  /* ── PHOTO FRAME ──────────────────── */
-  .pg-photo {
-    position:relative; overflow:hidden; border-radius:18px;
-    border:1px solid rgba(141,198,63,.13);
-    box-shadow:0 40px 80px -40px rgba(0,0,0,.85);
-    height:100%;
-  }
-  .pg-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.2,.6,.2,1); }
-  .pg-photo:hover img { transform:scale(1.06); }
-  .pg-photo-shine {
-    position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(135deg, rgba(141,198,63,.08) 0%, transparent 60%);
-    opacity:0; transition:opacity .4s;
-  }
-  .pg-photo:hover .pg-photo-shine { opacity:1; }
-
-  /* ── GALLERY GRID ─────────────────── */
-  .pg-gallery { display:grid; grid-template-columns:repeat(12,1fr); gap:1rem; }
-  .gc-7 { grid-column:span 7; }
-  .gc-5 { grid-column:span 5; }
-  .gc-6 { grid-column:span 6; }
-  @media(max-width:720px){ .gc-7,.gc-5,.gc-6 { grid-column:span 12; } }
-  .pg-gallery .pg-photo { min-height:clamp(180px,26vw,360px); }
-  .pg-gallery .tall { min-height:clamp(240px,36vw,480px); }
-
-  /* ── VIDEO REELS ──────────────────── */
-  .pg-reels { display:grid; justify-content:center; gap:1.2rem; }
-  .pg-reels.c2 { grid-template-columns:repeat(2,minmax(0,260px)); }
-  @media(max-width:600px){ .pg-reels.c2 { grid-template-columns:minmax(0,260px); } }
-
-  .pg-reel {
-    position:relative; border-radius:20px; overflow:hidden;
-    aspect-ratio:267/476; background:#111408;
-    border:1px solid rgba(141,198,63,.2);
-    box-shadow:0 32px 64px -32px rgba(0,0,0,.92);
-    transition:transform .5s cubic-bezier(.2,.6,.2,1), box-shadow .5s;
-  }
-  .pg-reel:hover { transform:translateY(-7px); box-shadow:0 44px 72px -28px rgba(0,0,0,.95), 0 0 0 1px rgba(141,198,63,.35); }
-  .pg-reel iframe { position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
-
-  /* ── STATS ────────────────────────── */
-  .pg-stats { display:flex; flex-wrap:wrap; gap:clamp(2rem,5vw,4rem); }
-  .pg-stat { text-align:center; }
-  .pg-stat-n { font-family:"Cormorant Garamond",serif; font-size:clamp(2.2rem,4.5vw,3.4rem); color:var(--accent); line-height:1; }
-  .pg-stat-l { font-family:"Kanit",sans-serif; font-weight:300; font-size:.82rem; color:rgba(245,238,229,.55); margin-top:.35rem; }
-
-  /* ── CTA STRIP ────────────────────── */
-  .pg-cta { text-align:center; padding:clamp(4rem,8vw,7rem) 1.5rem; background:#111408; border-top:1px solid rgba(141,198,63,.1); position:relative; overflow:hidden; }
-  .pg-cta-wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:"Cormorant Garamond",serif; font-size:clamp(5rem,20vw,16rem); color:rgba(141,198,63,.035); font-weight:600; white-space:nowrap; pointer-events:none; user-select:none; }
-
-  .pg-btn {
-    display:inline-flex; align-items:center; gap:.6rem; padding:.95rem 2.1rem; border-radius:999px;
-    background:var(--accent); color:#0b0d08; font-family:"Kanit",sans-serif; font-weight:500; font-size:.95rem;
-    transition:gap .3s, transform .3s, box-shadow .3s; box-shadow:0 14px 32px -12px rgba(141,198,63,.55);
-  }
-  .pg-btn:hover { gap:1rem; transform:translateY(-2px); box-shadow:0 20px 42px -12px rgba(141,198,63,.7); }
-  .pg-btn.ghost { background:transparent; border:1px solid rgba(245,238,229,.32); color:#F5EEE5; box-shadow:none; }
-  .pg-btn.ghost:hover { background:rgba(245,238,229,.06); transform:translateY(-2px); }
-
-  /* ── DIVIDER ──────────────────────── */
-  .pg-div { display:flex; align-items:center; gap:1.2rem; }
-  .pg-div::before,.pg-div::after { content:""; flex:1; height:1px; background:rgba(141,198,63,.18); }
-  .pg-div span { font-family:"Cormorant Garamond",serif; letter-spacing:.3em; font-size:.7rem; text-transform:uppercase; color:var(--accent); white-space:nowrap; }
-
-  /* ── REVEAL ───────────────────────── */
-  .rv { opacity:0; transform:translateY(36px); transition:opacity .85s cubic-bezier(.2,.6,.2,1), transform .85s cubic-bezier(.2,.6,.2,1); }
-  .rv.vis { opacity:1; transform:none; }
-  .rv.d1 { transition-delay:.12s; }
-  .rv.d2 { transition-delay:.24s; }
-  .rv.d3 { transition-delay:.36s; }
-  .rv.d4 { transition-delay:.48s; }
-  @media(prefers-reduced-motion:reduce){ .rv { opacity:1; transform:none; transition:none; } }
-
-  /* ── FOOTER ───────────────────────── */
-  .pg-foot { background:#090b07; padding:2.2rem 1.5rem; text-align:center; border-top:1px solid rgba(141,198,63,.08); }
 </style>
 </head>
 
-<body>
+<body class="font-thai">
 
-<!-- NAV -->
-<header class="pg-nav" id="pgNav">
-  <a href="Rattiya Homepage.html" class="pg-back">← กลับหน้าหลัก</a>
-  <span class="pg-nav-brand">Butterfly · Power Branding™</span>
-  <a href="#reels" class="pg-back">วิดีโอ →</a>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html#hero" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
+      <span>ปรึกษาฟรี</span>
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="pg-hero">
-  <div class="pg-hero-bg">
-    <img src="assets/bfpm/bf1.jpg" alt="Butterfly brand" id="heroBg" />
+<!-- ============ HERO ============ -->
+<section id="hero" class="bf-hero min-h-screen flex items-center pt-32 pb-20">
+  <div class="bf-watermark pointer-events-none absolute top-28 left-0 right-0 text-center text-[13vw] lg:text-[9vw] z-0 whitespace-nowrap">
+    BUTTERFLY
   </div>
-  <div class="pg-hero-inner">
-    <img class="pg-logo" src="assets/bfpm/butterfly-logo.png" alt="Butterfly" />
-    <div class="pg-eyebrow">Food Brand · Power Branding™</div>
-    <h1 class="pg-hero-title">Butter<span class="a">fly</span></h1>
-    <p class="pg-hero-sub">สร้างคาแรกเตอร์แบรนด์ให้สนุก จดจำง่าย และเป็นมิตร</p>
-    <div class="pg-hero-badge">
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M6.5 3.5v3l1.8 1.4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-      ผลงานของ ครูเป้ รัตติยา
-    </div>
-  </div>
-  <div class="pg-scroll-hint"><span>เลื่อนลง</span><span class="ln"></span></div>
-</section>
 
-<!-- STORY -->
-<section class="pg-sec" id="story">
-  <div class="pg-wrap pg-split">
-    <div class="rv" style="aspect-ratio:3/4;">
-      <div class="pg-photo" style="height:100%;">
-        <img src="assets/bfpm/bf2.jpg" alt="Butterfly" />
-        <div class="pg-photo-shine"></div>
-      </div>
-    </div>
-    <div class="rv d1">
-      <span class="pg-kicker">เรื่องราวของแบรนด์</span>
-      <h2 class="pg-h2">แบรนด์อาหารที่<br/><span class="a">สนุก</span> และจดจำง่าย</h2>
-      <div class="pg-body mt-6">
-        <p>Butterfly คือแบรนด์อาหารที่ครูเป้ช่วยสร้างตัวตนให้โดดเด่น ด้วยคาแรกเตอร์ที่ชัดเจน สนุก และเป็นมิตร ทำให้แบรนด์แตกต่างในตลาดอาหารที่มีการแข่งขันสูง</p>
-        <p>ด้วยกลยุทธ์ Power Branding™ ที่ออกแบบมาเฉพาะ Butterfly ได้ภาพลักษณ์ที่น่าเข้าถึง สร้างฐานลูกค้าประจำ และกลายเป็นแบรนด์ที่คนพูดถึงในชุมชน</p>
+  <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.02fr_0.98fr] gap-14 lg:gap-16 items-center w-full">
+    <div>
+      <a href="Rattiya Homepage.html#work" class="bf-back mb-8"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
+
+      <img src="assets/bfpm/butterfly-logo.png" alt="Butterfly" class="reveal" data-y="18"
+        style="width: clamp(180px,24vw,280px); height: auto; display: block; margin: 0.5rem 0 1.6rem; filter: drop-shadow(0 14px 26px rgba(92,68,53,0.22));" />
+
+      <div class="hero-eyebrow flex items-center gap-3 mb-6 mt-2">
+        <span class="deco-dot"></span>
+        <span class="eyebrow">Case Study · Food Brand</span>
       </div>
 
-      <div class="pg-stats mt-10">
-        <div class="pg-stat rv d2">
-          <div class="pg-stat-n">3×</div>
-          <div class="pg-stat-l">ยอดเอ็นเกจเมนต์เพิ่มขึ้น</div>
+      <h1 class="font-thaihead font-medium text-ink leading-[1.18] text-[clamp(2.3rem,5vw,4.2rem)]">
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap">คาแรกเตอร์ที่<span class="gold-text font-sriracha" style="font-size:1.08em;">สนุก</span></span></span>
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap">และ<span class="gold-text">จดจำง่าย</span></span></span>
+      </h1>
+
+      <p class="hero-sub mt-7 max-w-[34rem] text-[1.08rem] leading-relaxed text-ink/75">
+        แบรนด์อาหารที่ครูเป้ช่วยสร้างตัวตนให้โดดเด่น ด้วยคาแรกเตอร์ที่ชัดเจน สนุก และเป็นมิตร
+        ทำให้ Butterfly แตกต่างในตลาดอาหาร สร้างฐานลูกค้าประจำและการบอกต่อที่แข็งแกร่ง
+      </p>
+
+      <div class="mt-9 flex flex-wrap gap-x-9 gap-y-5">
+        <div>
+          <div class="font-serif text-brown text-3xl leading-none">Food Brand</div>
+          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">หมวดธุรกิจ</div>
         </div>
-        <div style="width:1px; align-self:stretch; background:rgba(141,198,63,.2);"></div>
-        <div class="pg-stat rv d3">
-          <div class="pg-stat-n">6 เดือน</div>
-          <div class="pg-stat-l">สร้างฐานแฟนแบรนด์</div>
+        <div class="w-px self-stretch bg-gold/25"></div>
+        <div>
+          <div class="font-serif text-brown text-3xl leading-none">Brand Identity</div>
+          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">บริการที่ใช้</div>
         </div>
       </div>
     </div>
+
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="bf-frame w-[92%] sm:w-[82%] lg:w-[100%] max-w-[540px]" style="aspect-ratio:3/4;">
+        <img src="assets/bfpm/bf1.jpg" alt="Butterfly brand" />
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="pg-sec pg-band" id="gallery">
-  <div class="pg-wrap">
-    <div class="rv" style="max-width:660px">
-      <span class="pg-kicker">แกลเลอรีภาพ</span>
-      <h2 class="pg-h2">ภาพที่สะท้อน<span class="a">ตัวตน</span>ของแบรนด์</h2>
-    </div>
-    <div class="pg-gallery mt-10">
-      <div class="gc-7 tall rv d1">
-        <div class="pg-photo">
+<!-- ============ STORY (visual) ============ -->
+<section class="py-20 lg:py-28 border-t border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="bf-story">
+      <div class="reveal" data-y="34">
+        <div class="bf-frame" style="height:100%; min-height:360px;">
+          <img src="assets/bfpm/bf2.jpg" alt="Butterfly" />
+        </div>
+      </div>
+      <div class="reveal" data-y="34" data-x="20">
+        <div class="bf-frame" style="height:100%; min-height:360px;">
           <img src="assets/bfpm/bf3.jpg" alt="Butterfly" />
-          <div class="pg-photo-shine"></div>
-        </div>
-      </div>
-      <div class="gc-5 rv d2" style="display:grid; gap:1rem;">
-        <div class="pg-photo">
-          <img src="assets/bfpm/bf4.jpg" alt="Butterfly" />
-          <div class="pg-photo-shine"></div>
-        </div>
-        <div class="pg-photo">
-          <img src="assets/bfpm/bf5.jpg" alt="Butterfly" />
-          <div class="pg-photo-shine"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pg-gallery mt-3">
-      <div class="gc-6 rv d1">
-        <div class="pg-photo">
-          <img src="assets/clients/butterfly.jpg" alt="Butterfly brand identity" />
-          <div class="pg-photo-shine"></div>
-        </div>
-      </div>
-      <div class="gc-6 rv d2">
-        <div class="pg-photo">
-          <img src="assets/bfpm/bf2.jpg" alt="Butterfly" style="object-position:center 30%;" />
-          <div class="pg-photo-shine"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VIDEOS -->
-<section class="pg-sec" id="reels">
-  <div class="pg-wrap">
-    <div class="rv text-center" style="max-width:580px; margin-inline:auto; margin-bottom:3rem;">
-      <span class="pg-kicker">วิดีโอแบรนด์</span>
-      <h2 class="pg-h2">ดูแบรนด์ใน<span class="a">แอคชัน</span></h2>
-      <p class="pg-body mt-4">ทุกวิดีโอสะท้อนความสนุกและตัวตนที่แท้จริงของ Butterfly</p>
+<!-- ============ WORK & CONTENT ============ -->
+<section class="py-20 lg:py-28 bg-ivory/50 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal" data-y="26">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="section-num">02</span><span class="eyebrow">ผลงาน &amp; คอนเทนต์จากแบรนด์</span>
+      </div>
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(1.8rem,3.2vw,2.6rem)]">
+        ตัวตนที่<span class="gold-text">สนุก</span> ผ่านภาพและวิดีโอ
+      </h2>
     </div>
-    <div class="pg-reels c2">
-      <div class="pg-reel rv d1">
+
+    <div class="bf-row videos" data-reveal-group>
+      <div class="bf-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F887945137071887%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Butterfly — วิดีโอ 1"></iframe>
       </div>
-      <div class="pg-reel rv d2">
+      <div class="bf-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3920583754907092%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Butterfly — วิดีโอ 2"></iframe>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="pg-cta">
-  <div class="pg-cta-wm">BUTTERFLY</div>
-  <div class="pg-wrap rv" style="position:relative;z-index:1; max-width:580px; margin-inline:auto;">
-    <span class="pg-kicker" style="justify-content:center; margin-bottom:1rem;">Power Branding™</span>
-    <h2 class="pg-h2" style="text-align:center;">อยากให้ครูเป้<span class="a">ปั้นแบรนด์</span>ของคุณ?</h2>
-    <p class="pg-body mt-4" style="text-align:center;">เริ่มสร้างแบรนด์ที่มีตัวตนชัดเจน จดจำง่าย และขายได้จริง</p>
-    <div class="mt-8 flex flex-wrap gap-4 justify-center">
-      <a href="Rattiya Homepage.html#contact" class="pg-btn">ปรึกษาครูเป้ฟรี →</a>
-      <a href="Rattiya Homepage.html" class="pg-btn ghost">← กลับหน้าหลัก</a>
+    <div class="bf-row pics mt-5 lg:mt-7" data-reveal-group>
+      <div class="bf-tile"><img src="assets/bfpm/bf4.jpg" alt="Butterfly" /></div>
+      <div class="bf-tile"><img src="assets/bfpm/bf5.jpg" alt="Butterfly" /></div>
+      <div class="bf-tile"><img src="assets/clients/butterfly.jpg" alt="Butterfly brand" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="pg-foot">
-  <a href="Rattiya Homepage.html" style="font-family:'Pinyon Script',cursive; color:#B8956A; font-size:2.4rem; line-height:1; display:inline-block; text-decoration:none;">Rattiya</a>
-  <div style="font-family:'Kanit',sans-serif; font-size:.58rem; letter-spacing:.42em; color:rgba(245,238,229,.32); margin-top:.5rem;">POWER BRANDING™</div>
-  <div style="font-size:.76rem; color:rgba(245,238,229,.28); margin-top:1.1rem;">© 2025 Power Branding™. All rights reserved.</div>
+<!-- ============ PULLQUOTE ============ -->
+<section class="py-16 lg:py-20 bg-ivory/50 border-b border-gold/15">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal" data-y="28">
+    <span class="eyebrow text-rosedeep">โจทย์ของแบรนด์</span>
+    <p class="bf-pullquote mt-6">
+      "มีสินค้าดีและรสชาติที่ประทับใจ แต่ยังขาด <span class="gold-text not-italic">ตัวตน</span>
+      ที่ทำให้ลูกค้า<span class="gold-text not-italic">จดจำ</span> และอยากบอกต่อ"
+    </p>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative overflow-hidden py-24 lg:py-32 bg-brown text-ivory">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="deco-dot"></span><span class="eyebrow text-goldlight">แบรนด์ของคุณคือรายต่อไป</span><span class="deco-dot"></span>
+    </div>
+    <h2 class="font-thaihead font-medium leading-[1.12] text-[clamp(2rem,4.6vw,3.6rem)]">
+      อยากให้แบรนด์ของคุณ<br/><span class="gold-text">เล่าเรื่องเป็น</span>แบบนี้ไหม?
+    </h2>
+    <p class="reveal text-ivory/75 text-lg mt-7 max-w-xl mx-auto" data-y="24">
+      ปรึกษาครูเป้ฟรี ไม่มีข้อผูกมัด — มาคุยกันว่าแบรนด์ของคุณจะไปได้ไกลแค่ไหน
+    </p>
+    <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-4" data-y="24">
+      <a href="Rattiya Homepage.html#contact" class="btn btn-primary"><span>เริ่มสร้างแบรนด์ของคุณ</span><span class="btn-arrow">→</span></a>
+      <a href="Rattiya Homepage.html#work" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>ดูผลงานอื่น ๆ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <div class="font-script gold-text text-4xl leading-none">Rattiya</div>
+      <div class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</div>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="footer-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="footer-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
 </footer>
 
-<!-- SCRIPTS -->
-<script>
-  /* nav solid on scroll */
-  const nav = document.getElementById("pgNav");
-  window.addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 60), { passive:true });
-
-  /* scroll reveal */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); } });
-  }, { threshold: .1 });
-  document.querySelectorAll(".rv").forEach(el => io.observe(el));
-
-  /* hero parallax */
-  const bg = document.getElementById("heroBg");
-  window.addEventListener("scroll", () => {
-    if (bg && scrollY < innerHeight * 1.5) bg.style.transform = `translateY(${scrollY * 0.28}px) scale(1.1)`;
-  }, { passive:true });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
