@@ -602,10 +602,14 @@ body {
   .hero-float { display: none !important; }
 }
 
-/* Homepage About section — the stat badge sits -6rem below the image,
-   so we add bottom padding on mobile to stop it overlapping the next row */
+/* Homepage About section — badge overlaps bottom-right of card on mobile/iPad.
+   padding-bottom:0 keeps the reference point at the image edge so -bottom-24
+   positions the badge the same way as on desktop.
+   z-index:1 ensures the badge renders above the text section below.
+   The sibling text div gets margin-top to clear the badge. */
 @media (max-width: 1023px) {
-  .about-img-wrap { padding-bottom: 7rem; }
+  .about-img-wrap            { padding-bottom: 0; position: relative; z-index: 1; }
+  .about-img-wrap + div      { margin-top: 3rem; }
 }
 
 /* Logo marquee tiles — slightly smaller on mobile */
