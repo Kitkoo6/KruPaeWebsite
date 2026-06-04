@@ -59,6 +59,8 @@
   .pm-row.videos .pm-tile { width: clamp(200px, 22vw, 270px); }
 
   .pm-row.pics .pm-tile { width: clamp(140px, 17vw, 210px); }
+  .pm-tile-natural { aspect-ratio: auto; background: transparent; }
+  .pm-tile-natural img { object-fit: contain; height: auto; }
   .pm-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; background: #16110d;
     border: 1px solid rgba(184,149,106,0.22);
@@ -205,9 +207,8 @@
 
     <div class="pm-row pics mt-5 lg:mt-7" data-reveal-group>
       <div class="pm-tile"><img src="assets/bfpm/pm3.jpg" alt="เปามาลี" /></div>
-      <div class="pm-tile"><img src="assets/bfpm/pm4.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm5.jpg" alt="เปามาลี" /></div>
-      <div class="pm-tile"><img src="assets/bfpm/pm6.jpg" alt="เปามาลี" /></div>
+      <div class="pm-tile pm-tile-natural"><img src="assets/bfpm/pm6.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm8.jpg" alt="เปามาลี" /></div>
     </div>
   </div>
