@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hilltribe House — ผลงานการสร้างแบรนด์ · Power Branding™</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          kanit: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* ---------- Hilltribe House case page ---------- */
+  .hh-hero { position: relative; overflow: hidden; }
+  .hh-watermark {
+    font-family: "Cormorant Garamond", serif; font-weight: 700; text-transform: uppercase;
+    color: var(--cream-deep); letter-spacing: .02em; line-height: .82; user-select: none;
+  }
+  .hh-frame {
+    border-radius: 26px; overflow: hidden; position: relative;
+    box-shadow: 0 50px 90px -42px rgba(92,68,53,0.6);
+    border: 1px solid rgba(184,149,106,0.25);
+  }
+  .hh-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .hh-back {
+    display:inline-flex; align-items:center; gap:.5rem; font-size:.92rem;
+    color: var(--brown); font-family:"Kanit",sans-serif; transition: gap .35s ease, color .35s ease;
+  }
+  .hh-back:hover { gap:.85rem; color: var(--gold-deep); }
+
+  /* Story two-column */
+  .hh-story { display:grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem,5vw,4.5rem); align-items:center; }
+  @media (max-width: 900px){ .hh-story { grid-template-columns: 1fr; } }
+
+  /* Steps */
+  .hh-steps { display:grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; }
+  @media (max-width: 760px){ .hh-steps { grid-template-columns: 1fr; } }
+  .hh-step {
+    position: relative; background: var(--ivory); border:1px solid rgba(184,149,106,0.2);
+    border-radius: 20px; padding: 2.1rem 2rem 2rem;
+    box-shadow: 0 22px 48px -34px rgba(92,68,53,0.5);
+    transition: transform .5s cubic-bezier(.4,0,.15,1), box-shadow .5s ease, border-color .5s ease;
+  }
+  .hh-step:hover { transform: translateY(-6px); box-shadow: 0 34px 60px -34px rgba(92,68,53,0.55); border-color: var(--gold); }
+  .hh-step-num {
+    font-family:"Cormorant Garamond",serif; font-style:italic; font-size:1.5rem; color: var(--rose-deep);
+    display:flex; align-items:center; gap:.7rem; margin-bottom: .9rem;
+  }
+  .hh-step-num::after { content:""; flex:1; height:1px; background: linear-gradient(90deg, var(--gold-light), transparent); }
+  .hh-step h3 { font-family:"Kanit",sans-serif; font-weight:500; color: var(--brown); font-size:1.22rem; margin-bottom:.55rem; }
+  .hh-step p { color: rgba(74,59,48,0.72); font-weight:300; line-height:1.8; font-size:.98rem; }
+
+  /* Gallery */
+  .hh-gallery { display:grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+  @media (max-width: 760px){ .hh-gallery { grid-template-columns: 1fr; max-width: 420px; margin-inline:auto; } }
+  .hh-gallery .hh-frame { aspect-ratio: 3/4; }
+
+  /* Reels */
+  .hh-reels { display:flex; flex-wrap:wrap; gap: 1.6rem; justify-content:center; }
+  .hh-reel {
+    width: 300px; max-width: 80vw; aspect-ratio: 267/476;
+    border-radius: 22px; overflow:hidden; background:#16110d;
+    border:1px solid rgba(184,149,106,0.25);
+    box-shadow: 0 34px 64px -38px rgba(92,68,53,0.65);
+  }
+  .hh-reel iframe { width:100%; height:100%; border:0; display:block; }
+
+  /* Combined media grid — uniform portrait tiles (videos + photos) */
+  .hh-media-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: clamp(1rem,2vw,1.5rem); }
+  @media (max-width: 900px){ .hh-media-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 540px){ .hh-media-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline:auto; } }
+  .hh-row { display:flex; flex-wrap:wrap; justify-content:center; gap: clamp(1rem,2vw,1.5rem); }
+  .hh-row.videos .hh-tile { width: clamp(230px, 26vw, 300px); }
+  .hh-row.pics .hh-tile { width: clamp(180px, 21vw, 250px); }
+  .hh-tile {
+    aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d;
+    border:1px solid rgba(184,149,106,0.22);
+    box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6);
+  }
+  .hh-tile img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .7s cubic-bezier(.3,0,.2,1); }
+  .hh-tile:hover img { transform: scale(1.05); }
+  .hh-tile iframe { width:100%; height:100%; border:0; display:block; }
+
+  .hh-pullquote {
+    font-family:"Cormorant Garamond",serif; font-style:italic;
+    font-size: clamp(1.5rem,3.2vw,2.4rem); line-height:1.4; color: var(--brown);
+  }
+</style>
+</head>
+
+<body class="font-thai">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html#hero" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
+      <span>ปรึกษาฟรี</span>
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hh-hero min-h-screen flex items-center pt-32 pb-20">
+  <div class="hh-watermark pointer-events-none absolute top-28 left-0 right-0 text-center text-[13vw] lg:text-[9vw] z-0 whitespace-nowrap">
+    HILLTRIBE
+  </div>
+
+  <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.02fr_0.98fr] gap-14 lg:gap-16 items-center w-full">
+    <div>
+      <a href="Rattiya Homepage.html#work" class="hh-back mb-8"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
+
+      <img src="assets/hilltribe/logo.png" alt="Hilltribe House" class="reveal" data-y="18" style="width:clamp(230px,30vw,340px); height:auto; display:block; margin:0.5rem 0 1.6rem; filter:drop-shadow(0 14px 26px rgba(92,68,53,0.22));" />
+
+      <div class="hero-eyebrow flex items-center gap-3 mb-6 mt-2">
+        <span class="deco-dot"></span>
+        <span class="eyebrow">Case Study · Lifestyle &amp; Craft</span>
+      </div>
+
+      <h1 class="font-thaihead font-medium text-ink leading-[1.18] text-[clamp(2.3rem,5vw,4.2rem)]">
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap">ผ้าทอที่<span class="gold-text font-sriracha" style="font-size:1.08em;">มีเรื่องเล่า</span></span></span>
+      </h1>
+
+      <p class="hero-sub mt-7 max-w-[34rem] text-[1.08rem] leading-relaxed text-ink/75">
+        แบรนด์ผ้าและงานคราฟต์จากภูมิปัญญาชาวเขา ที่เราช่วยเปลี่ยน “ของดี”
+        ให้กลายเป็น “แบรนด์ที่คนรัก” — ผ่านการวางตัวตน เล่าเรื่อง
+        และสร้างคอนเทนต์ที่ทำให้ทุกผืนผ้ามีความหมาย
+      </p>
+
+      <div class="mt-9 flex flex-wrap gap-x-9 gap-y-5">
+        <div>
+          <div class="font-serif text-brown text-3xl leading-none">Lifestyle</div>
+          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">หมวดธุรกิจ</div>
+        </div>
+        <div class="w-px self-stretch bg-gold/25"></div>
+        <div>
+          <div class="font-serif text-brown text-3xl leading-none">Personal Branding</div>
+          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">บริการที่ใช้</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="hh-frame w-[92%] sm:w-[82%] lg:w-[100%] max-w-[540px]" style="aspect-ratio:3/4;">
+        <img src="assets/hilltribe/textile.jpg" alt="เจ้าของแบรนด์ Hilltribe House กับผ้าปักโบราณ" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY (visual) ============ -->
+<section class="py-20 lg:py-28 border-t border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="hh-story" style="grid-template-columns:0.82fr 1.18fr; align-items:stretch;">
+      <div class="reveal" data-y="34">
+        <div class="hh-frame" style="height:100%; min-height:360px;">
+          <img src="assets/hilltribe/shop.jpg" alt="เจ้าของแบรนด์จัดแต่งผ้าชาวเขาภายในร้าน Hilltribe House" />
+        </div>
+      </div>
+      <div class="reveal" data-y="34" data-x="20">
+        <div class="hh-frame" style="height:100%; min-height:360px;">
+          <img src="assets/hilltribe/consult.jpg" alt="พูดคุยและคัดสรรผ้าทอกับช่างทอชาวเขา" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK & CONTENT (videos + pictures combined) ============ -->
+<section class="py-20 lg:py-28 bg-ivory/50 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal" data-y="26">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="section-num">02</span><span class="eyebrow">ผลงาน &amp; คอนเทนต์จากแบรนด์</span>
+      </div>
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(1.8rem,3.2vw,2.6rem)]">
+        เรื่องเล่าที่<span class="gold-text">มีชีวิต</span> ผ่านภาพและวิดีโอ
+      </h2>
+    </div>
+    <div class="hh-row videos" data-reveal-group>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3189368434599803%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Hilltribe House — วิดีโอ 1"></iframe>
+      </div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F988847030262721%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Hilltribe House — วิดีโอ 2"></iframe>
+      </div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1939920490021293%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Hilltribe House — วิดีโอ 3"></iframe>
+      </div>
+    </div>
+    <div class="hh-row pics mt-5 lg:mt-7" data-reveal-group>
+      <div class="hh-tile"><img src="assets/hilltribe/basket.jpg" alt="ผ้าใยกัญชงทอมือในตะกร้าสาน Hilltribe House" /></div>
+      <div class="hh-tile"><img src="assets/hilltribe/outfit.jpg" alt="ชุดผ้าชาวเขาของ Hilltribe House" /></div>
+      <div class="hh-tile"><img src="assets/hilltribe/products.jpg" alt="งานคราฟต์และของสะสมจาก Hilltribe House" /></div>
+      <div class="hh-tile"><img src="assets/hilltribe/fashionweek.jpg" alt="เจ้าของแบรนด์ Hilltribe House บนพรมแดง Bangkok City International Fashion Week" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHALLENGE / PULLQUOTE ============ -->
+<section class="py-16 lg:py-20 bg-ivory/50 border-y border-gold/15">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal" data-y="28">
+    <span class="eyebrow text-rosedeep">โจทย์ของแบรนด์</span>
+    <p class="hh-pullquote mt-6">
+      “มีของดีและเรื่องราวที่ลึกซึ้ง แต่ลูกค้ายังเห็นแค่ <span class="gold-text not-italic">สินค้า</span>
+      ยังไม่เห็น <span class="gold-text not-italic">คุณค่า</span> ที่อยู่เบื้องหลัง”
+    </p>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative overflow-hidden py-24 lg:py-32 bg-brown text-ivory">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="deco-dot"></span><span class="eyebrow text-goldlight">แบรนด์ของคุณคือรายต่อไป</span><span class="deco-dot"></span>
+    </div>
+    <h2 class="font-thaihead font-medium leading-[1.12] text-[clamp(2rem,4.6vw,3.6rem)]">
+      อยากให้แบรนด์ของคุณ<br/><span class="gold-text">เล่าเรื่องเป็น</span>แบบนี้ไหม?
+    </h2>
+    <p class="reveal text-ivory/75 text-lg mt-7 max-w-xl mx-auto" data-y="24">
+      ปรึกษาครูเป้ฟรี ไม่มีข้อผูกมัด — มาคุยกันว่าแบรนด์ของคุณจะไปได้ไกลแค่ไหน
+    </p>
+    <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-4" data-y="24">
+      <a href="Rattiya Homepage.html#contact" class="btn btn-primary"><span>เริ่มสร้างแบรนด์ของคุณ</span><span class="btn-arrow">→</span></a>
+      <a href="Rattiya Homepage.html#work" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>ดูผลงานอื่น ๆ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <div class="font-script gold-text text-4xl leading-none">Rattiya</div>
+      <div class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</div>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="footer-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="footer-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#F5EEE5"/>
+    <text x="50" y="60" font-family="Pinyon Script, cursive" font-size="30" fill="#B8956A" text-anchor="middle">H</text>
+  </svg>
+</template>
+
+</body>
+</html>

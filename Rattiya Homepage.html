@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rattiya · Power Branding™ — ที่ปรึกษา Personal Branding & Marketing</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          kanit: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-thai">
+
+<!-- Custom cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="#hero" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="#services">บริการ</a>
+      <a class="nav-link" href="#clients">ลูกค้า</a>
+      <a class="nav-link" href="#work">ผลงาน</a>
+      <a class="nav-link" href="#voices">รีวิว</a>
+      <a class="nav-link" href="#contact">ติดต่อ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
+      <span>ปรึกษาฟรี</span>
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+  <!-- watermark -->
+  <div class="hero-watermark pointer-events-none absolute top-24 lg:top-20 left-0 right-0 text-center text-[11vw] lg:text-[8.5vw] z-0 whitespace-nowrap">
+    POWER BRANDING
+  </div>
+
+  <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-10 items-center w-full">
+    <!-- copy -->
+    <div>
+      <div class="hero-eyebrow flex items-center gap-3 mb-7">
+        <span class="deco-dot"></span>
+        <span class="eyebrow">Personal Branding &amp; Marketing Strategy</span>
+      </div>
+
+      <h1 class="font-thaihead font-medium text-ink leading-[1.22] text-[clamp(2.2rem,4.9vw,4.3rem)]">
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap"><span class="gold-text font-sriracha" style="font-size:1.18em;">ปั้นตัวตน</span> ให้กลาย</span></span>
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap">เป็นแบรนด์ที่<span class="gold-text" style="font-size:1.12em;">ทรงพลัง</span></span></span>
+      </h1>
+
+      <div class="hero-mask mask-line mt-3" style="padding-left:0.22em; margin-left:-0.22em;">
+        <span class="font-script gold-text text-[clamp(2rem,5vw,3.6rem)] leading-[1.3]" style="padding-right:0.12em;">Power Branding</span>
+      </div>
+
+      <p class="hero-sub mt-7 max-w-[33rem] text-[1.06rem] leading-relaxed text-ink/75">
+        ที่ปรึกษาด้านการสร้างแบรนด์ส่วนบุคคลและกลยุทธ์การตลาด
+        สำหรับผู้หญิงที่ต้องการเปลี่ยน “ตัวตน” ให้เป็น “มูลค่า”
+        ด้วยระบบที่ออกแบบมาเพื่อให้คุณเป็นที่จดจำ และขายได้จริง
+      </p>
+
+      <div class="hero-cta mt-9 flex flex-wrap items-center gap-4">
+        <a href="#contact" class="btn btn-primary">
+          <span>เริ่มสร้างแบรนด์ของคุณ</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#work" class="btn btn-ghost">
+          <span>ดูผลงาน</span>
+          <span class="btn-arrow">↓</span>
+        </a>
+      </div>
+
+      <div class="hero-stats mt-12 flex flex-wrap gap-x-10 gap-y-6">
+        <div>
+          <div class="font-serif text-brown text-4xl leading-none"><span data-count="1000">0</span><span class="gold-text">+</span></div>
+          <div class="text-[0.82rem] tracking-wide text-ink/60 mt-2">แบรนด์ที่ดูแล</div>
+        </div>
+        <div class="w-px self-stretch bg-gold/25"></div>
+        <div>
+          <div class="font-serif text-brown text-4xl leading-none"><span data-count="8">0</span></div>
+          <div class="text-[0.82rem] tracking-wide text-ink/60 mt-2">ปีของประสบการณ์</div>
+        </div>
+        <div class="w-px self-stretch bg-gold/25"></div>
+        <div>
+          <div class="font-serif text-brown text-4xl leading-none"><span data-count="98">0</span><span class="gold-text">%</span></div>
+          <div class="text-[0.82rem] tracking-wide text-ink/60 mt-2">ลูกค้าแนะนำต่อ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- portrait -->
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="portrait-frame w-[88%] sm:w-[78%] lg:w-[100%] max-w-[560px] aspect-square">
+        <div class="portrait-ring"></div>
+        <div class="portrait-ring two"></div>
+        <div class="absolute inset-0 rounded-[30px] overflow-hidden shadow-[0_50px_90px_-40px_rgba(92,68,53,0.6)]">
+          <img class="hero-portrait-img w-full h-full object-cover scale-[1.06]" src="assets/rattiya/portrait-hero.png" alt="ครูเป้ รัตติยา" />
+        </div>
+        <!-- floating badge -->
+        <div class="hero-float absolute -left-6 lg:-left-12 top-10 bg-ivory/95 backdrop-blur rounded-2xl px-5 py-4 shadow-[0_24px_50px_-28px_rgba(92,68,53,0.7)] border border-gold/25">
+          <div class="font-serif italic text-rosedeep text-sm">ไว้วางใจโดย</div>
+          <div class="font-serif text-brown text-2xl leading-none">100+ <span class="text-base">แบรนด์</span></div>
+        </div>
+        <div class="hero-float absolute -right-3 lg:-right-8 bottom-12 bg-brown text-ivory rounded-2xl px-5 py-4 shadow-[0_24px_50px_-28px_rgba(92,68,53,0.9)]">
+          <div class="font-script gold-text text-2xl leading-none">Rattiya</div>
+          <div class="text-[0.68rem] tracking-[0.2em] text-ivory/70 mt-1">ผู้ก่อตั้ง &amp; โค้ช</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll hint -->
+  <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink/45">
+    <span class="text-[0.65rem] tracking-[0.4em] uppercase">Scroll</span>
+    <span class="w-px h-9 bg-gradient-to-b from-gold to-transparent"></span>
+  </div>
+</section>
+
+<!-- ============ CLIENT CAROUSEL (right after hero) ============ -->
+<section id="clients" class="py-14 lg:py-16 overflow-hidden border-y border-gold/20 bg-ivory/40">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 text-center mb-9">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <span class="section-num">01</span><span class="eyebrow">ลูกค้าที่ไว้วางใจ</span>
+    </div>
+    <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(1.7rem,3vw,2.6rem)] line-reveal">
+      <span class="inline-block">กว่า <span class="gold-text"><span data-count="1000">0</span>+ แบรนด์</span> เลือกเรา</span>
+    </h2>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="marquee mb-4">
+    <div class="track left" id="row1"></div>
+    <div class="track left" id="row1b" aria-hidden="true"></div>
+  </div>
+  <!-- Row 2 -->
+  <div class="marquee">
+    <div class="track right" id="row2"></div>
+    <div class="track right" id="row2b" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-16 lg:py-20">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="relative reveal" data-x="-40" data-y="0">
+      <div class="rounded-[20px] overflow-hidden shadow-[0_50px_90px_-46px_rgba(92,68,53,0.6)] border border-gold/20">
+        <img src="assets/rattiya/banner.jpg" alt="Personal Branding by Rattiya" class="w-full" />
+      </div>
+      <div class="absolute -bottom-24 -right-4 lg:-right-10 bg-brown text-ivory rounded-2xl px-7 py-6 shadow-xl w-[60%] max-w-[260px]">
+        <div class="font-serif text-goldlight text-5xl leading-none"><span data-count="50">0</span>+</div>
+        <div class="text-sm text-ivory/75 mt-2 leading-snug">คอร์สและเวิร์กช็อปที่จัดให้กับผู้ประกอบการทั่วประเทศ</div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-thaihead font-medium text-ink leading-[1.12] text-[clamp(2rem,3.6vw,3.1rem)] line-reveal">
+        <span class="inline-block">ฉันเชื่อว่า “ตัวตน” ของคุณ</span><br/>
+        <span class="inline-block">คือ<span class="gold-text">สินทรัพย์</span>ที่มีค่าที่สุด</span>
+      </h2>
+      <div class="gold-rule rule-draw my-7 w-40"></div>
+      <p class="reveal text-ink/75 leading-relaxed text-[1.05rem]" data-y="30">
+        ครูเป้ รัตติยา คือที่ปรึกษาด้าน Personal Branding และนักวางกลยุทธ์การตลาด
+        ผู้อยู่เบื้องหลังการสร้างแบรนด์ให้กับผู้ประกอบการหญิงและเจ้าของธุรกิจกว่า 1,000 แบรนด์
+        ด้วยปรัชญา “Power Branding™” ที่เปลี่ยนเรื่องราวธรรมดาให้กลายเป็นแบรนด์ที่ทรงพลังและขายได้จริง
+      </p>
+      <p class="reveal text-ink/75 leading-relaxed text-[1.05rem] mt-4" data-y="30">
+        เธอเชื่อว่าผู้หญิงทุกคนมีพลังของแบรนด์ซ่อนอยู่ — หน้าที่ของเธอคือการดึงมันออกมา
+        จัดวางให้เป็นระบบ และทำให้โลกจดจำ
+      </p>
+
+      <div class="mt-8 flex items-center gap-5">
+        <span class="font-script gold-text text-7xl leading-[1.5] inline-block pr-3 pb-1">Rattiya</span>
+        <div class="text-sm text-ink/60 leading-snug">
+          ครูเป้ รัตติยา<br/>
+          <span class="text-ink/45">Founder, Power Branding™</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED CASE STUDIES ============ -->
+<section id="work" class="py-16 lg:py-20 bg-ivory/55 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div>
+        <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2rem,3.8vw,3.2rem)] line-reveal">
+          <span class="inline-block">เรื่องราวของ<span class="gold-text">การเติบโต</span></span>
+        </h2>
+      </div>
+      <a href="#contact" class="btn btn-ghost"><span>ดูผลงานทั้งหมด</span><span class="btn-arrow">→</span></a>
+    </div>
+
+    <div class="space-y-14" data-reveal-group>
+
+      <!-- ===== SECTOR 1 · Coffee (flagship / her own) ===== -->
+      <div class="reveal" data-y="30">
+        <div class="sector-head">
+          <span class="sector-mark">01</span>
+          <span class="sector-name">คาเฟ่ &amp; กาแฟ — ธุรกิจหลักของครูเป้</span>
+          <span class="sector-line"></span>
+        </div>
+        <article class="flagship">
+          <a href="The Lao Cafe.html" class="flagship-media" aria-label="ดูเรื่องราว The Lao Cafe">
+            <img class="img-fill" src="assets/clients/laocafe-photo1.jpg" alt="The Lao Cafe ริมน้ำยามเย็น" style="object-fit:cover;" />
+            <span class="flagship-cue">ดูเรื่องราว <span aria-hidden="true">→</span></span>
+          </a>
+          <div class="flagship-body">
+            <a href="The Lao Cafe.html" class="flagship-logo-link"><img class="flagship-logo" src="assets/clients/laocafe-logo-cream.png" alt="The Lao Cafe Angthong" /></a>
+            <h3 class="font-thaihead text-3xl lg:text-4xl mt-5 mb-1">The Lao Cafe Angthong</h3>
+            <div class="flagship-eyebrow">Coffee · Art · Music</div>
+            <p class="flagship-desc mt-4">
+              คาเฟ่ที่ครูเป้ก่อตั้งและลงมือทำเอง ริมทุ่งนาที่อ่างทอง
+              ต้นแบบของการสร้างแบรนด์ที่มีตัวตน อบอุ่น และเป็นที่จดจำ
+            </p>
+            <a href="The Lao Cafe.html" class="flagship-link mt-7">
+              <span>ดูเรื่องราวทั้งหมด</span><span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== SECTOR 2 · Food (combined) ===== -->
+      <div class="reveal" data-y="30">
+        <div class="sector-head">
+          <span class="sector-mark">02</span>
+          <span class="sector-name">อาหาร — Food</span>
+          <span class="sector-line"></span>
+        </div>
+        <article class="combo-card">
+          <div class="combo-half" style="background:#fff;">
+            <img class="combo-logo" src="assets/clients/butterfly.jpg" alt="Butterfly" />
+            <div class="combo-name">Butterfly</div>
+            <p class="combo-desc">สร้างคาแรกเตอร์แบรนด์ให้สนุก จดจำง่าย และเป็นมิตร</p>
+          </div>
+          <div class="combo-half" style="background:#fff;">
+            <img class="combo-logo" src="assets/clients/paomalee.jpg" alt="Pao Malee" />
+            <div class="combo-name">เปามาลี · Pao Malee</div>
+            <p class="combo-desc">สร้างแบรนด์ซาลาเปาให้มีตัวตนชัดเจน ขยายสาขาได้ภายในปีเดียว</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== SECTOR 3 · Lifestyle / Real Estate / Education ===== -->
+      <div class="reveal" data-y="30">
+        <div class="sector-head">
+          <span class="sector-mark">03</span>
+          <span class="sector-name">ไลฟ์สไตล์ · อสังหาฯ · การศึกษา</span>
+          <span class="sector-line"></span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-7">
+          <article class="case-card">
+            <a href="Hilltribe House.html" class="case-cover-link" aria-label="ดูผลงาน Hilltribe House"></a>
+            <div class="case-media" style="background:#fff;">
+              <img src="assets/clients/hilltribe.jpg" alt="Hilltribe House" style="padding:7%;" />
+              <span class="case-arrow">↗</span>
+            </div>
+            <div class="p-7">
+              <span class="eyebrow text-rosedeep">Lifestyle</span>
+              <h3 class="font-thaihead text-2xl text-brown mt-2 mb-2">Hilltribe House</h3>
+              <p class="text-ink/65 text-sm leading-relaxed">เล่าเรื่องแบรนด์ผ่านวิถีธรรมชาติ สร้างฐานแฟนที่เหนียวแน่น</p>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-media" style="background:#2C3D17;">
+              <img src="assets/clients/estate.png" alt="ES Estate Khaoyai" />
+              <span class="case-arrow">↗</span>
+            </div>
+            <div class="p-7">
+              <span class="eyebrow text-rosedeep">Real Estate</span>
+              <h3 class="font-thaihead text-2xl text-brown mt-2 mb-2">ES Estate Khaoyai</h3>
+              <p class="text-ink/65 text-sm leading-relaxed">สื่อสารคุณค่าโครงการระดับลักชัวรีให้เข้าถึงกลุ่มเป้าหมายที่ใช่</p>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <a href="Dr Panjit.html" class="case-cover-link" aria-label="ดูผลงาน Dr. Panjit Consulting"></a>
+            <div class="case-media" style="background:#fff;">
+              <img src="assets/clients/panjit.jpg" alt="Panjit Consulting" style="padding:16%;" />
+              <span class="case-arrow">↗</span>
+            </div>
+            <div class="p-7">
+              <span class="eyebrow text-rosedeep">Education</span>
+              <h3 class="font-thaihead text-2xl text-brown mt-2 mb-2">Dr. Panjit Consulting</h3>
+              <p class="text-ink/65 text-sm leading-relaxed">วางภาพลักษณ์ผู้เชี่ยวชาญด้านการศึกษาให้น่าเชื่อถือและเข้าถึงง่าย</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== SECTOR 4 · Beauty & Health (combined) ===== -->
+      <div class="reveal" data-y="30">
+        <div class="sector-head">
+          <span class="sector-mark">04</span>
+          <span class="sector-name">ความงาม &amp; สุขภาพ — Beauty &amp; Health</span>
+          <span class="sector-line"></span>
+        </div>
+        <article class="combo-card">
+          <div class="combo-half" style="background:#fff;">
+            <img class="combo-logo" src="assets/clients/cosma-tight.jpg" alt="Cosma Health" />
+            <div class="combo-name">Cosma Health</div>
+            <p class="combo-desc">วางแบรนด์ด้านสุขภาพให้ดูน่าเชื่อถือ ทันสมัย และเป็นมืออาชีพ</p>
+          </div>
+          <div class="combo-half" style="background:#F7F0C0;">
+            <img class="combo-logo" src="assets/clients/opo.png" alt="Opo" />
+            <div class="combo-name">Opo</div>
+            <p class="combo-desc">สร้างแบรนด์ความงามให้มีบุคลิกชัดเจน เรียบหรู และจดจำง่าย</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="voices" class="py-16 lg:py-20">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2rem,3.8vw,3.2rem)] line-reveal">
+        <span class="inline-block">สิ่งที่พวกเขา<span class="gold-text">พูดถึงเรา</span></span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-7" data-reveal-group>
+      <figure class="bg-ivory border border-gold/20 rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark">”</span>
+        <blockquote class="font-thaihead text-[1.2rem] text-ink/85 leading-relaxed -mt-4 mb-6">
+          ครูเป้เปลี่ยนวิธีที่เรามองธุรกิจตัวเองไปเลย จากที่ไม่รู้จะเริ่มยังไง วันนี้แบรนด์เรามีตัวตนชัดและขายได้จริง
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-rose/40 grid place-items-center font-serif text-brown text-xl">ป</span>
+          <div><div class="text-ink font-medium">คุณแพรว</div><div class="text-xs text-ink/55">เจ้าของแบรนด์ความงาม</div></div>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-brown text-ivory rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark text-goldlight">”</span>
+        <blockquote class="font-thaihead text-[1.2rem] leading-relaxed -mt-4 mb-6">
+          ระบบการตลาดที่ครูเป้วางให้ทำให้ทีมเราทำงานง่ายขึ้นมาก ยอดขายโตขึ้นแบบที่ไม่เคยเป็นมาก่อน
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-gold/30 grid place-items-center font-serif text-ivory text-xl">ม</span>
+          <div><div class="font-medium">คุณมายด์</div><div class="text-xs text-ivory/60">ผู้ก่อตั้งร้านอาหาร</div></div>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-ivory border border-gold/20 rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark">”</span>
+        <blockquote class="font-thaihead text-[1.2rem] text-ink/85 leading-relaxed -mt-4 mb-6">
+          เธอไม่ได้แค่สอน แต่ลงมือทำไปกับเราจริง ๆ ความใส่ใจระดับนี้หาไม่ได้ง่าย ๆ คุ้มค่าทุกบาท
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-rose/40 grid place-items-center font-serif text-brown text-xl">น</span>
+          <div><div class="text-ink font-medium">คุณนุ่น</div><div class="text-xs text-ink/55">เจ้าของธุรกิจอสังหาฯ</div></div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Video reviews -->
+    <div class="mt-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="gold-rule rule-draw flex-1"></span>
+        <span class="eyebrow whitespace-nowrap">รีวิวจากลูกค้าจริง · วิดีโอ</span>
+        <span class="gold-rule rule-draw flex-1"></span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5" data-reveal-group>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F774052599035678%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 1"></iframe>
+        </div>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1280955217556111%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 2"></iframe>
+        </div>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2278922409180640%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 3"></iframe>
+        </div>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+          <iframe src="https://www.tiktok.com/player/v1/7603314707289705744?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="รีวิวลูกค้า — วิดีโอ 4 (TikTok)"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video lightbox -->
+<div class="vlightbox" id="vlightbox" aria-hidden="true">
+  <button class="vlightbox-close" id="vlightboxClose" aria-label="ปิด">✕</button>
+  <div class="vlightbox-stage" id="vlightboxStage">
+    <video class="vlightbox-video" id="vlightboxVideo" controls playsinline></video>
+    <div class="vlightbox-empty" id="vlightboxEmpty">
+      <span class="vlightbox-empty-icon">▶</span>
+      <p class="font-thaihead text-xl text-ivory mb-1" id="vlightboxName">วิดีโอรีวิว</p>
+      <p class="text-ivory/55 text-sm max-w-xs">ยังไม่มีไฟล์วิดีโอสำหรับคลิปนี้ — เพิ่มลิงก์วิดีโอใน <code class="text-goldlight">data-video</code> ของการ์ดเพื่อให้เล่นได้</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ COURSES (two boxes) ============ -->
+<section id="services" class="py-16 lg:py-20 bg-ivory/55 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow">คอร์สเรียนกับครูเป้</span>
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2rem,3.8vw,3.2rem)] line-reveal mt-4">
+        <span class="inline-block">สองคอร์สสู่<span class="gold-text">แบรนด์ที่ทรงพลัง</span></span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-7" data-reveal-group>
+      <article class="svc-card">
+        <div class="svc-index">01</div>
+        <h3 class="font-thaihead text-3xl text-brown mt-3 mb-4">CEO Branding</h3>
+        <p class="text-ink/72 leading-relaxed mb-7">
+          คอร์สสำหรับเจ้าของธุรกิจและผู้บริหารที่อยากปั้นตัวตนให้โดดเด่น
+          น่าเชื่อถือ และกลายเป็นแบรนด์ที่ลูกค้าจดจำผ่านตัวคุณเอง
+        </p>
+        <ul class="space-y-3 text-ink/70">
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> วางจุดยืนและภาพลักษณ์ของผู้นำ</li>
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> เล่าเรื่องตัวตนให้ทรงพลังบนโซเชียล</li>
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> สร้างคอนเทนต์ที่สะท้อนความเป็นผู้นำ</li>
+        </ul>
+        <a href="#contact" class="btn !px-0 mt-8 text-golddeep font-medium">
+          <span>ดูรายละเอียดคอร์ส</span><span class="btn-arrow">→</span>
+        </a>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-index">02</div>
+        <h3 class="font-thaihead text-3xl text-brown mt-3 mb-4">Brand Video</h3>
+        <p class="text-ink/72 leading-relaxed mb-7">
+          เรียนถ่ายและตัดต่อวิดีโอสำหรับแบรนด์ด้วยมือถือเครื่องเดียว
+          ตั้งแต่วางคอนเซ็ปต์ มุมกล้อง แสง ไปจนถึงการเล่าเรื่องให้คนหยุดดู
+        </p>
+        <ul class="space-y-3 text-ink/70">
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> เทคนิคถ่ายด้วยมือถือให้ดูโปร</li>
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> วางสคริปต์และเล่าเรื่องให้น่าติดตาม</li>
+          <li class="flex items-start gap-3"><span class="deco-dot mt-2.5"></span> ตัดต่อและลงคอนเทนต์ให้ปัง</li>
+        </ul>
+        <a href="#contact" class="btn !px-0 mt-8 text-golddeep font-medium">
+          <span>ดูรายละเอียดคอร์ส</span><span class="btn-arrow">→</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POWER BRANDING PLAN (single box) ============ -->
+<section id="plan" class="py-16 lg:py-24">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow">บริการพรีเมียม · ดูแลครบวงจร</span>
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2rem,3.8vw,3.2rem)] line-reveal mt-4">
+        <span class="inline-block"><span class="gold-text">Power Branding™</span> Plan</span>
+      </h2>
+    </div>
+
+    <article class="relative max-w-3xl mx-auto bg-brown text-ivory rounded-[26px] overflow-hidden shadow-[0_50px_90px_-44px_rgba(92,68,53,0.7)] reveal" data-y="40">
+      <div class="hero-watermark pointer-events-none absolute -right-6 -top-6 text-[10rem] leading-none opacity-[0.07] text-ivory select-none">★</div>
+      <div class="relative p-9 lg:p-12">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="eyebrow text-goldlight">โปรแกรมที่ปรึกษาส่วนตัว</span>
+            <h3 class="font-thaihead text-3xl lg:text-4xl mt-2">ปั้นแบรนด์ของคุณ<br/>แบบลงมือทำจริงกับครูเป้</h3>
+          </div>
+          <div class="text-right">
+            <div class="text-ivory/60 text-sm">เริ่มต้น</div>
+            <div class="font-serif text-goldlight text-[3.2rem] leading-none">฿150,000</div>
+          </div>
+        </div>
+
+        <p class="text-ivory/75 leading-relaxed mb-8 max-w-xl">
+          บริการที่ปรึกษาและลงมือทำแบบ exclusive — ครูเป้และทีมดูแลแบรนด์ของคุณ
+          ตั้งแต่วางกลยุทธ์ ตัวตน ไปจนถึงระบบการตลาดและคอนเทนต์ จนเห็นผลจริง
+        </p>
+
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-4 mb-10">
+          <li class="flex items-start gap-3 text-ivory/85"><span class="deco-dot mt-2.5"></span> วางกลยุทธ์แบรนด์และตัวตนเฉพาะบุคคล</li>
+          <li class="flex items-start gap-3 text-ivory/85"><span class="deco-dot mt-2.5"></span> ระบบคอนเทนต์และการตลาดครบวงจร</li>
+          <li class="flex items-start gap-3 text-ivory/85"><span class="deco-dot mt-2.5"></span> ดูแลใกล้ชิดโดยครูเป้และทีมตลอดโปรแกรม</li>
+          <li class="flex items-start gap-3 text-ivory/85"><span class="deco-dot mt-2.5"></span> เหมาะกับเจ้าของธุรกิจที่ต้องการผลลัพธ์ระดับสูง</li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary">
+          <span>ปรึกษาแพ็กเกจนี้</span><span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONTACT / CTA ============ -->
+<section id="contact" class="relative py-28 lg:py-40 overflow-hidden bg-brown text-ivory">
+  <div class="hero-watermark pointer-events-none absolute inset-0 flex items-center justify-center text-[16vw] opacity-[0.06] text-ivory whitespace-nowrap">RATTIYA</div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="deco-dot"></span><span class="eyebrow text-goldlight">เริ่มต้นวันนี้</span><span class="deco-dot"></span>
+    </div>
+    <h2 class="font-thaihead font-medium leading-[1.1] text-[clamp(2.2rem,5vw,4rem)] line-reveal">
+      <span class="inline-block">พร้อมสร้าง<span class="gold-text">แบรนด์</span>ของคุณ</span><br/>
+      <span class="inline-block">ให้ทรงพลังหรือยัง?</span>
+    </h2>
+    <p class="reveal text-ivory/75 text-lg mt-7 max-w-xl mx-auto" data-y="26">
+      ปรึกษาครูเป้ฟรี ไม่มีข้อผูกมัด — มาคุยกันว่าแบรนด์ของคุณจะไปได้ไกลแค่ไหน
+    </p>
+
+    <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-4" data-y="26">
+      <a href="#" class="btn btn-primary"><span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span></a>
+      <a href="#" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>ปูเป้ รัตติยา — Power Branding</span></a>
+    </div>
+
+    <div class="reveal mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-ivory/60" data-y="20">
+      <span>FB : ปูเป้ รัตติยา – Power Branding</span>
+      <span class="hidden sm:inline w-px h-4 bg-ivory/25"></span>
+      <span>Line : @bosspae</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <div class="font-script gold-text text-4xl leading-none">Rattiya</div>
+      <div class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</div>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="#services">บริการ</a>
+      <a class="footer-link" href="#clients">ลูกค้า</a>
+      <a class="footer-link" href="#work">ผลงาน</a>
+      <a class="footer-link" href="#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+  /* ---- Build logo tiles from real client assets ---- */
+  const CLIENTS = [
+    ["butterfly","Butterfly"],["paomalee","Pao Malee"],["genius","Genius Coaching"],
+    ["studychula","Study Chula"],["unionkk","Union KK"],["laocafe","The Lao Cafe"],
+    ["innercar","Inner Car"],["chime","Chime"],["thezin","The Zin"],
+    ["primproper","Prim & Proper"],["mewaffle","ME Waffle"],["opo","Opo"],
+    ["kinaraidee","Kin A Rai Dee"],["yuxing","Yu Xing"],["hilltribe","Hilltribe House"],
+    ["preston","Preston"],["gala","Gala Diamond"],["estate","Estate Khaoyai"],
+    ["ddhouse","DD House"],["aframe","A Frame"],["amercook","Amercook"],
+    ["namprik","น้ำพริก 3 หนุ่ม"],["cosma","Cosma Health"],["panjit","Panjit Consulting"],["kitchenthai","KitchenThai"],
+    ["elnat","Elnat Skin Beauty"],["krumegan","Kru Megan"],["greenleaf","ใบเตย"]
+  ];
+  const tile = (slug, name) =>
+    `<div class="logo-tile" title="${name}"><img src="assets/clients/${slug}.jpg" alt="${name}" loading="lazy"></div>`;
+  const half1 = CLIENTS.slice(0, 12), half2 = CLIENTS.slice(12);
+  const html1 = half1.map(c => tile(...c)).join("");
+  const html2 = half2.map(c => tile(...c)).join("");
+  document.getElementById("row1").innerHTML = html1;
+  document.getElementById("row1b").innerHTML = html1;
+  document.getElementById("row2").innerHTML = html2 + half1.slice(0,4).map(c=>tile(...c)).join("");
+  document.getElementById("row2b").innerHTML = html2 + half1.slice(0,4).map(c=>tile(...c)).join("");
+
+  /* ---- JS marquee: constant auto-scroll, no hover-pause, scroll speeds it up ---- */
+  (function () {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const marquees = [
+      { el: document.querySelector("#row1").closest(".marquee"), dir: -1 },
+      { el: document.querySelector("#row2").closest(".marquee"), dir:  1 },
+    ];
+    let boost = 0;              // extra px/sec from scrolling, decays over time
+    let lastY = window.scrollY;
+
+    function addBoost(amount) {
+      // cap so it never runs away; scrolling either way speeds it up (gentle)
+      boost = Math.min(boost + Math.abs(amount) * 2, 800);
+    }
+    window.addEventListener("scroll", () => {
+      addBoost(window.scrollY - lastY);
+      lastY = window.scrollY;
+    }, { passive: true });
+    window.addEventListener("wheel", (e) => addBoost(e.deltaY * 0.2), { passive: true });
+
+    const items = marquees.map(({ el, dir }) => {
+      const tracks = [...el.querySelectorAll(".track")];
+      tracks.forEach((t) => (t.style.animation = "none")); // take over from CSS
+      return { tracks, dir, x: 0, w: 0 };
+    });
+    function measure() { items.forEach((it) => (it.w = it.tracks[0].getBoundingClientRect().width)); }
+    measure();
+    window.addEventListener("resize", measure);
+    setTimeout(measure, 800); // re-measure once images/layout settle
+
+    const BASE = 42; // px/sec baseline drift
+    let last = performance.now();
+    function frame(now) {
+      const dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+      const speed = reduce ? 0 : BASE + boost;
+      boost *= 0.94; // ease back to baseline
+      if (boost < 0.5) boost = 0;
+      items.forEach((it) => {
+        if (!it.w) return;
+        it.x += speed * dt;
+        const m = ((it.x % it.w) + it.w) % it.w;
+        const tx = it.dir < 0 ? -m : m - it.w;
+        it.tracks.forEach((t) => (t.style.transform = `translateX(${tx}px)`));
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+</script>
+<script src="image-slot.js"></script>
+<script>
+  /* ---- Video review lightbox ---- */
+  (function () {
+    const box = document.getElementById("vlightbox");
+    const stage = document.getElementById("vlightboxStage");
+    const video = document.getElementById("vlightboxVideo");
+    const empty = document.getElementById("vlightboxEmpty");
+    const nameEl = document.getElementById("vlightboxName");
+    const closeBtn = document.getElementById("vlightboxClose");
+    if (!box) return;
+
+    function open(src, name) {
+      nameEl.textContent = name ? (name + " — รีวิว") : "วิดีโอรีวิว";
+      if (src) {
+        video.src = src;
+        video.classList.add("active");
+        empty.classList.add("hidden");
+        video.play().catch(() => {});
+      } else {
+        video.removeAttribute("src");
+        video.classList.remove("active");
+        empty.classList.remove("hidden");
+      }
+      box.classList.add("open");
+      box.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function close() {
+      box.classList.remove("open");
+      box.setAttribute("aria-hidden", "true");
+      video.pause();
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".video-card").forEach((card) => {
+      card.addEventListener("click", () => open(card.dataset.video, card.dataset.name));
+    });
+    closeBtn.addEventListener("click", close);
+    box.addEventListener("click", (e) => { if (!stage.contains(e.target)) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  })();
+</script>
+<script src="app.js"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#F5EEE5"/>
+    <text x="50" y="58" font-family="Pinyon Script, cursive" font-size="34" fill="#B8956A" text-anchor="middle">R</text>
+  </svg>
+</template>
+
+</body>
+</html>

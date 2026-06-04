@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Panjit Consulting — ผลงานการสร้างแบรนด์ · Power Branding™</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          kanit: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .hh-hero { position: relative; overflow: hidden; }
+  .hh-watermark {
+    font-family: "Cormorant Garamond", serif; font-weight: 700; text-transform: uppercase;
+    color: var(--cream-deep); letter-spacing: .02em; line-height: .82; user-select: none;
+  }
+  .hh-frame {
+    border-radius: 26px; overflow: hidden; position: relative;
+    box-shadow: 0 50px 90px -42px rgba(92,68,53,0.6);
+    border: 1px solid rgba(184,149,106,0.25);
+  }
+  .hh-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hh-back {
+    display:inline-flex; align-items:center; gap:.5rem; font-size:.92rem;
+    color: var(--brown); font-family:"Kanit",sans-serif; transition: gap .35s ease, color .35s ease;
+  }
+  .hh-back:hover { gap:.85rem; color: var(--gold-deep); }
+
+  /* portrait tile row (videos + portrait photos) */
+  .hh-row { display:flex; flex-wrap:wrap; justify-content:center; gap: clamp(1rem,2vw,1.5rem); }
+  .hh-row .hh-tile { width: clamp(190px, 22vw, 260px); }
+  .hh-tile {
+    aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d;
+    border:1px solid rgba(184,149,106,0.22);
+    box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6);
+  }
+  .hh-tile img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .7s cubic-bezier(.3,0,.2,1); }
+  .hh-tile:hover img { transform: scale(1.05); }
+  .hh-tile iframe { width:100%; height:100%; border:0; display:block; }
+
+  /* landscape gallery */
+  .pj-land { display:grid; grid-template-columns: repeat(2,1fr); gap: clamp(1rem,2vw,1.4rem); }
+  @media (max-width: 680px){ .pj-land { grid-template-columns: 1fr; } }
+  .pj-land .hh-frame { aspect-ratio: 3/2; }
+</style>
+</head>
+
+<body class="font-thai">
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html#hero" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
+      <span>ปรึกษาฟรี</span>
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO (only section with text) ============ -->
+<section id="hero" class="hh-hero min-h-screen flex items-center pt-32 pb-20">
+  <div class="hh-watermark pointer-events-none absolute top-28 left-0 right-0 text-center text-[14vw] lg:text-[10vw] z-0 whitespace-nowrap">
+    DR. PANJIT
+  </div>
+
+  <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.02fr_0.98fr] gap-14 lg:gap-16 items-center w-full">
+    <div>
+      <a href="Rattiya Homepage.html#work" class="hh-back mb-7"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
+
+      <img src="assets/panjit/logo.png" alt="Panjit Consulting" class="reveal" data-y="16" style="width:clamp(120px,13vw,150px); height:auto; display:block; margin:0 0 1.4rem; filter:drop-shadow(0 12px 22px rgba(92,68,53,0.2));" />
+
+      <div class="hero-eyebrow flex items-center gap-3 mb-6">
+        <span class="deco-dot"></span>
+        <span class="eyebrow">Case Study · Consulting &amp; Education</span>
+      </div>
+
+      <h1 class="font-thaihead font-medium text-ink leading-[1.16] text-[clamp(2.4rem,5.2vw,4.4rem)]">
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap"><span class="gold-text font-sriracha" style="font-size:1.1em;">Dr. Panjit</span></span></span>
+        <span class="hero-mask mask-line"><span>Consulting</span></span>
+      </h1>
+
+      <p class="hero-sub mt-7 max-w-[33rem] text-[1.08rem] leading-relaxed text-ink/75">
+        วางภาพลักษณ์ผู้เชี่ยวชาญด้านการศึกษาและที่ปรึกษา ให้ดูน่าเชื่อถือ
+        ทันสมัย และเข้าถึงง่าย ผ่านการเล่าเรื่องและคอนเทนต์ที่เป็นตัวเอง
+      </p>
+    </div>
+
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="hh-frame w-[94%] sm:w-[84%] lg:w-[100%] max-w-[560px]" style="aspect-ratio:3/4;">
+        <img src="assets/panjit/p2.jpg" alt="Dr. Panjit กับครูเป้" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS + PORTRAIT PHOTOS ============ -->
+<section class="py-20 lg:py-24 bg-ivory/50 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal" data-y="26">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="section-num">01</span><span class="eyebrow">เบื้องหลัง &amp; คอนเทนต์</span>
+      </div>
+      <h2 class="font-thaihead font-medium text-ink leading-tight text-[clamp(1.8rem,3.2vw,2.6rem)]">
+        ภาพและ<span class="gold-text">วิดีโอ</span>จากการทำงาน
+      </h2>
+    </div>
+
+    <div class="hh-row" data-reveal-group>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1547993780233384%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 1"></iframe>
+      </div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F779828795209600%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 2"></iframe>
+      </div>
+      <div class="hh-tile"><img src="assets/panjit/p1.jpg" alt="Dr. Panjit กับครูเป้ พูดคุยเรื่องแบรนด์" /></div>
+      <div class="hh-tile"><img src="assets/panjit/portrait.jpg" alt="Dr. Panjit — ที่ปรึกษาด้านการศึกษา" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LANDSCAPE GALLERY ============ -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="pj-land" data-reveal-group>
+      <div class="hh-frame"><img src="assets/panjit/l1.jpg" alt="เบื้องหลังการถ่ายทำ Dr. Panjit" /></div>
+      <div class="hh-frame"><img src="assets/panjit/l2.jpg" alt="บรรยากาศการสัมภาษณ์ Dr. Panjit" /></div>
+      <div class="hh-frame"><img src="assets/panjit/l3.jpg" alt="Dr. Panjit ระหว่างการสัมภาษณ์" /></div>
+      <div class="hh-frame"><img src="assets/panjit/l4.jpg" alt="Dr. Panjit กับครูเป้" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative overflow-hidden py-24 lg:py-32 bg-brown text-ivory">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="deco-dot"></span><span class="eyebrow text-goldlight">แบรนด์ของคุณคือรายต่อไป</span><span class="deco-dot"></span>
+    </div>
+    <h2 class="font-thaihead font-medium leading-[1.12] text-[clamp(2rem,4.6vw,3.6rem)]">
+      อยากให้ภาพลักษณ์ของคุณ<br/><span class="gold-text">น่าเชื่อถือ</span>แบบนี้ไหม?
+    </h2>
+    <p class="reveal text-ivory/75 text-lg mt-7 max-w-xl mx-auto" data-y="24">
+      ปรึกษาครูเป้ฟรี ไม่มีข้อผูกมัด — มาคุยกันว่าแบรนด์ของคุณจะไปได้ไกลแค่ไหน
+    </p>
+    <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-4" data-y="24">
+      <a href="Rattiya Homepage.html#contact" class="btn btn-primary"><span>เริ่มสร้างแบรนด์ของคุณ</span><span class="btn-arrow">→</span></a>
+      <a href="Rattiya Homepage.html#work" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>ดูผลงานอื่น ๆ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <div class="font-script gold-text text-4xl leading-none">Rattiya</div>
+      <div class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</div>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+      <a class="footer-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="footer-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#F5EEE5"/>
+    <text x="50" y="60" font-family="Pinyon Script, cursive" font-size="30" fill="#B8956A" text-anchor="middle">P</text>
+  </svg>
+</template>
+
+</body>
+</html>
