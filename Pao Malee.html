@@ -58,22 +58,14 @@
   .pm-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
   .pm-row.videos .pm-tile { width: clamp(200px, 22vw, 270px); }
 
-  /* Single scrollable row for photos */
+  /* All 6 photos in one visible row */
   .pm-row.pics {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 1rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: unset;
+    justify-content: unset;
   }
-  .pm-row.pics::-webkit-scrollbar { height: 4px; }
-  .pm-row.pics::-webkit-scrollbar-track { background: rgba(184,149,106,0.1); border-radius: 999px; }
-  .pm-row.pics::-webkit-scrollbar-thumb { background: rgba(184,149,106,0.5); border-radius: 999px; }
-  .pm-row.pics .pm-tile {
-    flex: 0 0 clamp(160px, 18vw, 210px);
-    scroll-snap-align: start;
-  }
+  .pm-row.pics .pm-tile { width: 100%; }
   .pm-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; background: #16110d;
     border: 1px solid rgba(184,149,106,0.22);
