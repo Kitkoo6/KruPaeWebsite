@@ -36,20 +36,27 @@
 
 <link rel="stylesheet" href="styles.css" />
 <style>
-/* ── Hero: mobile & iPad only (under 1024px) ─────────────────
-   Image above text, all text centred.
-   Desktop (1024px+) is completely untouched.
+/* ── Hero: mobile & iPad only (under 1024px) ──────────────────
+   Layout order: eyebrow → portrait → h1 + rest (all centred).
+   display:contents on hero-copy lets each child be ordered
+   independently. Desktop (1024px+) is untouched.
    ─────────────────────────────────────────────────────────── */
 @media (max-width: 1023px) {
-  /* Push portrait to the top of the single-column grid */
-  #hero .hero-portrait { order: -1; }
+  /* Remove hero-copy's box so its children join the grid directly */
+  #hero .hero-copy { display: contents; }
 
-  /* Centre every text block */
-  #hero .hero-copy { text-align: center; }
-  #hero .hero-copy .hero-eyebrow { justify-content: center; }
-  #hero .hero-copy .hero-sub    { margin-inline: auto; }
-  #hero .hero-copy .hero-cta    { justify-content: center; }
-  #hero .hero-copy .hero-stats  { justify-content: center; }
+  /* 1 — Eyebrow sits above the image */
+  #hero .hero-copy .hero-eyebrow { order: -2; justify-content: center; }
+
+  /* 2 — Portrait comes next; margin-top reveals the POWER BRANDING watermark */
+  #hero .hero-portrait { order: -1; margin-top: 2.5rem; }
+
+  /* 3 — Remaining text follows in DOM order, centred */
+  #hero .hero-copy h1,
+  #hero .hero-copy .hero-mask  { text-align: center; }
+  #hero .hero-copy .hero-sub   { text-align: center; margin-inline: auto; }
+  #hero .hero-copy .hero-cta   { justify-content: center; }
+  #hero .hero-copy .hero-stats { justify-content: center; }
 }
 </style>
 </head>
