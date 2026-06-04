@@ -157,7 +157,7 @@ body {
   line-height: .82;
   user-select: none;
 }
-.mask-line { overflow: hidden; display: block; padding: 0.12em 0; }
+.mask-line { overflow: hidden; display: block; padding: 0.4em 0 0.12em; }
 .mask-line > span { display: block; line-height: 1.22; will-change: transform; }
 
 .portrait-frame { position: relative; }
