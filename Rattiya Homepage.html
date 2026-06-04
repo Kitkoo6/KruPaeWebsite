@@ -37,34 +37,26 @@
 <link rel="stylesheet" href="styles.css" />
 <style>
 /* ── Hero: mobile & iPad only (under 1024px) ──────────────────
-   All changes are inside this one media query.
-   Desktop (1024px+) is completely untouched.
+   Layout order: eyebrow → portrait → h1 + rest (all centred).
+   display:contents on hero-copy lets each child be ordered
+   independently. Desktop (1024px+) is untouched.
    ─────────────────────────────────────────────────────────── */
 @media (max-width: 1023px) {
+  /* Remove hero-copy's box so its children join the grid directly */
+  #hero .hero-copy { display: contents; }
 
-  /* 1 ── Extra top padding so POWER BRANDING letters fully clear the nav */
-  #hero { padding-top: 9rem; }
-
-  /* 2 ── Reorder: eyebrow → portrait → h1 + rest
-          display:contents removes hero-copy's box so each child
-          participates in the grid independently */
-  #hero .hero-copy               { display: contents; }
+  /* 1 — Eyebrow sits above the image */
   #hero .hero-copy .hero-eyebrow { order: -2; justify-content: center; }
-  #hero .hero-portrait           { order: -1; margin-top: 1.25rem; }
 
-  /* 3 ── Centre all remaining text */
+  /* 2 — Portrait comes next; margin-top reveals the POWER BRANDING watermark */
+  #hero .hero-portrait { order: -1; margin-top: 2.5rem; }
+
+  /* 3 — Remaining text follows in DOM order, centred */
   #hero .hero-copy h1,
-  #hero .hero-copy .hero-mask    { text-align: center; }
-  #hero .hero-copy .hero-sub     { text-align: center; margin-inline: auto; }
-  #hero .hero-copy .hero-cta     { justify-content: center; }
-  #hero .hero-copy .hero-stats   { justify-content: center; }
-
-  /* 4 ── Tighter vertical rhythm between h1 → Power Branding → paragraph */
-  #hero .hero-copy > .hero-mask  { margin-top: 0.25rem; }
-  #hero .hero-copy .hero-sub     { margin-top: 0.75rem; }
-  #hero .hero-copy .hero-cta     { margin-top: 1.25rem; }
-  #hero .hero-copy .hero-stats   { margin-top: 1.75rem; }
-
+  #hero .hero-copy .hero-mask  { text-align: center; }
+  #hero .hero-copy .hero-sub   { text-align: center; margin-inline: auto; }
+  #hero .hero-copy .hero-cta   { justify-content: center; }
+  #hero .hero-copy .hero-stats { justify-content: center; }
 }
 </style>
 </head>
@@ -181,7 +173,7 @@
         <div class="portrait-ring"></div>
         <div class="portrait-ring two"></div>
         <div class="absolute inset-0 rounded-[30px] overflow-hidden shadow-[0_50px_90px_-40px_rgba(92,68,53,0.6)]">
-          <img class="hero-portrait-img w-full h-full object-cover scale-[1.06]" src="assets/rattiya/portrait-hero.png" alt="ครูเป้ รัตติยา" />
+          <img class="hero-portrait-img w-full h-full object-cover scale-[1.06]" src="assets/rattiya/portrait-hero-new.jpg" alt="ครูเป้ รัตติยา" />
         </div>
         <!-- floating badge -->
         <div class="hero-float absolute -left-6 lg:-left-12 top-10 bg-ivory/95 backdrop-blur rounded-2xl px-5 py-4 shadow-[0_24px_50px_-28px_rgba(92,68,53,0.7)] border border-gold/25">
