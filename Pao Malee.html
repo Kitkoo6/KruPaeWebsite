@@ -58,7 +58,24 @@
   .pm-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
   .pm-row.videos .pm-tile { width: clamp(200px, 22vw, 270px); }
 
-  .pm-row.pics .pm-tile { width: clamp(140px, 17vw, 210px); }
+  .pm-pics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+  .pm-pics-grid .pm-tile { width: 100%; }
+  .pm-pics-featured {
+    grid-column: 1 / -1;
+    height: clamp(200px, 28vw, 380px);
+    border-radius: 20px; overflow: hidden;
+    background: #16110d;
+    border: 1px solid rgba(184,149,106,0.22);
+    box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6);
+  }
+  .pm-pics-featured img {
+    width: 100%; height: 100%;
+    object-fit: contain; display: block;
+  }
   .pm-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; background: #16110d;
     border: 1px solid rgba(184,149,106,0.22);
@@ -203,16 +220,12 @@
       </div>
     </div>
 
-    <div class="pm-row pics mt-5 lg:mt-7" data-reveal-group>
+    <div class="pm-pics-grid mt-5 lg:mt-7" data-reveal-group>
       <div class="pm-tile"><img src="assets/bfpm/pm3.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm5.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm8.jpg" alt="เปามาลี" /></div>
-    </div>
-
-    <!-- pm6 featured row -->
-    <div class="reveal mt-4" data-y="26" style="max-width:720px;margin-inline:auto;">
-      <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(184,149,106,0.22);box-shadow:0 30px 58px -38px rgba(92,68,53,0.6);">
-        <img src="assets/bfpm/pm6.jpg" alt="เปามาลี" style="width:100%;height:auto;display:block;" />
+      <div class="pm-pics-featured">
+        <img src="assets/bfpm/pm6.jpg" alt="เปามาลี" />
       </div>
     </div>
   </div>
