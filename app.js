@@ -165,4 +165,27 @@
   });
 
   ScrollTrigger.refresh();
+
+  /* ---------- Mobile hamburger menu ---------- */
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileNav = document.getElementById("mobileNav");
+  if (mobileMenuBtn && mobileNav) {
+    const openMenu = () => {
+      mobileNav.classList.add("open");
+      mobileMenuBtn.classList.add("open");
+      mobileMenuBtn.setAttribute("aria-label", "ปิดเมนู");
+      document.body.style.overflow = "hidden";
+    };
+    const closeMenu = () => {
+      mobileNav.classList.remove("open");
+      mobileMenuBtn.classList.remove("open");
+      mobileMenuBtn.setAttribute("aria-label", "เปิดเมนู");
+      document.body.style.overflow = "";
+    };
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileNav.classList.contains("open") ? closeMenu() : openMenu();
+    });
+    mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
+  }
 })();

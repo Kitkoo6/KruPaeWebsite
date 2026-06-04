@@ -534,3 +534,78 @@ body {
 
 /* misc */
 .deco-dot { width:6px; height:6px; border-radius:999px; background: var(--gold); display:inline-block; }
+
+/* ============================================================
+   Mobile Navigation — hamburger + full-screen overlay
+   ============================================================ */
+
+/* Hamburger button — hidden on desktop, shown on mobile */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: none; border: none; cursor: pointer;
+  padding: 4px; flex-shrink: 0;
+}
+.mobile-menu-btn span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--brown); border-radius: 999px;
+  transition: transform 0.35s cubic-bezier(.4,0,.15,1), opacity 0.35s;
+  transform-origin: center;
+}
+.mobile-menu-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.mobile-menu-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.mobile-menu-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+@media (max-width: 1023px) { .mobile-menu-btn { display: flex; } }
+
+/* Mobile nav full-screen overlay */
+.mobile-nav {
+  position: fixed; inset: 0; z-index: 49;
+  background: rgba(251,247,240,0.97); backdrop-filter: blur(18px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.2rem;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 0.38s cubic-bezier(.4,0,.15,1), visibility 0.38s;
+}
+.mobile-nav.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.mobile-nav-link {
+  font-family: "Kanit", sans-serif; font-weight: 400;
+  font-size: clamp(1.35rem, 5vw, 1.75rem); color: var(--brown);
+  padding: 0.6rem 2.2rem; border-radius: 14px;
+  transition: color 0.25s, background 0.25s; letter-spacing: 0.02em;
+}
+.mobile-nav-link:hover, .mobile-nav-link:active {
+  color: var(--gold-deep); background: rgba(184,149,106,0.1);
+}
+.mobile-nav-divider {
+  width: 40px; height: 1px; background: rgba(184,149,106,0.35); margin: 0.8rem 0;
+}
+
+/* ============================================================
+   Mobile fixes
+   ============================================================ */
+
+/* Hide decorative floating badges on small phones — they clip awkwardly */
+@media (max-width: 639px) {
+  .hero-float { display: none !important; }
+}
+
+/* Homepage About section — the stat badge sits -6rem below the image,
+   so we add bottom padding on mobile to stop it overlapping the next row */
+@media (max-width: 1023px) {
+  .about-img-wrap { padding-bottom: 7rem; }
+}
+
+/* Logo marquee tiles — slightly smaller on mobile */
+@media (max-width: 640px) {
+  .logo-tile { width: 110px; height: 110px; }
+}
+
+/* Flagship card — reduce body padding on mobile */
+@media (max-width: 480px) {
+  .flagship-body { padding: 1.6rem 1.2rem 2rem; }
+}

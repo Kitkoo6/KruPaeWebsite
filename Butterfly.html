@@ -67,6 +67,11 @@
   .bf-tile:hover img { transform: scale(1.05); }
   .bf-tile iframe { width: 100%; height: 100%; border: 0; display: block; }
 
+  @media (max-width: 540px) {
+    .bf-row.videos .bf-tile,
+    .bf-row.pics   .bf-tile { width: min(85vw, 320px); }
+  }
+
   .bf-pullquote {
     font-family: "Cormorant Garamond", serif; font-style: italic;
     font-size: clamp(1.5rem,3.2vw,2.4rem); line-height: 1.4; color: var(--brown);
@@ -93,12 +98,29 @@
       <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
       <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
     </nav>
-    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
-      <span>ปรึกษาฟรี</span>
-      <span class="btn-arrow">→</span>
-    </a>
+    <div class="flex items-center gap-2">
+      <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+        <span>ปรึกษาฟรี</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <button class="lg:hidden mobile-menu-btn" id="mobileMenuBtn" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a class="mobile-nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+  <a class="mobile-nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+  <a class="mobile-nav-link" href="Rattiya Homepage.html#clients">ลูกค้า</a>
+  <a class="mobile-nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+  <a class="mobile-nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+  <div class="mobile-nav-divider"></div>
+  <a href="Rattiya Homepage.html#contact" class="btn btn-primary">
+    <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+  </a>
+</div>
 
 <!-- ============ HERO ============ -->
 <section id="hero" class="bf-hero min-h-screen flex items-center pt-32 pb-20">

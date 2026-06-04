@@ -58,12 +58,31 @@
       <a class="nav-link" href="#voices">รีวิว</a>
       <a class="nav-link" href="#contact">ติดต่อ</a>
     </nav>
-    <a href="#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem]">
-      <span>ปรึกษาฟรี</span>
-      <span class="btn-arrow">→</span>
-    </a>
+    <div class="flex items-center gap-2">
+      <a href="#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+        <span>ปรึกษาฟรี</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <button class="lg:hidden mobile-menu-btn" id="mobileMenuBtn" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <a class="mobile-nav-link" href="#about">เกี่ยวกับ</a>
+  <a class="mobile-nav-link" href="#services">บริการ</a>
+  <a class="mobile-nav-link" href="#clients">ลูกค้า</a>
+  <a class="mobile-nav-link" href="#work">ผลงาน</a>
+  <a class="mobile-nav-link" href="#voices">รีวิว</a>
+  <a class="mobile-nav-link" href="#contact">ติดต่อ</a>
+  <div class="mobile-nav-divider"></div>
+  <a href="#contact" class="btn btn-primary">
+    <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+  </a>
+</div>
 
 <!-- ============ HERO ============ -->
 <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
@@ -178,7 +197,7 @@
 <!-- ============ ABOUT ============ -->
 <section id="about" class="py-16 lg:py-20">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
-    <div class="relative reveal" data-x="-40" data-y="0">
+    <div class="about-img-wrap relative reveal" data-x="-40" data-y="0">
       <div class="rounded-[20px] overflow-hidden shadow-[0_50px_90px_-46px_rgba(92,68,53,0.6)] border border-gold/20">
         <img src="assets/rattiya/banner.jpg" alt="Personal Branding by Rattiya" class="w-full" />
       </div>
