@@ -37,26 +37,34 @@
 <link rel="stylesheet" href="styles.css" />
 <style>
 /* ── Hero: mobile & iPad only (under 1024px) ──────────────────
-   Layout order: eyebrow → portrait → h1 + rest (all centred).
-   display:contents on hero-copy lets each child be ordered
-   independently. Desktop (1024px+) is untouched.
+   All changes are inside this one media query.
+   Desktop (1024px+) is completely untouched.
    ─────────────────────────────────────────────────────────── */
 @media (max-width: 1023px) {
-  /* Remove hero-copy's box so its children join the grid directly */
-  #hero .hero-copy { display: contents; }
 
-  /* 1 — Eyebrow sits above the image */
+  /* 1 ── Extra top padding so POWER BRANDING letters fully clear the nav */
+  #hero { padding-top: 9rem; }
+
+  /* 2 ── Reorder: eyebrow → portrait → h1 + rest
+          display:contents removes hero-copy's box so each child
+          participates in the grid independently */
+  #hero .hero-copy               { display: contents; }
   #hero .hero-copy .hero-eyebrow { order: -2; justify-content: center; }
+  #hero .hero-portrait           { order: -1; margin-top: 1.25rem; }
 
-  /* 2 — Portrait comes next; margin-top reveals the POWER BRANDING watermark */
-  #hero .hero-portrait { order: -1; margin-top: 2.5rem; }
-
-  /* 3 — Remaining text follows in DOM order, centred */
+  /* 3 ── Centre all remaining text */
   #hero .hero-copy h1,
-  #hero .hero-copy .hero-mask  { text-align: center; }
-  #hero .hero-copy .hero-sub   { text-align: center; margin-inline: auto; }
-  #hero .hero-copy .hero-cta   { justify-content: center; }
-  #hero .hero-copy .hero-stats { justify-content: center; }
+  #hero .hero-copy .hero-mask    { text-align: center; }
+  #hero .hero-copy .hero-sub     { text-align: center; margin-inline: auto; }
+  #hero .hero-copy .hero-cta     { justify-content: center; }
+  #hero .hero-copy .hero-stats   { justify-content: center; }
+
+  /* 4 ── Tighter vertical rhythm between h1 → Power Branding → paragraph */
+  #hero .hero-copy > .hero-mask  { margin-top: 0.25rem; }
+  #hero .hero-copy .hero-sub     { margin-top: 0.75rem; }
+  #hero .hero-copy .hero-cta     { margin-top: 1.25rem; }
+  #hero .hero-copy .hero-stats   { margin-top: 1.75rem; }
+
 }
 </style>
 </head>
