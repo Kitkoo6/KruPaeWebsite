@@ -58,14 +58,7 @@
   .pm-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
   .pm-row.videos .pm-tile { width: clamp(200px, 22vw, 270px); }
 
-  /* All 6 photos in one visible row */
-  .pm-row.pics {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    flex-wrap: unset;
-    justify-content: unset;
-  }
-  .pm-row.pics .pm-tile { width: 100%; }
+  .pm-row.pics .pm-tile { width: clamp(140px, 17vw, 210px); }
   .pm-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; background: #16110d;
     border: 1px solid rgba(184,149,106,0.22);
@@ -211,7 +204,6 @@
     </div>
 
     <div class="pm-row pics mt-5 lg:mt-7" data-reveal-group>
-      <div class="pm-tile"><img src="assets/bfpm/pm1.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm3.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm4.jpg" alt="เปามาลี" /></div>
       <div class="pm-tile"><img src="assets/bfpm/pm5.jpg" alt="เปามาลี" /></div>
