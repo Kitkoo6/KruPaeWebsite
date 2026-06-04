@@ -127,6 +127,21 @@
 
 <body class="font-thai">
 
+<!-- Facebook JS SDK -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({ xfbml: true, version: 'v22.0' });
+  };
+  (function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(d.getElementById(id))return;
+    js=d.createElement(s);js.id=id;
+    js.src="https://connect.facebook.net/th_TH/sdk.js";
+    fjs.parentNode.insertBefore(js,fjs);
+  }(document,'script','facebook-jssdk'));
+</script>
+
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
@@ -213,13 +228,13 @@
 
     <div class="hh-row pj-videos" data-reveal-group>
       <div class="hh-tile">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1547993780233384%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 1"></iframe>
+        <div class="fb-video" data-href="https://www.facebook.com/reel/1547993780233384/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
       </div>
       <div class="hh-tile">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F779828795209600%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 2"></iframe>
+        <div class="fb-video" data-href="https://www.facebook.com/reel/779828795209600/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
       </div>
       <div class="hh-tile">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4444237742495149%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 3"></iframe>
+        <div class="fb-video" data-href="https://www.facebook.com/reel/4444237742495149/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
       </div>
     </div>
 

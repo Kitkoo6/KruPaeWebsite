@@ -45,6 +45,13 @@
   /* Remove hero-copy's box so its children join the grid directly */
   #hero .hero-copy { display: contents; }
 
+  /* 0 — Name tag: first item, only visible on mobile */
+  .hero-name-mobile { display: none; }
+  #hero .hero-copy .hero-name-mobile {
+    display: flex; align-items: baseline; justify-content: center;
+    order: -3; margin-bottom: 0.2rem;
+  }
+
   /* 1 — Eyebrow sits above the image */
   #hero .hero-copy .hero-eyebrow { order: -2; justify-content: center; }
 
@@ -127,6 +134,11 @@
   <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-10 items-center w-full">
     <!-- copy -->
     <div class="hero-copy">
+      <div class="hero-name-mobile">
+        <span class="font-thaihead font-medium text-ink/80 text-[3rem] tracking-wide">ปูเป้ รัตติยา</span>
+        <span class="font-script gold-text text-[4.4rem] leading-none ml-2" style="padding-bottom:0.25em; display:inline-block;">Power Branding</span>
+      </div>
+
       <div class="hero-eyebrow flex items-center gap-3 mb-7">
         <span class="deco-dot"></span>
         <span class="eyebrow">Personal Branding &amp; Marketing Strategy</span>
@@ -446,16 +458,16 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5" data-reveal-group>
-        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
-          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F774052599035678%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 1"></iframe>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)] fb-review-tile" style="aspect-ratio:267/476;">
+          <div class="fb-video" data-href="https://www.facebook.com/reel/774052599035678/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
         </div>
-        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
-          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1280955217556111%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 2"></iframe>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)] fb-review-tile" style="aspect-ratio:267/476;">
+          <div class="fb-video" data-href="https://www.facebook.com/reel/1280955217556111/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
         </div>
-        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
-          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1465195941283315%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:0;display:block" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="รีวิวลูกค้า — วิดีโอ 3"></iframe>
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)] fb-review-tile" style="aspect-ratio:267/476;">
+          <div class="fb-video" data-href="https://www.facebook.com/reel/1465195941283315/" data-width="auto" data-show-text="false" data-allowfullscreen="true"></div>
         </div>
-        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+        <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)] fb-review-tile" style="aspect-ratio:267/476;">
           <iframe src="https://www.tiktok.com/player/v1/7603314707289705744?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="รีวิวลูกค้า — วิดีโอ 4 (TikTok)"></iframe>
         </div>
       </div>
@@ -579,23 +591,21 @@
       <span class="inline-block">พร้อมสร้าง<span class="gold-text">แบรนด์</span>ของคุณ</span><br/>
       <span class="inline-block">ให้ทรงพลังหรือยัง?</span>
     </h2>
-    <p class="reveal text-ivory/75 text-lg mt-7 max-w-xl mx-auto" data-y="26">
-      ปรึกษาครูเป้ฟรี ไม่มีข้อผูกมัด — มาคุยกันว่าแบรนด์ของคุณจะไปได้ไกลแค่ไหน
-    </p>
-
     <div class="reveal mt-10 flex flex-nowrap items-center justify-center gap-4" data-y="26">
-      <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary"><span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span></a>
-      <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>ปูเป้ รัตติยา — Power Branding</span></a>
-      <a href="https://www.tiktok.com/@rattiya.sukawas" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full"><span>TikTok : @rattiya.sukawas</span></a>
+      <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        <span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span>
+      </a>
+      <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span>ปูเป้ รัตติยา — Power Branding</span>
+      </a>
+      <a href="https://www.tiktok.com/@rattiya.sukawas" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        <span>TikTok : @rattiya.sukawas</span>
+      </a>
     </div>
 
-    <div class="reveal mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-ivory/60" data-y="20">
-      <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="hover:text-ivory/90 transition-colors">FB : ปูเป้ รัตติยา – Power Branding</a>
-      <span class="hidden sm:inline w-px h-4 bg-ivory/25"></span>
-      <a href="https://www.tiktok.com/@rattiya.sukawas" target="_blank" rel="noopener" class="hover:text-ivory/90 transition-colors">TikTok : @rattiya.sukawas</a>
-      <span class="hidden sm:inline w-px h-4 bg-ivory/25"></span>
-      <span>Line : @bosspae</span>
-    </div>
   </div>
 </section>
 
