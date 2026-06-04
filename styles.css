@@ -585,25 +585,6 @@ body {
   width: 40px; height: 1px; background: rgba(184,149,106,0.35); margin: 0.8rem 0;
 }
 
-/* ── Facebook JS SDK: make fb-video fill any sized container ── */
-.fb-video { display: block !important; width: 100% !important; }
-.fb-video > span { display: block !important; width: 100% !important; }
-.fb-video > span > span { display: block !important; width: 100% !important; }
-.fb-video span iframe { display: block !important; width: 100% !important; }
-
-.hh-tile .fb-video,
-.hh-tile .fb-video > span,
-.hh-tile .fb-video > span > span,
-.hh-tile .fb-video span iframe,
-.lc-frame .fb-video,
-.lc-frame .fb-video > span,
-.lc-frame .fb-video > span > span,
-.lc-frame .fb-video span iframe,
-.fb-review-tile .fb-video,
-.fb-review-tile .fb-video > span,
-.fb-review-tile .fb-video > span > span,
-.fb-review-tile .fb-video span iframe { height: 100% !important; }
-
 /* ── Case-study pages: shared mobile rules ─────────────────── */
 @media (max-width: 1023px) {
   /* Center brand logo in hero on mobile */
