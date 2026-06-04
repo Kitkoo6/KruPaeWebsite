@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>เปามาลี · Pao Malee — Food Brand · Power Branding™</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  :root { --accent: #E8548C; --accentdim: rgba(232,84,140,.22); --bg: #0e0809; }
+  body { background: var(--bg); color: #F5EEE5; }
+  html, body, * { cursor: auto; }
+  a, button { cursor: pointer; }
+
+  /* ── NAV ─────────────────────────────── */
+  .pg-nav {
+    position:fixed; top:0; inset-inline:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.1rem clamp(1.5rem,4vw,3rem);
+    background:linear-gradient(to bottom, rgba(14,8,9,.88), transparent);
+    transition:background .4s, backdrop-filter .4s;
+  }
+  .pg-nav.solid { background:rgba(14,8,9,.93); backdrop-filter:blur(12px); }
+  .pg-back {
+    display:inline-flex; align-items:center; gap:.55rem;
+    color:#F5EEE5; font-family:"Kanit",sans-serif; font-weight:300; font-size:.95rem;
+    transition:gap .3s, color .3s;
+  }
+  .pg-back:hover { gap:.9rem; color:var(--accent); }
+  .pg-nav-brand { font-family:"Cormorant Garamond",serif; letter-spacing:.4em; font-size:.68rem; text-transform:uppercase; color:rgba(245,238,229,.55); }
+
+  /* ── HERO ─────────────────────────────── */
+  .pg-hero { position:relative; min-height:100svh; display:grid; place-items:center; overflow:hidden; }
+  .pg-hero-bg { position:absolute; inset:0; }
+  .pg-hero-bg img { width:100%; height:100%; object-fit:cover; transform-origin:center; }
+  .pg-hero-bg::after {
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to bottom, rgba(14,8,9,.5) 0%, rgba(14,8,9,.1) 40%, rgba(14,8,9,.9) 100%);
+  }
+  .pg-hero-inner { position:relative; z-index:2; text-align:center; padding:8rem 1.5rem 5rem; }
+
+  @keyframes floatLogo {
+    0%,100% { transform:translateY(0) rotate(-1.5deg); }
+    50%      { transform:translateY(-16px) rotate(1.5deg); }
+  }
+  .pg-logo {
+    width:clamp(80px,12vw,140px); margin:0 auto 1.6rem; display:block;
+    border-radius:20px; padding:10px; background:rgba(255,255,255,.95);
+    animation:floatLogo 5.5s ease-in-out infinite;
+    box-shadow:0 20px 52px -16px rgba(232,84,140,.55);
+  }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
+  .pg-eyebrow { font-family:"Cormorant Garamond",serif; letter-spacing:.5em; text-transform:uppercase; color:var(--accent); font-size:clamp(.68rem,1.4vw,.86rem); opacity:0; animation:fadeUp .9s .25s forwards; }
+  .pg-hero-title { font-family:"Cormorant Garamond",serif; font-weight:600; color:#fff; line-height:.9; font-size:clamp(3.5rem,11vw,8.5rem); letter-spacing:-.02em; opacity:0; animation:fadeUp .9s .5s forwards; }
+  .pg-hero-title .a { color:var(--accent); }
+  .pg-hero-sub { font-family:"Kanit",sans-serif; font-weight:300; color:rgba(255,255,255,.7); font-size:clamp(.9rem,1.9vw,1.12rem); margin-top:1.3rem; opacity:0; animation:fadeUp .9s .75s forwards; }
+  .pg-hero-badge {
+    display:inline-flex; align-items:center; gap:.55rem; margin-top:1.9rem;
+    padding:.5rem 1.3rem; border-radius:999px; border:1px solid rgba(232,84,140,.38);
+    color:var(--accent); font-family:"Kanit",sans-serif; font-weight:300; font-size:.85rem;
+    opacity:0; animation:fadeUp .9s 1s forwards;
+  }
+
+  .pg-scroll-hint { position:absolute; bottom:1.8rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:.5rem; color:rgba(255,255,255,.45); }
+  .pg-scroll-hint span { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:.75rem; letter-spacing:.2em; }
+  .pg-scroll-hint .ln { width:1px; height:32px; background:linear-gradient(to bottom,var(--accent),transparent); }
+
+  /* ── SHARED ──────────────────────────── */
+  .pg-sec { padding:clamp(4rem,9vw,8rem) clamp(1.5rem,5vw,4rem); }
+  .pg-wrap { max-width:1180px; margin:0 auto; }
+  .pg-band { background:#160b0e; border-block:1px solid rgba(232,84,140,.1); }
+
+  .pg-kicker { display:inline-flex; align-items:center; gap:.7rem; font-family:"Cormorant Garamond",serif; text-transform:uppercase; letter-spacing:.32em; font-size:.72rem; color:var(--accent); }
+  .pg-kicker::before { content:""; width:28px; height:1px; background:var(--accent); display:inline-block; }
+  .pg-h2 { font-family:"Kanit",sans-serif; font-weight:500; color:#F5EEE5; line-height:1.18; font-size:clamp(1.9rem,4vw,3.1rem); margin-top:.9rem; }
+  .pg-h2 .a { color:var(--accent); }
+  .pg-body { color:rgba(245,238,229,.7); font-family:"Kanit",sans-serif; font-weight:300; line-height:1.88; font-size:1.03rem; }
+  .pg-body p + p { margin-top:1rem; }
+
+  /* ── SPLIT ───────────────────────────── */
+  .pg-split { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:center; }
+  @media(max-width:860px){ .pg-split { grid-template-columns:1fr; } }
+
+  /* ── PHOTO ───────────────────────────── */
+  .pg-photo {
+    position:relative; overflow:hidden; border-radius:18px;
+    border:1px solid rgba(232,84,140,.13);
+    box-shadow:0 40px 80px -40px rgba(0,0,0,.88);
+    height:100%;
+  }
+  .pg-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.2,.6,.2,1); }
+  .pg-photo:hover img { transform:scale(1.055); }
+  .pg-photo-shine { position:absolute; inset:0; pointer-events:none; background:linear-gradient(135deg,rgba(232,84,140,.07) 0%,transparent 60%); opacity:0; transition:opacity .4s; }
+  .pg-photo:hover .pg-photo-shine { opacity:1; }
+
+  /* ── GALLERY ─────────────────────────── */
+  .pg-gallery { display:grid; grid-template-columns:repeat(12,1fr); gap:1rem; }
+  .gc-7 { grid-column:span 7; }
+  .gc-5 { grid-column:span 5; }
+  .gc-6 { grid-column:span 6; }
+  .gc-4 { grid-column:span 4; }
+  .gc-8 { grid-column:span 8; }
+  @media(max-width:720px){ .gc-7,.gc-5,.gc-6,.gc-4,.gc-8 { grid-column:span 12; } }
+  .pg-gallery .pg-photo { min-height:clamp(180px,26vw,340px); }
+  .pg-gallery .tall { min-height:clamp(240px,38vw,500px); }
+
+  /* ── REELS ───────────────────────────── */
+  .pg-reels { display:grid; justify-content:center; gap:1.2rem; }
+  .pg-reels.c2 { grid-template-columns:repeat(2,minmax(0,255px)); }
+  .pg-reels.c4 { grid-template-columns:repeat(4,minmax(0,255px)); }
+  @media(max-width:900px){ .pg-reels.c4 { grid-template-columns:repeat(2,minmax(0,255px)); } }
+  @media(max-width:560px){ .pg-reels.c4,.pg-reels.c2 { grid-template-columns:minmax(0,260px); } }
+
+  .pg-reel {
+    position:relative; border-radius:20px; overflow:hidden;
+    aspect-ratio:267/476; background:#160b0e;
+    border:1px solid rgba(232,84,140,.2);
+    box-shadow:0 32px 64px -32px rgba(0,0,0,.92);
+    transition:transform .5s cubic-bezier(.2,.6,.2,1), box-shadow .5s;
+  }
+  .pg-reel:hover { transform:translateY(-7px); box-shadow:0 44px 72px -28px rgba(0,0,0,.95), 0 0 0 1px rgba(232,84,140,.38); }
+  .pg-reel iframe { position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
+
+  /* ── STATS ───────────────────────────── */
+  .pg-stats { display:flex; flex-wrap:wrap; gap:clamp(2rem,5vw,4rem); }
+  .pg-stat { text-align:center; }
+  .pg-stat-n { font-family:"Cormorant Garamond",serif; font-size:clamp(2.2rem,4.5vw,3.4rem); color:var(--accent); line-height:1; }
+  .pg-stat-l { font-family:"Kanit",sans-serif; font-weight:300; font-size:.82rem; color:rgba(245,238,229,.55); margin-top:.35rem; }
+
+  /* ── CTA ─────────────────────────────── */
+  .pg-cta { text-align:center; padding:clamp(4rem,8vw,7rem) 1.5rem; background:#160b0e; border-top:1px solid rgba(232,84,140,.1); position:relative; overflow:hidden; }
+  .pg-cta-wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:"Cormorant Garamond",serif; font-size:clamp(4rem,18vw,14rem); color:rgba(232,84,140,.035); font-weight:600; white-space:nowrap; pointer-events:none; user-select:none; }
+
+  .pg-btn {
+    display:inline-flex; align-items:center; gap:.6rem; padding:.95rem 2.1rem; border-radius:999px;
+    background:var(--accent); color:#fff; font-family:"Kanit",sans-serif; font-weight:500; font-size:.95rem;
+    transition:gap .3s, transform .3s, box-shadow .3s; box-shadow:0 14px 32px -12px rgba(232,84,140,.55);
+  }
+  .pg-btn:hover { gap:1rem; transform:translateY(-2px); box-shadow:0 20px 42px -12px rgba(232,84,140,.7); }
+  .pg-btn.ghost { background:transparent; border:1px solid rgba(245,238,229,.32); color:#F5EEE5; box-shadow:none; }
+  .pg-btn.ghost:hover { background:rgba(245,238,229,.06); transform:translateY(-2px); }
+
+  /* ── REVEAL ──────────────────────────── */
+  .rv { opacity:0; transform:translateY(36px); transition:opacity .85s cubic-bezier(.2,.6,.2,1), transform .85s cubic-bezier(.2,.6,.2,1); }
+  .rv.vis { opacity:1; transform:none; }
+  .rv.d1 { transition-delay:.12s; }
+  .rv.d2 { transition-delay:.24s; }
+  .rv.d3 { transition-delay:.36s; }
+  .rv.d4 { transition-delay:.48s; }
+  @media(prefers-reduced-motion:reduce){ .rv { opacity:1; transform:none; transition:none; } }
+
+  /* ── TICKER ──────────────────────────── */
+  @keyframes ticker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  .pg-ticker-track { display:flex; width:max-content; animation:ticker 22s linear infinite; white-space:nowrap; }
+  .pg-ticker-track:hover { animation-play-state:paused; }
+  .pg-ticker { overflow:hidden; padding:.6rem 0; border-block:1px solid rgba(232,84,140,.14); margin-block:3rem; }
+  .pg-ticker span { font-family:"Cormorant Garamond",serif; font-size:clamp(1rem,2vw,1.4rem); color:var(--accent); letter-spacing:.2em; padding-inline:2.2rem; opacity:.7; }
+  .pg-ticker .dot { color:rgba(232,84,140,.4); }
+
+  /* ── FOOT ────────────────────────────── */
+  .pg-foot { background:#0b0608; padding:2.2rem 1.5rem; text-align:center; border-top:1px solid rgba(232,84,140,.08); }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="pg-nav" id="pgNav">
+  <a href="Rattiya Homepage.html" class="pg-back">← กลับหน้าหลัก</a>
+  <span class="pg-nav-brand">เปามาลี · Power Branding™</span>
+  <a href="#reels" class="pg-back">วิดีโอ →</a>
+</header>
+
+<!-- HERO -->
+<section class="pg-hero">
+  <div class="pg-hero-bg">
+    <img src="assets/bfpm/pm1.jpg" alt="เปามาลี Pao Malee" id="heroBg" />
+  </div>
+  <div class="pg-hero-inner">
+    <img class="pg-logo" src="assets/bfpm/paomalee-logo.png" alt="Pao Malee logo" />
+    <div class="pg-eyebrow">Food Brand · Power Branding™</div>
+    <h1 class="pg-hero-title">เปา<span class="a">มาลี</span></h1>
+    <p class="pg-hero-sub">สร้างแบรนด์ซาลาเปาให้มีตัวตนชัดเจน ขยายสาขาได้ภายในปีเดียว</p>
+    <div class="pg-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M6.5 3.5v3l1.8 1.4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+      ผลงานของ ครูเป้ รัตติยา
+    </div>
+  </div>
+  <div class="pg-scroll-hint"><span>เลื่อนลง</span><span class="ln"></span></div>
+</section>
+
+<!-- TICKER -->
+<div class="pg-ticker" aria-hidden="true">
+  <div class="pg-ticker-track">
+    <span>เปามาลี</span><span class="dot">·</span>
+    <span>Pao Malee</span><span class="dot">·</span>
+    <span>Power Branding™</span><span class="dot">·</span>
+    <span>ซาลาเปา</span><span class="dot">·</span>
+    <span>ขยายสาขา</span><span class="dot">·</span>
+    <span>แบรนด์อาหาร</span><span class="dot">·</span>
+    <span>เปามาลี</span><span class="dot">·</span>
+    <span>Pao Malee</span><span class="dot">·</span>
+    <span>Power Branding™</span><span class="dot">·</span>
+    <span>ซาลาเปา</span><span class="dot">·</span>
+    <span>ขยายสาขา</span><span class="dot">·</span>
+    <span>แบรนด์อาหาร</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="pg-sec" id="story">
+  <div class="pg-wrap pg-split">
+    <div class="rv" style="aspect-ratio:3/4;">
+      <div class="pg-photo" style="height:100%;">
+        <img src="assets/bfpm/pm2.jpg" alt="เปามาลี" />
+        <div class="pg-photo-shine"></div>
+      </div>
+    </div>
+    <div class="rv d1">
+      <span class="pg-kicker">เรื่องราวของแบรนด์</span>
+      <h2 class="pg-h2">ซาลาเปาที่มี<br/><span class="a">ตัวตน</span>และขยายได้จริง</h2>
+      <div class="pg-body mt-6">
+        <p>เปามาลี คือแบรนด์ซาลาเปาที่ครูเป้ช่วยสร้างตัวตนให้ชัดเจน จากร้านธรรมดา กลายเป็นแบรนด์ที่มีบุคลิก น่าจดจำ และสร้างแฟนตัวจริงได้ภายในเวลาอันสั้น</p>
+        <p>ด้วยกลยุทธ์ Power Branding™ เปามาลีขยายสาขาได้สำเร็จภายในปีเดียว — พิสูจน์ว่าแบรนด์อาหารไทยก็สามารถโตได้อย่างมีระบบ ถ้ามีตัวตนที่แข็งแกร่ง</p>
+      </div>
+
+      <div class="pg-stats mt-10">
+        <div class="pg-stat rv d2">
+          <div class="pg-stat-n">1 ปี</div>
+          <div class="pg-stat-l">ขยายสาขาสำเร็จ</div>
+        </div>
+        <div style="width:1px; align-self:stretch; background:rgba(232,84,140,.2);"></div>
+        <div class="pg-stat rv d3">
+          <div class="pg-stat-n">5×</div>
+          <div class="pg-stat-l">ยอดขายเพิ่มขึ้น</div>
+        </div>
+        <div style="width:1px; align-self:stretch; background:rgba(232,84,140,.2);"></div>
+        <div class="pg-stat rv d4">
+          <div class="pg-stat-n">2 สาขา</div>
+          <div class="pg-stat-l">ภายในปีแรก</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pg-sec pg-band" id="gallery">
+  <div class="pg-wrap">
+    <div class="rv" style="max-width:680px;">
+      <span class="pg-kicker">แกลเลอรีภาพ</span>
+      <h2 class="pg-h2">เบื้องหลัง<span class="a">แบรนด์</span>ที่น่ารักของเปามาลี</h2>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="pg-gallery mt-10">
+      <div class="gc-5 tall rv d1">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm3.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+      <div class="gc-7 rv d2" style="display:grid; gap:1rem;">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm4.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm5.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: three equal cols -->
+    <div class="pg-gallery mt-3">
+      <div class="gc-4 rv d1">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm6.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+      <div class="gc-4 rv d2">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm7.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+      <div class="gc-4 rv d3">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm8.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: wide + narrow -->
+    <div class="pg-gallery mt-3">
+      <div class="gc-8 rv d1">
+        <div class="pg-photo">
+          <img src="assets/clients/paomalee.jpg" alt="เปามาลี" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+      <div class="gc-4 rv d2">
+        <div class="pg-photo">
+          <img src="assets/bfpm/pm2.jpg" alt="เปามาลี" style="object-position:center 30%;" />
+          <div class="pg-photo-shine"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="pg-sec" id="reels">
+  <div class="pg-wrap">
+    <div class="rv text-center" style="max-width:600px; margin-inline:auto; margin-bottom:3rem;">
+      <span class="pg-kicker">วิดีโอแบรนด์</span>
+      <h2 class="pg-h2">เปามาลีใน<span class="a">ทุกช่วงเวลา</span></h2>
+      <p class="pg-body mt-4">วิดีโอที่สะท้อนความน่ารัก ความอร่อย และตัวตนที่แท้จริงของเปามาลี</p>
+    </div>
+    <div class="pg-reels c4">
+      <div class="pg-reel rv d1">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1449998459670496%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="เปามาลี — วิดีโอ 1"></iframe>
+      </div>
+      <div class="pg-reel rv d2">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3856417104491711%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="เปามาลี — วิดีโอ 2"></iframe>
+      </div>
+      <div class="pg-reel rv d3">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F946363508352179%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="เปามาลี — วิดีโอ 3"></iframe>
+      </div>
+      <div class="pg-reel rv d4">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1314041087284296%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="เปามาลี — วิดีโอ 4"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pg-cta">
+  <div class="pg-cta-wm">PAO MALEE</div>
+  <div class="pg-wrap rv" style="position:relative;z-index:1; max-width:580px; margin-inline:auto;">
+    <span class="pg-kicker" style="justify-content:center; margin-bottom:1rem;">Power Branding™</span>
+    <h2 class="pg-h2" style="text-align:center;">อยากให้ครูเป้<span class="a">ปั้นแบรนด์</span>ของคุณ?</h2>
+    <p class="pg-body mt-4" style="text-align:center;">เริ่มสร้างแบรนด์ที่มีตัวตนชัดเจน จดจำง่าย และขายได้จริง</p>
+    <div class="mt-8 flex flex-wrap gap-4 justify-center">
+      <a href="Rattiya Homepage.html#contact" class="pg-btn">ปรึกษาครูเป้ฟรี →</a>
+      <a href="Rattiya Homepage.html" class="pg-btn ghost">← กลับหน้าหลัก</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pg-foot">
+  <a href="Rattiya Homepage.html" style="font-family:'Pinyon Script',cursive; color:#B8956A; font-size:2.4rem; line-height:1; display:inline-block; text-decoration:none;">Rattiya</a>
+  <div style="font-family:'Kanit',sans-serif; font-size:.58rem; letter-spacing:.42em; color:rgba(245,238,229,.32); margin-top:.5rem;">POWER BRANDING™</div>
+  <div style="font-size:.76rem; color:rgba(245,238,229,.28); margin-top:1.1rem;">© 2025 Power Branding™. All rights reserved.</div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  /* nav solid */
+  const nav = document.getElementById("pgNav");
+  window.addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 60), { passive:true });
+
+  /* scroll reveal */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); } });
+  }, { threshold:.1 });
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+  /* hero parallax */
+  const bg = document.getElementById("heroBg");
+  window.addEventListener("scroll", () => {
+    if (bg && scrollY < innerHeight * 1.5) bg.style.transform = `translateY(${scrollY * 0.28}px) scale(1.1)`;
+  }, { passive:true });
+</script>
+</body>
+</html>
