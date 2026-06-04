@@ -59,6 +59,28 @@
   .hh-story { display:grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem,5vw,4.5rem); align-items:center; }
   @media (max-width: 900px){ .hh-story { grid-template-columns: 1fr; } }
 
+  /* Mobile hero: text left, image right on same row */
+  @media (max-width: 1023px) {
+    #hero .relative.z-10 {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    #hero .relative.z-10 > div:first-child {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    #hero .relative.z-10 > div:last-child {
+      flex: 0 0 44%;
+      max-width: 44%;
+    }
+    #hero .hh-frame {
+      width: 100% !important;
+      max-width: none !important;
+    }
+  }
+
   /* Steps */
   .hh-steps { display:grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; }
   @media (max-width: 760px){ .hh-steps { grid-template-columns: 1fr; } }

@@ -55,6 +55,28 @@
   .bf-story { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(2rem,5vw,4.5rem); align-items: stretch; }
   @media (max-width: 900px) { .bf-story { grid-template-columns: 1fr; } }
 
+  /* Tablet/mobile hero: text left, image right on same row */
+  @media (max-width: 1023px) {
+    #hero .relative.z-10 {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    #hero .relative.z-10 > div:first-child {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    #hero .relative.z-10 > div:last-child {
+      flex: 0 0 44%;
+      max-width: 44%;
+    }
+    #hero .bf-frame {
+      width: 100% !important;
+      max-width: none !important;
+    }
+  }
+
   .bf-row { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem,2vw,1.5rem); }
   .bf-row.videos .bf-tile { width: clamp(230px, 26vw, 300px); }
   .bf-row.pics   .bf-tile { width: clamp(180px, 21vw, 250px); }

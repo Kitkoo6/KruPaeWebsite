@@ -69,6 +69,55 @@
     .hh-row .hh-tile { width: min(85vw, 320px); }
   }
 
+  /* Dr Panjit photo gallery */
+  .pj-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr 1.4fr;
+    grid-template-rows: 1fr;
+    gap: clamp(0.7rem, 1.2vw, 1.1rem);
+    align-items: stretch;
+  }
+  .pj-gallery .hh-frame { overflow: hidden; }
+  .pj-gallery .hh-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 767px) {
+    .pj-gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    .pj-gallery .pj-portrait { aspect-ratio: 3/4; }
+    .pj-gallery .pj-landscape { aspect-ratio: 4/3; }
+  }
+
+  /* Dr Panjit videos: always 3 columns */
+  .pj-videos {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    flex-wrap: unset !important;
+  }
+  .pj-videos .hh-tile { width: 100% !important; }
+
+  /* Tablet/mobile hero: text left, image right on same row */
+  @media (max-width: 1023px) {
+    #hero .relative.z-10 {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    #hero .relative.z-10 > div:first-child {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    #hero .relative.z-10 > div:last-child {
+      flex: 0 0 44%;
+      max-width: 44%;
+    }
+    #hero .hh-frame {
+      width: 100% !important;
+      max-width: none !important;
+    }
+  }
+
   /* landscape gallery */
   .pj-land { display:grid; grid-template-columns: repeat(2,1fr); gap: clamp(1rem,2vw,1.4rem); }
   @media (max-width: 680px){ .pj-land { grid-template-columns: 1fr; } }
@@ -167,27 +216,24 @@
       </h2>
     </div>
 
-    <div class="hh-row" data-reveal-group>
+    <div class="hh-row pj-videos" data-reveal-group>
       <div class="hh-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1547993780233384%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 1"></iframe>
       </div>
       <div class="hh-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F779828795209600%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 2"></iframe>
       </div>
-      <div class="hh-tile"><img src="assets/panjit/p1.jpg" alt="Dr. Panjit กับครูเป้ พูดคุยเรื่องแบรนด์" /></div>
-      <div class="hh-tile"><img src="assets/panjit/portrait.jpg" alt="Dr. Panjit — ที่ปรึกษาด้านการศึกษา" /></div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4444237742495149%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 3"></iframe>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- ============ LANDSCAPE GALLERY ============ -->
-<section class="py-20 lg:py-28">
-  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
-    <div class="pj-land" data-reveal-group>
-      <div class="hh-frame"><img src="assets/panjit/l1.jpg" alt="เบื้องหลังการถ่ายทำ Dr. Panjit" /></div>
-      <div class="hh-frame"><img src="assets/panjit/l2.jpg" alt="บรรยากาศการสัมภาษณ์ Dr. Panjit" /></div>
-      <div class="hh-frame"><img src="assets/panjit/l3.jpg" alt="Dr. Panjit ระหว่างการสัมภาษณ์" /></div>
-      <div class="hh-frame"><img src="assets/panjit/l4.jpg" alt="Dr. Panjit กับครูเป้" /></div>
+    <!-- Photo gallery: portraits + landscapes -->
+    <div class="pj-gallery mt-8" data-reveal-group>
+      <div class="hh-frame pj-portrait"><img src="assets/panjit/portrait.jpg" alt="Dr. Panjit — ที่ปรึกษาด้านการศึกษา" /></div>
+      <div class="hh-frame pj-portrait"><img src="assets/panjit/p1.jpg" alt="Dr. Panjit กับครูเป้ พูดคุยเรื่องแบรนด์" /></div>
+      <div class="hh-frame pj-landscape"><img src="assets/panjit/l4.jpg" alt="Dr. Panjit กับครูเป้" /></div>
+      <div class="hh-frame pj-landscape"><img src="assets/panjit/l3.jpg" alt="Dr. Panjit ระหว่างการสัมภาษณ์" /></div>
     </div>
   </div>
 </section>
