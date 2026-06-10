@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CEO Branding · Rattiya Power Branding™</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .check-item { display:flex; align-items:flex-start; gap:.9rem; }
+  .check-icon {
+    flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    background:linear-gradient(135deg,#C9A876,#9C7B50);
+    display:grid; place-items:center; margin-top:.18rem;
+  }
+  .check-icon svg { width:11px; height:11px; }
+  .step-num {
+    font-family:"Cormorant Garamond",serif; font-style:italic;
+    font-size:3.8rem; line-height:1; font-weight:600;
+    background:linear-gradient(105deg,#C9A876 0%,#9C7B50 60%,#E4CDA4 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+</style>
+</head>
+
+<body class="font-thai bg-cream">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#voices">รีวิว</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+      <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="pt-36 pb-20 bg-cream overflow-hidden relative">
+  <div class="hero-watermark pointer-events-none absolute -right-10 top-8 text-[18vw] leading-none opacity-[0.05] select-none whitespace-nowrap">CEO</div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <a href="Rattiya Homepage.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-8 font-medium">
+      <span>←</span><span>กลับหน้าแรก</span>
+    </a>
+    <div class="max-w-3xl">
+      <span class="eyebrow mb-4 block">คอร์สเรียนกับครูเป้ · 01</span>
+      <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.8rem,6vw,5rem)]">
+        CEO <span class="gold-text">Branding</span>
+      </h1>
+      <p class="text-ink/65 text-[1.15rem] mt-6 max-w-2xl leading-relaxed">
+        คอร์สสำหรับเจ้าของธุรกิจและผู้บริหารที่อยากปั้นตัวตนให้โดดเด่น
+        น่าเชื่อถือ และกลายเป็นแบรนด์ที่ลูกค้าจดจำผ่านตัวคุณเอง
+      </p>
+      <div class="flex flex-wrap gap-4 mt-10">
+        <a href="Rattiya Homepage.html#contact" class="btn btn-primary">
+          <span>สมัครเรียนเลย</span><span class="btn-arrow">→</span>
+        </a>
+        <a href="#details" class="btn btn-ghost">
+          <span>ดูรายละเอียด</span><span class="btn-arrow">↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR WHOM ============ -->
+<section class="py-16 lg:py-20 bg-ivory/60 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <span class="eyebrow">เหมาะสำหรับใคร</span>
+      <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] mt-3">
+        คอร์สนี้<span class="gold-text">เหมาะกับคุณ</span>ถ้า…
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">เจ้าของธุรกิจ</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">คุณมีธุรกิจแล้วแต่ยังไม่รู้จะสร้างตัวตนในฐานะ "เจ้าของแบรนด์" ให้โดดเด่นได้อย่างไร</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">ผู้บริหารและ CEO</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">คุณอยู่ในตำแหน่งผู้นำและต้องการภาพลักษณ์ที่น่าเชื่อถือ ทรงอิทธิพล บนโซเชียลมีเดีย</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">คนที่อยากเปลี่ยนตัวตนเป็นมูลค่า</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">คุณรู้สึกว่าตัวเองมีคุณค่าแต่ยังไม่สามารถสื่อสารออกไปได้ถูกต้องและทรงพลัง</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section id="details" class="py-16 lg:py-24">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <div>
+        <span class="eyebrow mb-4 block">สิ่งที่คุณจะได้รับ</span>
+        <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] leading-snug mb-8">
+          จากคนธรรมดา<br/>สู่<span class="gold-text">แบรนด์ที่จดจำ</span>ได้
+        </h2>
+        <div class="space-y-5">
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">วางจุดยืนและภาพลักษณ์ของผู้นำ</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">ค้นหาและกำหนด "ตัวตน" ที่ชัดเจนของคุณ ให้ตลาดจดจำและเชื่อมั่น</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">เล่าเรื่องตัวตนให้ทรงพลังบนโซเชียล</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">เทคนิคสร้างสตอรีที่ทำให้คนหยุดอ่าน ติดตาม และอยากซื้อสินค้า/บริการจากคุณ</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">สร้างคอนเทนต์ที่สะท้อนความเป็นผู้นำ</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">ระบบสร้างคอนเทนต์ที่ทำซ้ำได้ง่าย ไม่ต้องนั่งคิดใหม่ทุกวัน แต่ยังทรงพลังเสมอ</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">กลยุทธ์การตลาดที่ตรงกับตัวตนของคุณ</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">วางแผนการตลาดที่ไม่ได้ copy ใคร แต่สร้างจากจุดแข็งและตัวตนที่คุณมีอยู่แล้ว</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">ระบบดึงดูดลูกค้าโดยไม่ต้องโฆษณา</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">สร้าง personal brand ให้แข็งแกร่งจนลูกค้าเข้ามาหาเองผ่าน organic content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow mb-4 block">รูปแบบการเรียน</span>
+        <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] leading-snug mb-8">
+          เรียนอย่างไร
+        </h2>
+        <div class="space-y-8">
+          <div class="flex gap-5 items-start">
+            <div class="step-num">01</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">วิเคราะห์ตัวตน</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">เริ่มจากการค้นหาว่า "คุณคือใคร" จุดแข็ง จุดต่าง และสิ่งที่คุณมีแต่คนอื่นไม่มี</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">02</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">วางกลยุทธ์แบรนด์</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">ออกแบบภาพลักษณ์ ข้อความ และทิศทางที่ชัดเจน สอดคล้องกับธุรกิจ</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">03</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">ลงมือสร้างคอนเทนต์</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">เรียนรู้การสร้างคอนเทนต์จริง ฝึกเล่าเรื่อง และผลิตโพสต์ที่ใช้ได้ทันที</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">04</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">วัดผลและปรับแต่ง</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">วิเคราะห์ผลลัพธ์ เรียนรู้จากข้อมูลจริง และพัฒนาต่อเนื่อง</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-16 bg-ivory/55 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <span class="eyebrow">เสียงจากลูกค้าจริง</span>
+      <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] mt-3">
+        พวกเขา<span class="gold-text">เปลี่ยนไป</span>อย่างไร
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-7">
+      <figure class="bg-cream border border-gold/20 rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark">"</span>
+        <blockquote class="font-thaihead text-[1.1rem] text-ink/85 leading-relaxed -mt-4 mb-6">
+          ครูเป้เปลี่ยนวิธีที่เรามองธุรกิจตัวเองไปเลย จากที่ไม่รู้จะเริ่มยังไง วันนี้แบรนด์เรามีตัวตนชัดและขายได้จริง
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-rose/40 grid place-items-center font-serif text-brown text-xl">ป</span>
+          <div><div class="text-ink font-medium">คุณแพรว</div><div class="text-xs text-ink/55">เจ้าของแบรนด์ความงาม</div></div>
+        </figcaption>
+      </figure>
+      <figure class="bg-brown text-ivory rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark text-goldlight">"</span>
+        <blockquote class="font-thaihead text-[1.1rem] leading-relaxed -mt-4 mb-6">
+          ระบบการตลาดที่ครูเป้วางให้ทำให้ทีมเราทำงานง่ายขึ้นมาก ยอดขายโตขึ้นแบบที่ไม่เคยเป็นมาก่อน
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-gold/30 grid place-items-center font-serif text-ivory text-xl">ม</span>
+          <div><div class="font-medium">คุณมายด์</div><div class="text-xs text-ivory/60">ผู้ก่อตั้งร้านอาหาร</div></div>
+        </figcaption>
+      </figure>
+      <figure class="bg-cream border border-gold/20 rounded-2xl p-8 flex flex-col">
+        <span class="quote-mark">"</span>
+        <blockquote class="font-thaihead text-[1.1rem] text-ink/85 leading-relaxed -mt-4 mb-6">
+          เธอไม่ได้แค่สอน แต่ลงมือทำไปกับเราจริงๆ ความใส่ใจระดับนี้หาไม่ได้ง่ายๆ คุ้มค่าทุกบาท
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-rose/40 grid place-items-center font-serif text-brown text-xl">น</span>
+          <div><div class="text-ink font-medium">คุณนุ่น</div><div class="text-ink/55 text-xs">เจ้าของธุรกิจอสังหาฯ</div></div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="py-16 lg:py-24 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <article class="relative max-w-3xl mx-auto bg-brown text-ivory rounded-[26px] overflow-hidden shadow-[0_50px_90px_-44px_rgba(92,68,53,0.7)]">
+      <div class="hero-watermark pointer-events-none absolute -right-6 -top-6 text-[10rem] leading-none opacity-[0.07] text-ivory select-none">01</div>
+      <div class="relative p-9 lg:p-12">
+        <span class="eyebrow text-goldlight block mb-3">สมัครคอร์ส CEO Branding</span>
+        <h2 class="font-thaihead text-3xl lg:text-4xl leading-snug mb-6">
+          พร้อมปั้นตัวตนของคุณ<br/>ให้กลายเป็นแบรนด์ที่<span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">ทรงพลัง</span>
+        </h2>
+        <p class="text-ivory/70 leading-relaxed mb-8 max-w-xl">
+          ติดต่อครูเป้เพื่อนัดคุยและสอบถามรายละเอียดคอร์สได้เลย ปรึกษาฟรีก่อนตัดสินใจ
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span>
+          </a>
+          <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full">
+            <span>Facebook</span><span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <a href="Rattiya Homepage.html" class="flex flex-col items-center md:items-start leading-none">
+      <span class="font-script gold-text text-4xl leading-none">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</span>
+    </a>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="footer-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+</script>
+</body>
+</html>

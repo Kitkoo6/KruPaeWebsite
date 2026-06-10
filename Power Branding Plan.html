@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Power Branding™ Plan · Rattiya</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .check-item { display:flex; align-items:flex-start; gap:.9rem; }
+  .check-icon-light {
+    flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    background:rgba(219,192,154,0.25); border:1px solid rgba(219,192,154,0.5);
+    display:grid; place-items:center; margin-top:.18rem;
+  }
+  .check-icon-light svg { width:11px; height:11px; }
+  .step-card {
+    background:rgba(255,255,255,0.05); border:1px solid rgba(219,192,154,0.2);
+    border-radius:18px; padding:2rem;
+    transition: background .3s ease, border-color .3s ease;
+  }
+  .step-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(219,192,154,0.4); }
+  .step-num-large {
+    font-family:"Cormorant Garamond",serif; font-style:italic;
+    font-size:3rem; line-height:1; font-weight:700;
+    background:linear-gradient(105deg,#C9A876 0%,#E4CDA4 52%,#C9A876 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+</style>
+</head>
+
+<body class="font-thai" style="background:#3D2A20;">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 py-5 transition-all duration-500">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script text-[2rem] -mb-1" style="background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Rattiya</span>
+      <span class="text-[0.55rem] tracking-[0.45em] uppercase font-medium" style="color:rgba(219,192,154,0.6);">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="hover:text-goldlight transition-colors text-ivory/70" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="hover:text-goldlight transition-colors text-ivory/70" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="hover:text-goldlight transition-colors text-ivory/70" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="hover:text-goldlight transition-colors text-ivory/70" href="Rattiya Homepage.html#voices">รีวิว</a>
+      <a class="hover:text-goldlight transition-colors text-ivory/70" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+      <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO (dark premium) ============ -->
+<section class="pt-36 pb-24 relative overflow-hidden text-ivory">
+  <div class="pointer-events-none absolute inset-0 flex items-center justify-center text-[20vw] leading-none select-none whitespace-nowrap font-serif font-bold" style="color:rgba(184,149,106,0.04);">PLAN</div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative z-10">
+    <a href="Rattiya Homepage.html" class="inline-flex items-center gap-2 text-sm font-medium transition-colors mb-8" style="color:#DBC09A;">
+      <span>←</span><span>กลับหน้าแรก</span>
+    </a>
+    <div class="max-w-3xl">
+      <span class="block mb-4 font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">บริการพรีเมียม · ดูแลครบวงจร</span>
+      <h1 class="font-thaihead font-medium leading-tight text-[clamp(2.8rem,6vw,5rem)]">
+        <span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876 0%,#9C7B50 28%,#E4CDA4 52%,#A6824F 78%,#C9A876 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Power Branding™</span>
+        <span class="text-ivory"> Plan</span>
+      </h1>
+      <p class="text-ivory/65 text-[1.15rem] mt-6 max-w-2xl leading-relaxed">
+        บริการที่ปรึกษาและลงมือทำแบบ exclusive — ครูเป้และทีมดูแลแบรนด์ของคุณ
+        ตั้งแต่วางกลยุทธ์ ตัวตน ไปจนถึงระบบการตลาดและคอนเทนต์ จนเห็นผลจริง
+      </p>
+      <div class="flex flex-wrap items-end gap-8 mt-10">
+        <div>
+          <div class="text-ivory/50 text-sm mb-1">เริ่มต้น</div>
+          <div class="font-serif leading-none" style="font-size:3.8rem; background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">฿150,000</div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>ปรึกษาแพ็กเกจนี้</span><span class="btn-arrow">→</span>
+          </a>
+          <a href="#details" class="btn !border !border-ivory/25 !text-ivory hover:!bg-ivory/10 !py-[1.05rem] !px-[2.1rem] rounded-full transition-colors">
+            <span>ดูรายละเอียด</span><span class="btn-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section id="details" class="py-16 lg:py-24 text-ivory" style="background:#2D1E16;">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="block mb-4 font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">สิ่งที่รวมอยู่ในแพ็กเกจ</span>
+      <h2 class="font-thaihead font-medium text-ivory leading-tight text-[clamp(1.8rem,3.5vw,3rem)]">
+        ดูแลครบทุกมิติ<br/>
+        <span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">แบบ Exclusive</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">วางกลยุทธ์แบรนด์และตัวตนเฉพาะบุคคล</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">ออกแบบ brand identity ที่สะท้อนตัวคุณอย่างแท้จริง ไม่ copy ใคร</p>
+        </div>
+      </div>
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">ระบบคอนเทนต์และการตลาดครบวงจร</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">วางปฏิทินคอนเทนต์ เขียนสคริปต์ และระบบที่ทำซ้ำได้ทุกเดือน</p>
+        </div>
+      </div>
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">ดูแลใกล้ชิดโดยครูเป้และทีม</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">มี dedicated team ดูแลตลอดโปรแกรม ปรึกษาได้ตลอด ไม่ทิ้งไว้คนเดียว</p>
+        </div>
+      </div>
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">เหมาะกับเจ้าของธุรกิจระดับสูง</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">สำหรับคนที่พร้อมลงทุนในตัวเองและต้องการผลลัพธ์ระดับพรีเมียม</p>
+        </div>
+      </div>
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">ออกแบบ Visual Identity</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">สี โทน ฟอนต์ และ mood ของแบรนด์ที่สอดคล้องกับตัวตนของคุณ</p>
+        </div>
+      </div>
+      <div class="check-item p-6 rounded-2xl" style="background:rgba(255,255,255,0.04); border:1px solid rgba(219,192,154,0.15);">
+        <div class="check-icon-light"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="font-thaihead font-medium text-ivory text-lg">วัดผลและปรับกลยุทธ์ต่อเนื่อง</div>
+          <p class="text-ivory/50 text-sm mt-1 leading-relaxed">ติดตามตัวเลข วิเคราะห์ผล และปรับแผนทุกเดือนให้ได้ผลสูงสุด</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="py-16 lg:py-24 text-ivory" style="background:#3D2A20;">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="block mb-4 font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">กระบวนการทำงาน</span>
+      <h2 class="font-thaihead font-medium text-ivory leading-tight text-[clamp(1.8rem,3.5vw,3rem)]">
+        เราทำงานร่วมกัน<br/>
+        <span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">อย่างไร</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+      <div class="step-card text-center">
+        <div class="step-num-large mx-auto mb-4">01</div>
+        <h3 class="font-thaihead font-medium text-ivory text-xl mb-3">Discovery Session</h3>
+        <p class="text-ivory/55 text-sm leading-relaxed">นัดคุยเพื่อทำความเข้าใจธุรกิจ เป้าหมาย และตัวตนของคุณอย่างลึกซึ้ง</p>
+      </div>
+      <div class="step-card text-center">
+        <div class="step-num-large mx-auto mb-4">02</div>
+        <h3 class="font-thaihead font-medium text-ivory text-xl mb-3">Brand Strategy</h3>
+        <p class="text-ivory/55 text-sm leading-relaxed">วางกลยุทธ์แบรนด์ ออกแบบตัวตน และกำหนดทิศทางการสื่อสารที่ชัดเจน</p>
+      </div>
+      <div class="step-card text-center">
+        <div class="step-num-large mx-auto mb-4">03</div>
+        <h3 class="font-thaihead font-medium text-ivory text-xl mb-3">Execute & Create</h3>
+        <p class="text-ivory/55 text-sm leading-relaxed">ลงมือสร้างคอนเทนต์ ระบบการตลาด และสื่อทุกชิ้นตามแผน</p>
+      </div>
+      <div class="step-card text-center">
+        <div class="step-num-large mx-auto mb-4">04</div>
+        <h3 class="font-thaihead font-medium text-ivory text-xl mb-3">Review & Scale</h3>
+        <p class="text-ivory/55 text-sm leading-relaxed">วัดผล ปรับแต่ง และขยายสิ่งที่ได้ผลให้เติบโตต่อเนื่อง</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR WHOM ============ -->
+<section class="py-16 lg:py-20 text-ivory" style="background:#2D1E16;">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="block mb-4 font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">เหมาะสำหรับใคร</span>
+        <h2 class="font-thaihead font-medium text-ivory leading-tight text-[clamp(1.8rem,3.2vw,2.8rem)] mb-6">
+          แพ็กเกจนี้เหมาะกับ<span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">คุณ</span>ถ้า…
+        </h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="check-icon-light flex-shrink-0 mt-1"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="text-ivory/75 leading-relaxed">คุณเป็นเจ้าของธุรกิจที่อยากปั้นแบรนด์ส่วนตัวให้เป็นสินทรัพย์ที่ขายได้จริง</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="check-icon-light flex-shrink-0 mt-1"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="text-ivory/75 leading-relaxed">คุณพร้อมที่จะลงทุนในตัวเองอย่างจริงจัง และต้องการผลลัพธ์ระดับพรีเมียม</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="check-icon-light flex-shrink-0 mt-1"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="text-ivory/75 leading-relaxed">คุณต้องการทีมผู้เชี่ยวชาญที่ดูแลแบบ exclusive ไม่ใช่แค่คอร์สออนไลน์ทั่วไป</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="check-icon-light flex-shrink-0 mt-1"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#DBC09A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="text-ivory/75 leading-relaxed">คุณอยากเห็นผลลัพธ์ที่วัดได้จริง ไม่ใช่แค่ทฤษฎี</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-[26px] p-9 lg:p-12 relative overflow-hidden" style="background:rgba(184,149,106,0.12); border:1px solid rgba(219,192,154,0.25);">
+          <div class="pointer-events-none absolute -right-4 -top-4 text-[8rem] leading-none select-none font-serif font-bold opacity-[0.06] text-ivory">★</div>
+          <span class="block mb-2 font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">ราคาเริ่มต้น</span>
+          <div class="font-serif leading-none mb-6" style="font-size:4.5rem; background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">฿150,000</div>
+          <p class="text-ivory/60 text-sm leading-relaxed mb-6">
+            ราคาขึ้นอยู่กับขนาดและความซับซ้อนของโปรแกรม ติดต่อครูเป้เพื่อรับ proposal เฉพาะสำหรับธุรกิจของคุณ
+          </p>
+          <div class="gold-rule w-full mb-6" style="background:linear-gradient(90deg,transparent,rgba(219,192,154,0.5) 30%,rgba(219,192,154,0.8) 50%,rgba(219,192,154,0.5) 70%,transparent);"></div>
+          <div class="space-y-2 text-ivory/70 text-sm">
+            <div class="flex items-center gap-2"><span style="color:#DBC09A;">✦</span> รับลูกค้า exclusive จำนวนจำกัด</div>
+            <div class="flex items-center gap-2"><span style="color:#DBC09A;">✦</span> ปรึกษาฟรีก่อนตัดสินใจ</div>
+            <div class="flex items-center gap-2"><span style="color:#DBC09A;">✦</span> ผ่อนชำระได้ (สอบถามเพิ่มเติม)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative py-28 lg:py-40 overflow-hidden text-ivory" style="background:#1E1008;">
+  <div class="pointer-events-none absolute inset-0 flex items-center justify-center text-[16vw] opacity-[0.04] text-ivory whitespace-nowrap font-serif font-bold select-none">RATTIYA</div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="deco-dot" style="background:var(--gold);width:7px;height:7px;border-radius:50%;display:inline-block;"></span>
+      <span class="font-serif uppercase tracking-[0.42em] text-[0.78rem] font-semibold" style="color:#9C7B50;">เริ่มต้นวันนี้</span>
+      <span class="deco-dot" style="background:var(--gold);width:7px;height:7px;border-radius:50%;display:inline-block;"></span>
+    </div>
+    <h2 class="font-thaihead font-medium leading-[1.1] text-[clamp(2.2rem,5vw,4rem)]">
+      พร้อมสร้างแบรนด์ของคุณ<br/>
+      <span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876 0%,#9C7B50 28%,#E4CDA4 52%,#A6824F 78%,#C9A876 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">ให้ทรงพลัง</span>หรือยัง?
+    </h2>
+    <p class="text-ivory/55 text-[1.05rem] mt-6 max-w-xl mx-auto leading-relaxed">
+      ติดต่อครูเป้เพื่อนัดคุยและรับ proposal เฉพาะสำหรับธุรกิจของคุณ ปรึกษาฟรีก่อนตัดสินใจ
+    </p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        <span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span>
+      </a>
+      <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span>Facebook</span><span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="text-ivory/70 py-14" style="background:#160C06;">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <a href="Rattiya Homepage.html" class="flex flex-col items-center md:items-start leading-none">
+      <span class="font-script text-4xl leading-none" style="background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Rattiya</span>
+      <span class="text-[0.55rem] tracking-[0.4em] uppercase font-medium mt-1" style="color:rgba(219,192,154,0.4);">POWER BRANDING™ · ครูเป้ รัตติยา</span>
+    </a>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs" style="color:rgba(255,255,255,0.25);">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 30;
+    nav.style.background = scrolled ? 'rgba(30,10,0,0.88)' : 'transparent';
+    nav.style.backdropFilter = scrolled ? 'blur(14px)' : 'none';
+    nav.style.boxShadow = scrolled ? '0 1px 0 rgba(184,149,106,0.12)' : 'none';
+  }, { passive: true });
+</script>
+</body>
+</html>

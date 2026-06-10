@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brand Video · Rattiya Power Branding™</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .check-item { display:flex; align-items:flex-start; gap:.9rem; }
+  .check-icon {
+    flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    background:linear-gradient(135deg,#C9A876,#9C7B50);
+    display:grid; place-items:center; margin-top:.18rem;
+  }
+  .check-icon svg { width:11px; height:11px; }
+  .step-num {
+    font-family:"Cormorant Garamond",serif; font-style:italic;
+    font-size:3.8rem; line-height:1; font-weight:600;
+    background:linear-gradient(105deg,#C9A876 0%,#9C7B50 60%,#E4CDA4 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+</style>
+</head>
+
+<body class="font-thai bg-cream">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#voices">รีวิว</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+      <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="pt-36 pb-20 bg-cream overflow-hidden relative">
+  <div class="hero-watermark pointer-events-none absolute -right-10 top-8 text-[14vw] leading-none opacity-[0.05] select-none whitespace-nowrap">VIDEO</div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <a href="Rattiya Homepage.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-8 font-medium">
+      <span>←</span><span>กลับหน้าแรก</span>
+    </a>
+    <div class="max-w-3xl">
+      <span class="eyebrow mb-4 block">คอร์สเรียนกับครูเป้ · 02</span>
+      <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.8rem,6vw,5rem)]">
+        Brand <span class="gold-text">Video</span>
+      </h1>
+      <p class="text-ink/65 text-[1.15rem] mt-6 max-w-2xl leading-relaxed">
+        เรียนถ่ายและตัดต่อวิดีโอสำหรับแบรนด์ด้วยมือถือเครื่องเดียว
+        ตั้งแต่วางคอนเซ็ปต์ มุมกล้อง แสง ไปจนถึงการเล่าเรื่องให้คนหยุดดู
+      </p>
+      <div class="flex flex-wrap gap-4 mt-10">
+        <a href="Rattiya Homepage.html#contact" class="btn btn-primary">
+          <span>สมัครเรียนเลย</span><span class="btn-arrow">→</span>
+        </a>
+        <a href="#details" class="btn btn-ghost">
+          <span>ดูรายละเอียด</span><span class="btn-arrow">↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR WHOM ============ -->
+<section class="py-16 lg:py-20 bg-ivory/60 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <span class="eyebrow">เหมาะสำหรับใคร</span>
+      <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] mt-3">
+        คอร์สนี้<span class="gold-text">เหมาะกับคุณ</span>ถ้า…
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">เจ้าของธุรกิจที่อยากทำคอนเทนต์เอง</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">ไม่อยากจ้างทีม แต่อยากสร้างวิดีโอแบรนด์ที่ดูดีได้ด้วยตัวเอง ด้วยมือถือที่มีอยู่</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">นักการตลาดที่ต้องการทักษะวิดีโอ</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">ต้องการเสริมทักษะการผลิตคอนเทนต์วิดีโอให้แบรนด์ที่คุณดูแลอยู่</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-gold/18">
+        <div class="text-gold/80 text-3xl font-serif mb-4">✦</div>
+        <h3 class="font-thaihead font-medium text-brown text-xl mb-2">คนที่อยากเริ่มต้นทำ Short Video</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">TikTok, Reels, YouTube Shorts — เรียนรู้สูตรที่ทำให้วิดีโอได้ยอดวิวและยอดขายจริง</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU LEARN ============ -->
+<section id="details" class="py-16 lg:py-24">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <div>
+        <span class="eyebrow mb-4 block">สิ่งที่คุณจะได้เรียน</span>
+        <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] leading-snug mb-8">
+          มือถือเครื่องเดียว<br/>สร้าง<span class="gold-text">วิดีโอแบรนด์</span>ระดับโปร
+        </h2>
+        <div class="space-y-5">
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">เทคนิคถ่ายด้วยมือถือให้ดูโปร</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">มุมกล้อง แสง การจัดองค์ประกอบภาพ ที่ทำให้วิดีโอดูมีมูลค่าทันที</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">วางสคริปต์และเล่าเรื่องให้น่าติดตาม</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">โครงสร้างวิดีโอที่ดึงให้คนดูจนจบ และอยากแชร์ต่อ</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">ตัดต่อและลงคอนเทนต์ให้ปัง</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">แอปตัดต่อที่ใช้ง่าย เทคนิค caption เพลง และการ optimize สำหรับแต่ละแพลตฟอร์ม</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">สร้าง Hook ที่หยุดนิ้วได้ใน 3 วินาที</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">เรียนรู้สูตรเปิดวิดีโอที่ทำให้คนไม่เลื่อนผ่าน และติดตามคุณต่อไป</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="font-thaihead font-medium text-brown text-lg">ระบบผลิตวิดีโอที่ทำซ้ำได้ทุกสัปดาห์</div>
+              <p class="text-ink/60 text-sm mt-1 leading-relaxed">วางแผนคอนเทนต์วิดีโอล่วงหน้า เพื่อให้ posting สม่ำเสมอโดยไม่หมดแรง</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow mb-4 block">รูปแบบการเรียน</span>
+        <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] leading-snug mb-8">
+          เรียนแบบลงมือทำ
+        </h2>
+        <div class="space-y-8">
+          <div class="flex gap-5 items-start">
+            <div class="step-num">01</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">เรียนทฤษฎีการเล่าเรื่อง</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">เข้าใจโครงสร้างวิดีโอที่ดี สูตร Hook-Body-CTA และจิตวิทยาของผู้ชม</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">02</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">ฝึกถ่าย Live Workshop</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">ถ่ายจริงในคลาส พร้อม feedback จากครูเป้ทันที แก้ไขได้ตรงจุด</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">03</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">ตัดต่อและลงจริง</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">ทำวิดีโอสำเร็จและลงโซเชียลจริงภายในวันเรียน เห็นผลทันที</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="step-num">04</div>
+            <div class="pt-2">
+              <h3 class="font-thaihead font-medium text-brown text-xl mb-1">ติดตามผลหลังเรียน</h3>
+              <p class="text-ink/60 text-sm leading-relaxed">ครูเป้ติดตามผลและให้คำแนะนำต่อเนื่อง จนคุณทำได้คล่องด้วยตัวเอง</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLE VIDEOS ============ -->
+<section class="py-16 bg-ivory/55 border-y border-gold/15">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <span class="eyebrow">ตัวอย่างผลงาน</span>
+      <h2 class="font-thaihead font-medium text-ink text-[clamp(1.8rem,3.2vw,2.8rem)] mt-3">
+        วิดีโอที่<span class="gold-text">ลูกค้าสร้าง</span>จากคอร์สนี้
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+        <iframe src="https://www.tiktok.com/player/v1/7590333410397195540?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="Study Chula"></iframe>
+      </div>
+      <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+        <iframe src="https://www.tiktok.com/player/v1/7576821760343969040?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="Genius Coaching"></iframe>
+      </div>
+      <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+        <iframe src="https://www.tiktok.com/player/v1/7496864724563348744?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="Fah Life Architecture"></iframe>
+      </div>
+      <div class="rounded-[18px] overflow-hidden bg-[#16110d] border border-gold/25 shadow-[0_30px_58px_-38px_rgba(92,68,53,0.6)]" style="aspect-ratio:267/476;">
+        <iframe src="https://www.tiktok.com/player/v1/7564033207981690120?music_info=1&description=1" class="w-full h-full" style="border:0;display:block" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" frameborder="0" title="Dog Universe"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="py-16 lg:py-24 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <article class="relative max-w-3xl mx-auto bg-brown text-ivory rounded-[26px] overflow-hidden shadow-[0_50px_90px_-44px_rgba(92,68,53,0.7)]">
+      <div class="hero-watermark pointer-events-none absolute -right-6 -top-6 text-[10rem] leading-none opacity-[0.07] text-ivory select-none">02</div>
+      <div class="relative p-9 lg:p-12">
+        <span class="eyebrow text-goldlight block mb-3">สมัครคอร์ส Brand Video</span>
+        <h2 class="font-thaihead text-3xl lg:text-4xl leading-snug mb-6">
+          พร้อมสร้างวิดีโอแบรนด์<br/>ที่<span style="font-family:'Sriracha',cursive;background:linear-gradient(105deg,#C9A876,#E4CDA4,#C9A876);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">คนหยุดดู</span>หรือยัง?
+        </h2>
+        <p class="text-ivory/70 leading-relaxed mb-8 max-w-xl">
+          ติดต่อครูเป้เพื่อนัดคุยและสอบถามรายละเอียดคอร์สได้เลย ปรึกษาฟรีก่อนตัดสินใจ
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://lin.ee/YQUCYsS" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span>แอดไลน์ @bosspae</span><span class="btn-arrow">→</span>
+          </a>
+          <a href="https://www.facebook.com/Boss.Poupee" target="_blank" rel="noopener" class="btn !border !border-ivory/40 !text-ivory hover:!bg-ivory hover:!text-brown transition-colors !py-[1.05rem] !px-[2.1rem] rounded-full">
+            <span>Facebook</span><span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#3D2E25] text-ivory/70 py-14">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <a href="Rattiya Homepage.html" class="flex flex-col items-center md:items-start leading-none">
+      <span class="font-script gold-text text-4xl leading-none">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45 mt-1">POWER BRANDING™ · ครูเป้ รัตติยา</span>
+    </a>
+    <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm">
+      <a class="footer-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="footer-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="footer-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+</script>
+</body>
+</html>

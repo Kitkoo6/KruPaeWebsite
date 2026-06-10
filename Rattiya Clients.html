@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>แบรนด์ที่เราดูแล · Rattiya Power Branding™</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+          sriracha: ['"Sriracha"', "cursive"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.client-card {
+  display:block; background:#fff; border-radius:18px;
+  border:1px solid rgba(184,149,106,0.2);
+  overflow:hidden; text-decoration:none;
+  transition: transform .5s cubic-bezier(.4,0,.15,1), box-shadow .5s ease, border-color .5s ease;
+}
+.client-card:hover { transform:translateY(-8px); box-shadow:0 38px 64px -38px rgba(92,68,53,0.5); border-color:rgba(184,149,106,0.55); }
+.client-card-media {
+  aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+  padding:18%; position:relative; overflow:hidden; background:#fff;
+}
+.client-card-media img { width:100%; height:100%; object-fit:contain; transition:transform .7s cubic-bezier(.3,0,.2,1); }
+.client-card:hover .client-card-media img { transform:scale(1.06); }
+.client-card-overlay {
+  position:absolute; inset:0; background:rgba(74,59,48,0.6);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .4s ease;
+}
+.client-card:hover .client-card-overlay { opacity:1; }
+.client-card-placeholder {
+  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:600;
+  font-size:3rem; color:rgba(184,149,106,0.45);
+  background:linear-gradient(135deg,#F5EEE5,#EBE0D0);
+}
+.client-card-info { padding:1.1rem 1.3rem 1.3rem; border-top:1px solid rgba(184,149,106,0.12); }
+</style>
+</head>
+
+<body class="font-thai bg-ivory">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#voices">รีวิว</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+      <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="pt-36 pb-16 bg-cream text-center">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <a href="Rattiya Homepage.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-8 font-medium">
+      <span>←</span><span>กลับหน้าแรก</span>
+    </a>
+    <div class="flex flex-col items-center">
+      <span class="eyebrow mb-4">Portfolio · Power Branding™</span>
+      <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.4rem,5vw,4rem)]">
+        แบรนด์ที่<span class="gold-text">เราดูแล</span>
+      </h1>
+      <p class="text-ink/60 text-[1.05rem] mt-4 max-w-lg leading-relaxed">
+        ลูกค้าทุกแบรนด์ที่ครูเป้ดูแล ครอบคลุมหลากหลายอุตสาหกรรม
+      </p>
+      <div class="gold-rule w-24 mt-8"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAND GRID ============ -->
+<main class="py-16 lg:py-20">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 space-y-16">
+
+    <!-- ===== 01 · ขนมอบ · Bakery (2 clients) ===== -->
+    <div>
+      <div class="sector-head mb-7">
+        <span class="sector-mark">01</span>
+        <span class="sector-name">ขนมอบ — Bakery</span>
+        <span class="sector-line"></span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <a href="Chime Homemade.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/chime.jpg" alt="Chime Homemade"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">C</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Bakery</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Chime Homemade</div>
+          </div>
+        </a>
+
+        <a href="Me Waffle.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/mewaffle.jpg" alt="Me Waffle"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">M</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Bakery</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Me Waffle</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== 02+03 · Restaurant (1) + Automotive (1) — paired to save space ===== -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Restaurant -->
+      <div>
+        <div class="sector-head mb-7">
+          <span class="sector-mark">02</span>
+          <span class="sector-name">อาหาร — Restaurant</span>
+          <span class="sector-line"></span>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <a href="Kin Arai Dee.html" class="client-card">
+            <div class="client-card-media">
+              <img src="assets/clients/kinaraidee.jpg" alt="กินอะไรดี"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="client-card-placeholder" style="display:none;">ก</div>
+              <div class="client-card-overlay">
+                <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+              </div>
+            </div>
+            <div class="client-card-info">
+              <div class="eyebrow text-rosedeep text-[0.68rem]">Restaurant</div>
+              <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">กินอะไรดี</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Automotive -->
+      <div>
+        <div class="sector-head mb-7">
+          <span class="sector-mark">03</span>
+          <span class="sector-name">ยานยนต์ — Automotive</span>
+          <span class="sector-line"></span>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <a href="Inner Car.html" class="client-card">
+            <div class="client-card-media">
+              <img src="assets/clients/innercar.jpg" alt="Inner Car"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="client-card-placeholder" style="display:none;">IC</div>
+              <div class="client-card-overlay">
+                <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+              </div>
+            </div>
+            <div class="client-card-info">
+              <div class="eyebrow text-rosedeep text-[0.68rem]">Automotive</div>
+              <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Inner Car</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== 04 · ความรักและไลฟ์สไตล์ · Love Talk (2 clients) ===== -->
+    <div>
+      <div class="sector-head mb-7">
+        <span class="sector-mark">04</span>
+        <span class="sector-name">ความรักและไลฟ์สไตล์ — Love Talk</span>
+        <span class="sector-line"></span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <a href="Khun Bpu.html" class="client-card">
+          <div class="client-card-media">
+            <div class="client-card-placeholder">บิ้ว</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Love Talk</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">คุณบิ้ว ฝรั่ง</div>
+          </div>
+        </a>
+
+        <a href="Kru Megan.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/krumegan.jpg" alt="ครูเมแกน"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">ม</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Love Talk</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ครูเมแกน</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== 05 · การศึกษาและโค้ชชิ่ง · Education (3 clients) ===== -->
+    <div>
+      <div class="sector-head mb-7">
+        <span class="sector-mark">05</span>
+        <span class="sector-name">การศึกษาและโค้ชชิ่ง — Education &amp; Coaching</span>
+        <span class="sector-line"></span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <a href="Study Chula.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/studychula.jpg" alt="Study Chula"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">SC</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Education</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Study Chula</div>
+          </div>
+        </a>
+
+        <a href="Genius Coaching.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/genius.jpg" alt="Genius Coaching"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">GC</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Coaching</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Genius Coaching</div>
+          </div>
+        </a>
+
+        <a href="Police Training.html" class="client-card">
+          <div class="client-card-media">
+            <div class="client-card-placeholder">ตร.</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Training</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Police Training</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== 06 · ไลฟ์สไตล์และสัตว์เลี้ยง (2 clients) ===== -->
+    <div>
+      <div class="sector-head mb-7">
+        <span class="sector-mark">06</span>
+        <span class="sector-name">ไลฟ์สไตล์และสัตว์เลี้ยง — Lifestyle &amp; Pet</span>
+        <span class="sector-line"></span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <a href="Fah Life Architecture.html" class="client-card">
+          <div class="client-card-media">
+            <div class="client-card-placeholder">Fah</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Life Design</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Fah Life Architecture</div>
+          </div>
+        </a>
+
+        <a href="Dog Universe.html" class="client-card">
+          <div class="client-card-media">
+            <div class="client-card-placeholder">DU</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Pet</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Dog Universe</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== 07 · อาหารเสริม · Supplements ===== -->
+    <div>
+      <div class="sector-head mb-7">
+        <span class="sector-mark">07</span>
+        <span class="sector-name">อาหารเสริม — Supplements</span>
+        <span class="sector-line"></span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <a href="Baiteoy.html" class="client-card">
+          <div class="client-card-media">
+            <img src="assets/clients/greenleaf.jpg" alt="Baiteoy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="client-card-placeholder" style="display:none;">B</div>
+            <div class="client-card-overlay">
+              <span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span>
+            </div>
+          </div>
+          <div class="client-card-info">
+            <div class="eyebrow text-rosedeep text-[0.68rem]">Supplements</div>
+            <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Baiteoy</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brown text-ivory py-12 mt-8">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-6">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script text-[2rem] -mb-1" style="background:linear-gradient(105deg,#C9A876 0%,#E4CDA4 52%,#C9A876 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Rattiya</span>
+      <span class="text-ivory/50 text-[0.55rem] tracking-[0.45em] uppercase font-medium">POWER BRANDING™</span>
+    </a>
+    <nav class="flex flex-wrap gap-6 text-sm text-ivory/70">
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+</script>
+</body>
+</html>
