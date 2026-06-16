@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>แบรนด์ที่เคยร่วมงาน · Rattiya Power Branding™</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Kanit:wght@300;400;500;600;700&family=Sriracha&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F5EEE5", creamdeep: "#EBE0D0", ivory: "#FBF7F0",
+          gold: "#B8956A", golddeep: "#9C7B50", goldlight: "#DBC09A",
+          rose: "#C5A099", rosedeep: "#A8827B", brown: "#5C4435", ink: "#4A3B30",
+        },
+        fontFamily: {
+          script: ['"Pinyon Script"', "cursive"],
+          serif: ['"Cormorant Garamond"', "serif"],
+          thaihead: ['"Kanit"', "sans-serif"],
+          thai: ['"Kanit"', "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.archive-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(184,149,106,0.18);
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10%;
+  transition: transform .4s cubic-bezier(.4,0,.15,1), box-shadow .4s ease, border-color .4s ease;
+}
+.archive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -20px rgba(92,68,53,0.35);
+  border-color: rgba(184,149,106,0.5);
+}
+.archive-card img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  transition: transform .6s cubic-bezier(.3,0,.2,1);
+}
+.archive-card:hover img { transform: scale(1.06); }
+
+.archive-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic; font-weight: 600;
+  font-size: 2rem;
+  color: rgba(184,149,106,0.3);
+  background: linear-gradient(135deg,#F5EEE5,#EBE0D0);
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body class="font-thai bg-ivory">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
+  <div class="w-full px-6 lg:px-10 xl:px-16 2xl:px-24 flex items-center justify-between">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script gold-text text-[2rem] -mb-1">Rattiya</span>
+      <span class="eyebrow text-[0.55rem] tracking-[0.45em] text-brown/70">POWER BRANDING™</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[0.95rem]">
+      <a class="nav-link" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="nav-link" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="nav-link" href="Rattiya Homepage.html#voices">รีวิว</a>
+      <a class="nav-link" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-[0.9rem] hidden sm:inline-flex">
+      <span>ปรึกษาฟรี</span><span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="relative pt-36 pb-16 bg-cream overflow-hidden text-center">
+  <div class="hero-watermark pointer-events-none absolute top-16 left-0 right-0 text-center text-[13vw] lg:text-[10vw] z-0 whitespace-nowrap">
+    BRANDS
+  </div>
+  <div class="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-10">
+    <a href="Rattiya Clients.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-10 font-medium">
+      <span>←</span><span>กลับผลงานอื่น ๆ</span>
+    </a>
+    <div class="flex flex-col items-center">
+      <span class="eyebrow mb-5">Brand Archive · Power Branding™</span>
+      <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.6rem,5.5vw,4.8rem)]">
+        แบรนด์ที่<span class="gold-text">เคยร่วมงาน</span>
+      </h1>
+      <p class="text-ink/60 text-[1.05rem] mt-5 max-w-xl leading-relaxed">
+        รวมแบรนด์ที่ครูเป้ได้มีโอกาสร่วมวางกลยุทธ์และสร้างตัวตนมาตลอดหลายปีที่ผ่านมา
+      </p>
+      <div class="gold-rule w-24 mt-8"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO WALL ============ -->
+<main class="py-16 lg:py-20">
+  <div class="max-w-[1600px] mx-auto px-6 lg:px-10">
+
+    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+
+      <!-- Add images here: replace archive-placeholder divs with <img> tags -->
+      <!-- Example: <img src="assets/clients/archive/brand-name.jpg" alt="Brand name" /> -->
+
+      <div class="archive-card"><div class="archive-placeholder">01</div></div>
+      <div class="archive-card"><div class="archive-placeholder">02</div></div>
+      <div class="archive-card"><div class="archive-placeholder">03</div></div>
+      <div class="archive-card"><div class="archive-placeholder">04</div></div>
+      <div class="archive-card"><div class="archive-placeholder">05</div></div>
+      <div class="archive-card"><div class="archive-placeholder">06</div></div>
+      <div class="archive-card"><div class="archive-placeholder">07</div></div>
+      <div class="archive-card"><div class="archive-placeholder">08</div></div>
+      <div class="archive-card"><div class="archive-placeholder">09</div></div>
+      <div class="archive-card"><div class="archive-placeholder">10</div></div>
+      <div class="archive-card"><div class="archive-placeholder">11</div></div>
+      <div class="archive-card"><div class="archive-placeholder">12</div></div>
+      <div class="archive-card"><div class="archive-placeholder">13</div></div>
+      <div class="archive-card"><div class="archive-placeholder">14</div></div>
+      <div class="archive-card"><div class="archive-placeholder">15</div></div>
+      <div class="archive-card"><div class="archive-placeholder">16</div></div>
+      <div class="archive-card"><div class="archive-placeholder">17</div></div>
+      <div class="archive-card"><div class="archive-placeholder">18</div></div>
+      <div class="archive-card"><div class="archive-placeholder">19</div></div>
+      <div class="archive-card"><div class="archive-placeholder">20</div></div>
+      <div class="archive-card"><div class="archive-placeholder">21</div></div>
+      <div class="archive-card"><div class="archive-placeholder">22</div></div>
+      <div class="archive-card"><div class="archive-placeholder">23</div></div>
+      <div class="archive-card"><div class="archive-placeholder">24</div></div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brown text-ivory py-12 mt-8">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-6">
+    <a href="Rattiya Homepage.html" class="flex flex-col leading-none">
+      <span class="font-script text-[2rem] -mb-1" style="background:linear-gradient(105deg,#C9A876 0%,#E4CDA4 52%,#C9A876 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Rattiya</span>
+      <span class="text-ivory/50 text-[0.55rem] tracking-[0.45em] uppercase font-medium">POWER BRANDING™</span>
+    </a>
+    <nav class="flex flex-wrap gap-6 text-sm text-ivory/70">
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#about">เกี่ยวกับ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#services">บริการ</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#work">ผลงาน</a>
+      <a class="hover:text-ivory transition-colors" href="Rattiya Homepage.html#contact">ติดต่อ</a>
+    </nav>
+    <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+</script>
+</body>
+</html>
