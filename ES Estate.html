@@ -107,7 +107,7 @@
 
   /* Combined media grid — uniform portrait tiles (videos + photos) */
   .hh-row { display:flex; flex-wrap:wrap; justify-content:center; gap: clamp(1rem,2vw,1.5rem); }
-  .hh-row.videos .hh-tile { width: clamp(230px, 26vw, 300px); }
+  .hh-row.videos .hh-tile { width: clamp(160px, 21vw, 260px); }
   .hh-row.pics .hh-tile { width: clamp(180px, 21vw, 250px); }
   .hh-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d;
@@ -176,23 +176,15 @@
 
 <!-- ============ HERO ============ -->
 <section id="hero" class="hh-hero min-h-screen flex items-center pt-32 pb-20">
-  <div class="hh-watermark pointer-events-none absolute top-28 left-0 right-0 text-center text-[13vw] lg:text-[9vw] z-0 whitespace-nowrap">
-    ES ESTATE
-  </div>
 
   <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.02fr_0.98fr] gap-14 lg:gap-16 items-center w-full">
     <div>
       <a href="Rattiya Homepage.html#work" class="hh-back mb-8"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
 
-      <img src="assets/clients/estate.jpg" alt="ES Estate Khaoyai" class="reveal" data-y="18" style="width:clamp(200px,26vw,300px); height:auto; display:block; margin:0.5rem 0 1.6rem; border-radius:12px; filter:drop-shadow(0 14px 26px rgba(92,68,53,0.22));" />
-
-      <div class="hero-eyebrow flex items-center gap-3 mb-6 mt-2">
-        <span class="deco-dot"></span>
-        <span class="eyebrow">Case Study · Real Estate · เขาใหญ่</span>
-      </div>
+      <img src="assets/clients/estate.jpg" alt="ES Estate Khaoyai" class="reveal" data-y="18" style="width:clamp(160px,18vw,220px); height:auto; display:block; margin:0.5rem auto 2.8rem; border-radius:12px; filter:drop-shadow(0 14px 26px rgba(92,68,53,0.22));" />
 
       <h1 class="font-thaihead font-medium text-ink leading-[1.18] text-[clamp(2.3rem,5vw,4.2rem)]">
-        <span class="hero-mask mask-line"><span class="whitespace-nowrap">อสังหาฯ ที่<span class="gold-text font-sriracha" style="font-size:1.08em;">มีเรื่องเล่า</span></span></span>
+        <span class="hero-mask mask-line"><span class="whitespace-nowrap">อสังหาฯ ที่<span class="gold-text font-sriracha" style="font-size:1.08em;">มีคุณค่า</span></span></span>
       </h1>
 
       <p class="hero-sub mt-7 max-w-[34rem] text-[1.08rem] leading-relaxed text-ink/75">
@@ -200,41 +192,11 @@
         ให้ถึงกลุ่มเป้าหมายที่ใช่ — ผ่านการวางตัวตน เล่าเรื่องราวเบื้องหลัง
         และสร้างคอนเทนต์ที่ทำให้ทุกมุมของโครงการน่าหลงใหล
       </p>
-
-      <div class="mt-9 flex flex-wrap gap-x-9 gap-y-5">
-        <div>
-          <div class="font-serif text-brown text-3xl leading-none">Real Estate</div>
-          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">หมวดธุรกิจ</div>
-        </div>
-        <div class="w-px self-stretch bg-gold/25"></div>
-        <div>
-          <div class="font-serif text-brown text-3xl leading-none">Personal Branding</div>
-          <div class="text-[0.8rem] tracking-wide text-ink/60 mt-2">บริการที่ใช้</div>
-        </div>
-      </div>
     </div>
 
     <div class="relative flex justify-center lg:justify-end">
       <div class="hh-frame w-[92%] sm:w-[82%] lg:w-[100%] max-w-[540px]" style="aspect-ratio:3/4;">
         <img src="assets/es/hero.jpg" alt="ES Estate Khaoyai — ครูเป้และลูกค้า" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STORY (visual) ============ -->
-<section class="py-20 lg:py-28 border-t border-gold/15">
-  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
-    <div class="hh-story" style="grid-template-columns:0.82fr 1.18fr; align-items:stretch;">
-      <div class="reveal" data-y="34">
-        <div class="hh-frame" style="height:100%; min-height:360px;">
-          <img src="assets/es/interview.jpg" alt="ES Estate Khaoyai — บทสัมภาษณ์เจ้าของโครงการ" />
-        </div>
-      </div>
-      <div class="reveal" data-y="34" data-x="20">
-        <div class="hh-frame" style="height:100%; min-height:360px;">
-          <img src="assets/es/filming.jpg" alt="ES Estate Khaoyai — การถ่ายทำคอนเทนต์" />
-        </div>
       </div>
     </div>
   </div>
@@ -251,7 +213,13 @@
         คอนเทนต์ที่<span class="gold-text">ทรงพลัง</span> สื่อถึงคุณค่าของโครงการ
       </h2>
     </div>
-    <div class="hh-row videos" data-reveal-group>
+    <div class="mb-8" style="display:grid; grid-template-columns:0.62fr 1fr; gap:clamp(1rem,2vw,1.5rem); align-items:stretch;" data-reveal-group>
+      <div class="hh-frame reveal" data-y="24" style="overflow:hidden;"><img src="assets/es/portrait.jpg" alt="ES Estate Khaoyai — ภาพแบรนด์" style="width:100%; height:auto; object-fit:cover; object-position:50% 50%; display:block;" /></div>
+      <div class="hh-frame reveal" data-y="24" style="height:100%;"><img src="assets/es/interview.jpg" alt="ES Estate Khaoyai — บทสัมภาษณ์" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" /></div>
+      <div class="hh-frame reveal" data-y="24" style="height:100%;"><img src="assets/es/filming.jpg" alt="ES Estate Khaoyai — การถ่ายทำ" style="width:100%; height:100%; object-fit:cover; object-position:35% 50%; display:block;" /></div>
+      <div class="hh-frame reveal" data-y="24" style="height:100%;"><img src="assets/es/bts.jpg" alt="ES Estate Khaoyai — เบื้องหลัง" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" /></div>
+    </div>
+    <div class="hh-row videos mt-14 lg:mt-20" data-reveal-group>
       <div class="hh-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1661842288195944%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="ES Estate — วิดีโอ 1"></iframe>
       </div>
@@ -261,10 +229,9 @@
       <div class="hh-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2046033139284933%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="ES Estate — วิดีโอ 3"></iframe>
       </div>
-    </div>
-    <div class="hh-row pics mt-5 lg:mt-7" data-reveal-group>
-      <div class="hh-tile"><img src="assets/es/portrait.jpg" alt="ES Estate Khaoyai — ภาพแบรนด์" /></div>
-      <div class="hh-tile"><img src="assets/es/bts.jpg" alt="ES Estate Khaoyai — เบื้องหลังการสร้างคอนเทนต์" /></div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1289756143187961%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="ES Estate — วิดีโอ 4"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -274,8 +241,9 @@
   <div class="max-w-3xl mx-auto px-6 text-center reveal" data-y="28">
     <span class="eyebrow text-rosedeep">โจทย์ของแบรนด์</span>
     <p class="hh-pullquote mt-6">
-      "โครงการดีและทำเลพรีเมียม แต่ยังสื่อสาร <span class="gold-text not-italic">คุณค่า</span>
-      ไม่ถึงลูกค้าที่ใช่ — เพราะยังขาด <span class="gold-text not-italic">เรื่องเล่า</span> ที่ทำให้คนรู้สึก"
+      "โครงการดีและทำเลพรีเมียม<br/>
+      แต่ยังสื่อสาร <span class="gold-text not-italic">คุณค่า</span> ไม่ถึงลูกค้าที่ใช่<br/>
+      เพราะยังขาด <span class="gold-text not-italic">เรื่องเล่า</span> ที่ทำให้คนรู้สึก"
     </p>
   </div>
 </section>
@@ -316,6 +284,8 @@
     <div class="text-xs text-ivory/40">© 2025 Power Branding™. All rights reserved.</div>
   </div>
 </footer>
+
+
 
 <!-- ============ SCRIPTS ============ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

@@ -123,7 +123,7 @@
   .lc-concert { display:grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(1rem,2.5vw,1.6rem); align-items:stretch; }
   @media (max-width: 860px) { .lc-concert { grid-template-columns: 1fr; } }
   .lc-flyer { border-radius: 18px; overflow:hidden; box-shadow: 0 40px 80px -36px rgba(0,0,0,0.85); border:1px solid rgba(233,106,30,0.22); height:100%; }
-  .lc-flyer img { width:100%; height:100%; object-fit:cover; display:block; }
+  .lc-flyer img { width:100%; height:100%; object-fit:contain; display:block; }
   .lc-concert-stack { display:grid; gap: clamp(0.85rem,1.6vw,1.1rem); grid-template-rows: 1.12fr 1fr; }
   .lc-concert-stack .rv, .lc-concert-stack .lc-frame { height:100%; }
   .lc-concert-stack .lc-frame img { width:100%; height:100%; object-fit:cover; }
@@ -230,7 +230,6 @@
     <div class="lc-tag">Coffee · Art · Music</div>
     <div class="lc-loc"><span aria-hidden="true">📍</span> อ่างทอง · วิวพระใหญ่ วัดม่วง</div>
   </div>
-  <div class="lc-scroll"><span>เลื่อนลง</span><span class="bar"></span></div>
 </section>
 
 <!-- ===== STORY ===== -->
@@ -238,7 +237,6 @@
   <div class="lc-wrap lc-split">
     <div class="rv">
       <div class="lc-frame"><img src="assets/laocafe/family.jpg" alt="ครูเป้และลูกชาย ที่ The Lao Cafe" /></div>
-      <div class="lc-cap">ครูเป้และลูกชาย — ลงมือทำร้านนี้ด้วยกัน</div>
     </div>
     <div class="rv">
       <span class="lc-kicker">ธุรกิจหลักของครูเป้</span>
@@ -246,7 +244,7 @@
       <div class="lc-body mt-6">
         <p>The Lao Cafe คือคาเฟ่ที่ครูเป้ก่อตั้งและดูแลด้วยตัวเอง ร่วมกับลูกชาย — ไม่ใช่แค่ร้านกาแฟ แต่เป็นพื้นที่ของ <strong style="color:#F5EEE5;font-weight:500;">Coffee · Art · Music</strong> ที่ตั้งใจให้ทุกคนได้ช้าลง และอยู่กับช่วงเวลาตรงหน้า</p>
         <p>ตั้งอยู่ริมทุ่งนาที่อ่างทอง มองเห็นพระใหญ่วัดม่วงเป็นฉากหลัง บรรยากาศที่ทำให้ที่นี่กลายเป็นจุดหมายของคนที่อยากหนีความวุ่นวาย มานั่งจิบกาแฟ ฟังดนตรี และเติมใจให้เบาลง</p>
-        <p>ที่นี่คือต้นแบบของสิ่งที่ครูเป้สอน — การสร้างแบรนด์ที่มี “ตัวตน” จริง อบอุ่น และเป็นที่จดจำ</p>
+        <p>ที่นี่คือต้นแบบของสิ่งที่ครูเป้สอน — การสร้างแบรนด์ที่มี “ตัวตน” จริง<br/>อบอุ่น และเป็นที่จดจำ</p>
       </div>
     </div>
   </div>
@@ -292,17 +290,27 @@
       <span class="lc-kicker">Music at The Lao Cafe</span>
       <h2 class="lc-h2"><span class="accent">Love Concert</span><br/>ค่ำคืนของเสียงเพลงและความรัก</h2>
       <div class="lc-body mt-5" style="max-width:600px">
-        <p>“ตราบแดนนี้ จนรักนิรันดร์” — คอนเสิร์ตจากศิลปินรับเชิญชื่อดัง <strong style="color:#F5EEE5;font-weight:500;">ปั่น ไพบูลย์ เกียรติเขียวแก้ว</strong> Live at The Lao Cafe Angthong ค่ำคืนเดียวที่เพลงรักจะอยู่ในใจไปตลอดกาล</p>
+        <p>”ตราบแต่นี้ จนรักนิรันดร์” — คอนเสิร์ตจากศิลปินรับเชิญชื่อดัง <strong style=”color:#F5EEE5;font-weight:500;”>ปั่น ไพบูลย์ เกียรติเขียวแก้ว</strong><br/>Live at The Lao Cafe Angthong ค่ำคืนเดียวที่เพลงรักจะอยู่ในใจไปตลอดกาล</p>
       </div>
     </div>
 
-    <div class="lc-concert mt-10">
-      <div class="lc-flyer rv"><img src="assets/laocafe/concert-flyer.png" alt="Love Concert flyer — The Lao Cafe" /></div>
-      <div class="lc-concert-stack">
-        <div class="rv"><div class="lc-frame"><img src="assets/laocafe/concert-group.jpg" alt="ศิลปินและแขกผู้มีเกียรติถ่ายภาพร่วมกันที่ The Lao Cafe" /></div></div>
-        <div class="lc-concert-row">
-          <div class="rv"><div class="lc-frame"><img src="assets/laocafe/concert-stage.jpg" alt="ศิลปินรับเชิญแสดงสดที่ The Lao Cafe" /></div></div>
-          <div class="rv"><div class="lc-frame"><img src="assets/laocafe/concert-crowd.jpg" alt="บรรยากาศคอนเสิร์ตที่ The Lao Cafe" /></div></div>
+    <div class="mt-10" style="display:grid; grid-template-columns: 0.75fr 1.3fr; gap: clamp(0.75rem,1.5vw,1.1rem); align-items: stretch; height: clamp(480px, 54vw, 700px); overflow: hidden;">
+      <!-- left: flyer full height -->
+      <div class="rv lc-flyer" style="border-radius:18px; overflow:hidden; height:100%;">
+        <img src="assets/laocafe/concert-flyer.jpg" alt="Love Concert flyer — The Lao Cafe" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;" />
+      </div>
+      <!-- right: group on top, stage+crowd below -->
+      <div style="display:flex; flex-direction:column; gap: clamp(0.75rem,1.5vw,1.1rem);">
+        <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; flex:1.1;">
+          <img src="assets/laocafe/concert-group.jpg" alt="ศิลปินและแขกผู้มีเกียรติถ่ายภาพร่วมกันที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap: clamp(0.75rem,1.5vw,1.1rem); flex:1;">
+          <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; height: clamp(160px,18vw,260px);">
+            <img src="assets/laocafe/concert-stage.jpg" alt="ศิลปินรับเชิญแสดงสดที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; height: clamp(160px,18vw,260px);">
+            <img src="assets/laocafe/concert-crowd.jpg" alt="บรรยากาศคอนเสิร์ตที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
         </div>
       </div>
     </div>
@@ -342,7 +350,7 @@
     </div>
 
     <div class="lc-guestrow mt-10">
-      <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/guests-1.jpg" alt="กลุ่มลูกค้าชาวต่างชาติที่ The Lao Cafe" /></div></div>
+      <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/guests-1.jpg" alt="กลุ่มลูกค้าชาวต่างชาติที่ The Lao Cafe" style="object-fit: contain; object-position: center;" /></div></div>
       <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/guests-2.jpg" alt="ลูกค้าต่างชาติชมวิวทุ่งนาและพระใหญ่วัดม่วง" /></div></div>
       <div class="reel-pair">
         <div class="reel rv">
@@ -364,15 +372,15 @@
 <section class="lc-section lc-band">
   <div class="lc-wrap lc-split lc-split-persist">
     <div class="rv">
-      <div class="lc-quote-img"><img src="assets/laocafe/quote.jpg" alt="บทกวีจาก เหมียว เดอะลาว" /></div>
+      <div class="lc-quote-img"><img src="assets/laocafe/quote.jpg" alt="บทกวีจาก ครูเป้ เดอะลาวคาเฟ่" /></div>
     </div>
     <div class="rv">
       <span class="lc-kicker">บันทึกจากเจ้าของร้าน</span>
-      <blockquote class="lc-h2" style="font-weight:400;">“บางที สถานที่ที่อยู่ตรงหน้า<br/>คือ<span class="accent">คำตอบ</span>ที่หาอยู่”</blockquote>
+      <p style=”font-family:'Kanit',sans-serif; font-weight:500; color:#F5EEE5; line-height:1.18; font-size: clamp(2.6rem, 5.5vw, 4.2rem); margin-top:1.1rem;”>ความสุขง่ายๆ<br/><span style=”color:var(--lao);”>เริ่มต้นที่กาแฟแก้วโปรด</span></p>
       <div class="lc-body mt-6">
         <p>นั่งมองพระจากระเบียงร้าน ไม่ต้องไปไหนไกล — ความสงบที่ The Lao Cafe ตั้งใจมอบให้ทุกคนที่แวะมา</p>
       </div>
-      <div class="mt-6" style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--lao);font-size:1.1rem;">— เหมียว เดอะลาว</div>
+      <div class="mt-6" style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--lao);font-size:1.1rem;">— ครูเป้ เดอะลาวคาเฟ่</div>
     </div>
   </div>
 </section>

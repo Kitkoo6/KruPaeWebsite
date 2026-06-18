@@ -88,10 +88,10 @@
     .pj-gallery .pj-landscape { aspect-ratio: 4/3; }
   }
 
-  /* Dr Panjit videos: always 3 columns */
+  /* Dr Panjit videos: always 4 columns */
   .pj-videos {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     flex-wrap: unset !important;
   }
   .pj-videos .hh-tile { width: 100% !important; }
@@ -170,24 +170,21 @@
 
 <!-- ============ HERO (only section with text) ============ -->
 <section id="hero" class="hh-hero min-h-screen flex items-center pt-32 pb-20">
-  <div class="hh-watermark pointer-events-none absolute top-28 left-0 right-0 text-center text-[14vw] lg:text-[10vw] z-0 whitespace-nowrap">
-    DR. PANJIT
-  </div>
 
   <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.02fr_0.98fr] gap-14 lg:gap-16 items-center w-full">
     <div>
       <a href="Rattiya Homepage.html#work" class="hh-back mb-7"><span>←</span> กลับไปดูผลงานทั้งหมด</a>
 
-      <img src="assets/panjit/logo.png" alt="Panjit Consulting" class="reveal" data-y="16" style="width:clamp(120px,13vw,150px); height:auto; display:block; margin:0 auto 1.4rem; filter:drop-shadow(0 12px 22px rgba(92,68,53,0.2));" />
+      <img src="assets/panjit/logo.png" alt="Panjit Consulting" class="reveal" data-y="16" style="width:clamp(120px,13vw,150px); height:auto; display:block; margin:0 auto 2.8rem; filter:drop-shadow(0 12px 22px rgba(92,68,53,0.2));" />
 
-      <h1 class="font-thaihead font-medium text-ink leading-[1.16] text-[clamp(2.4rem,5.2vw,4.4rem)]">
-        <span class="hero-mask mask-line"><span class="whitespace-nowrap"><span class="gold-text font-sriracha" style="font-size:1.1em;">Dr. Panjit</span></span></span>
-        <span class="hero-mask mask-line"><span>Consulting</span></span>
+      <h1 class="font-thaihead font-medium text-ink leading-[1.18] text-[clamp(2.3rem,5vw,4.2rem)]">
+        <span class="hero-mask mask-line" style="overflow:visible;"><span class="whitespace-nowrap">ที่ปรึกษาที่ <span class="gold-text font-sriracha" style="font-size:1.08em;">คนเชื่อมือ</span></span></span>
       </h1>
 
       <p class="hero-sub mt-7 max-w-[33rem] text-[1.08rem] leading-relaxed text-ink/75">
-        วางภาพลักษณ์ผู้เชี่ยวชาญด้านการศึกษาและที่ปรึกษา ให้ดูน่าเชื่อถือ
-        ทันสมัย และเข้าถึงง่าย ผ่านการเล่าเรื่องและคอนเทนต์ที่เป็นตัวเอง
+        ที่ปรึกษาด้านการศึกษาระดับแนวหน้า ที่เราช่วยวางภาพลักษณ์ให้ดูน่าเชื่อถือ
+        ทันสมัย และเข้าถึงง่าย — ผ่านการวางตัวตน เล่าเรื่องราวเบื้องหลัง
+        และสร้างคอนเทนต์ที่ทำให้ทุกคนรู้สึกว่า "คนนี้แหละที่ไว้ใจได้"
       </p>
     </div>
 
@@ -221,6 +218,9 @@
       <div class="hh-tile">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4444237742495149%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 3"></iframe>
       </div>
+      <div class="hh-tile">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1835435561202873%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Dr. Panjit — วิดีโอ 4"></iframe>
+      </div>
     </div>
 
     <!-- Photo gallery: portraits + landscapes -->
@@ -238,8 +238,9 @@
   <div class="max-w-3xl mx-auto px-6 text-center reveal" data-y="28">
     <span class="eyebrow text-rosedeep">โจทย์ของแบรนด์</span>
     <p class="mt-6" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.5rem,3.2vw,2.4rem); line-height:1.4; color:var(--brown);">
-      "มีความรู้และประสบการณ์เชิงลึก แต่ยังขาด <span class="gold-text not-italic">ภาพลักษณ์</span>
-      ที่ทำให้คนรู้สึกว่านี่คือ <span class="gold-text not-italic">ผู้เชี่ยวชาญที่ไว้วางใจได้</span>"
+      "มีความรู้และประสบการณ์เชิงลึก<br/>
+      แต่ยังขาด <span class="gold-text not-italic">ภาพลักษณ์</span> ที่ทำให้คนรู้สึกว่านี่คือ<br/>
+      <span class="gold-text not-italic">ผู้เชี่ยวชาญที่ไว้วางใจได้</span>"
     </p>
   </div>
 </section>
