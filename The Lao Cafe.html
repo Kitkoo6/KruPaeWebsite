@@ -294,22 +294,22 @@
       </div>
     </div>
 
-    <div class="mt-10" style="display:grid; grid-template-columns: 0.75fr 1.3fr; gap: clamp(0.75rem,1.5vw,1.1rem); align-items: stretch; height: clamp(480px, 54vw, 700px); overflow: hidden;">
+    <div id="concertGrid" style="display:grid; grid-template-columns: 0.75fr 1.3fr; gap: clamp(0.75rem,1.5vw,1.1rem); align-items: stretch; height: 580px; overflow: hidden; margin-top:1rem;">
       <!-- left: flyer full height -->
       <div class="rv lc-flyer" style="border-radius:18px; overflow:hidden; height:100%;">
-        <img src="assets/laocafe/concert-flyer.jpg" alt="Love Concert flyer — The Lao Cafe" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;" />
+        <img id="concertFlyerImg" src="assets/laocafe/concert-flyer.jpg" alt="Love Concert flyer — The Lao Cafe" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;" />
       </div>
       <!-- right: group on top, stage+crowd below -->
-      <div style="display:flex; flex-direction:column; gap: clamp(0.75rem,1.5vw,1.1rem);">
-        <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; flex:1.1;">
-          <img src="assets/laocafe/concert-group.jpg" alt="ศิลปินและแขกผู้มีเกียรติถ่ายภาพร่วมกันที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+      <div id="concertRightCol" style="display:flex; flex-direction:column; gap: clamp(0.75rem,1.5vw,1.1rem); min-height:0; height:100%;">
+        <div id="concertGroupImg" class="rv lc-frame" style="border-radius:18px; overflow:hidden; flex:1.1; min-height:0;">
+          <img id="concertGroupInnerImg" src="assets/laocafe/concert-group.jpg" alt="ศิลปินและแขกผู้มีเกียรติถ่ายภาพร่วมกันที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap: clamp(0.75rem,1.5vw,1.1rem); flex:1;">
-          <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; height: clamp(160px,18vw,260px);">
-            <img src="assets/laocafe/concert-stage.jpg" alt="ศิลปินรับเชิญแสดงสดที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        <div id="concertBottomRow" style="display:grid; grid-template-columns:1fr 1fr; gap: clamp(0.75rem,1.5vw,1.1rem); flex:1; min-height:0; height:100%;">
+          <div id="concertStageWrap" class="rv lc-frame" style="border-radius:18px; overflow:hidden; height:100%;">
+            <img id="concertStageImg" src="assets/laocafe/concert-stage.jpg" alt="ศิลปินรับเชิญแสดงสดที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
           </div>
-          <div class="rv lc-frame" style="border-radius:18px; overflow:hidden; height: clamp(160px,18vw,260px);">
-            <img src="assets/laocafe/concert-crowd.jpg" alt="บรรยากาศคอนเสิร์ตที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <div id="concertCrowdWrap" class="rv lc-frame" style="border-radius:18px; overflow:hidden; height:100%;">
+            <img id="concertCrowdImg" src="assets/laocafe/concert-crowd.jpg" alt="บรรยากาศคอนเสิร์ตที่ The Lao Cafe" style="width:100%; height:100%; object-fit:cover; display:block;" />
           </div>
         </div>
       </div>
@@ -350,7 +350,6 @@
     </div>
 
     <div class="lc-guestrow mt-10">
-      <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/guests-1.jpg" alt="กลุ่มลูกค้าชาวต่างชาติที่ The Lao Cafe" style="object-fit: contain; object-position: center;" /></div></div>
       <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/guests-2.jpg" alt="ลูกค้าต่างชาติชมวิวทุ่งนาและพระใหญ่วัดม่วง" /></div></div>
       <div class="reel-pair">
         <div class="reel rv">
@@ -370,17 +369,47 @@
 
 <!-- ===== QUOTE ===== -->
 <section class="lc-section lc-band">
-  <div class="lc-wrap lc-split lc-split-persist">
-    <div class="rv">
-      <div class="lc-quote-img"><img src="assets/laocafe/quote.jpg" alt="บทกวีจาก ครูเป้ เดอะลาวคาเฟ่" /></div>
-    </div>
-    <div class="rv">
-      <span class="lc-kicker">บันทึกจากเจ้าของร้าน</span>
-      <p style=”font-family:'Kanit',sans-serif; font-weight:500; color:#F5EEE5; line-height:1.18; font-size: clamp(2.6rem, 5.5vw, 4.2rem); margin-top:1.1rem;”>ความสุขง่ายๆ<br/><span style=”color:var(--lao);”>เริ่มต้นที่กาแฟแก้วโปรด</span></p>
-      <div class="lc-body mt-6">
-        <p>นั่งมองพระจากระเบียงร้าน ไม่ต้องไปไหนไกล — ความสงบที่ The Lao Cafe ตั้งใจมอบให้ทุกคนที่แวะมา</p>
+  <div class="lc-wrap">
+    <div style="display:flex;align-items:center;gap:clamp(2.5rem,6vw,5.5rem);flex-wrap:wrap;">
+
+      <!-- IMAGE -->
+      <div class="rv" style="flex:0 0 min(400px,100%);width:min(400px,100%);">
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(233,106,30,0.28);box-shadow:0 0 0 5px rgba(233,106,30,0.06),0 44px 80px -30px rgba(0,0,0,0.88);">
+          <img src="assets/laocafe/quote.jpg" alt="ครูเป้ เดอะลาวคาเฟ่" style="width:100%;display:block;" />
+        </div>
       </div>
-      <div class="mt-6" style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--lao);font-size:1.1rem;">— ครูเป้ เดอะลาวคาเฟ่</div>
+
+      <!-- TEXT -->
+      <div class="rv" style="flex:1;min-width:min(280px,100%);">
+        <span class="lc-kicker">บันทึกจากเจ้าของร้าน</span>
+
+        <!-- quote with inline open/close marks -->
+        <div style="margin-top:1.3rem;">
+          <p style="font-family:'Kanit',sans-serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.25;color:#F5EEE5;margin:0;">
+            <span aria-hidden="true" style="font-family:'Cormorant Garamond',serif;font-size:0.75em;color:rgba(233,106,30,0.5);vertical-align:super;line-height:0;margin-right:0.1em;">"</span>ความสุขง่ายๆ
+          </p>
+          <p style="font-family:'Kanit',sans-serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.25;color:var(--lao);margin:0.05em 0 0;">
+            เริ่มต้นที่กาแฟแก้วโปรด<span aria-hidden="true" style="font-family:'Cormorant Garamond',serif;font-size:0.75em;color:rgba(233,106,30,0.5);vertical-align:super;line-height:0;margin-left:0.1em;">"</span>
+          </p>
+        </div>
+
+        <div style="margin-top:1.8rem;margin-bottom:1.5rem;"></div>
+
+        <!-- body -->
+        <p class="lc-body" style="font-size:0.97rem;line-height:1.9;max-width:420px;">
+          นั่งมองพระจากระเบียงร้าน ไม่ต้องไปไหนไกล — ความสงบที่ The Lao Cafe ตั้งใจมอบให้ทุกคนที่แวะมา
+        </p>
+
+        <!-- attribution -->
+        <div style="display:flex;align-items:center;gap:0.8rem;margin-top:1.8rem;">
+          <div style="width:26px;height:1px;background:var(--lao);flex-shrink:0;"></div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--lao);font-size:1.2rem;line-height:1.1;">ครูเป้ เดอะลาวคาเฟ่</div>
+            <div style="font-family:'Kanit',sans-serif;font-weight:300;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,238,229,0.3);margin-top:0.2rem;">The Lao Cafe · Angthong</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -391,7 +420,14 @@
     <span class="lc-kicker" style="justify-content:center">มาเยือน The Lao Cafe</span>
     <h2 class="lc-h2 mt-3" style="text-align:center">มานั่งจิบกาแฟ ฟังเพลง<br/>และ<span class="accent">เติมใจให้เบาลง</span></h2>
     <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
-      <a href="https://www.facebook.com" target="_blank" rel="noopener" class="lc-btn"><span>ติดตามเพจร้าน</span><span aria-hidden="true">→</span></a>
+      <a href="https://www.facebook.com/TheLaoCafeAngThong" target="_blank" rel="noopener" class="lc-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        <span>Facebook</span>
+      </a>
+      <a href="https://vt.tiktok.com/ZSQn6KopB/" target="_blank" rel="noopener" class="lc-btn" style="background:#010101;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        <span>TikTok</span>
+      </a>
       <a href="Rattiya Homepage.html" class="lc-btn ghost"><span aria-hidden="true">←</span><span>กลับหน้าหลัก</span></a>
     </div>
   </div>
