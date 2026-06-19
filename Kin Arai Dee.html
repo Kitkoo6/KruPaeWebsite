@@ -8,6 +8,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{cream:"#F5EEE5",creamdeep:"#EBE0D0",ivory:"#FBF7F0",gold:"#B8956A",golddeep:"#9C7B50",goldlight:"#DBC09A",rose:"#C5A099",rosedeep:"#A8827B",brown:"#5C4435",ink:"#4A3B30"},fontFamily:{script:['"Pinyon Script"',"cursive"],serif:['"Cormorant Garamond"',"serif"],thaihead:['"Kanit"',"sans-serif"],thai:['"Kanit"',"sans-serif"],sriracha:['"Sriracha"',"cursive"]}}}}}</script>
 <link rel="stylesheet" href="styles.css" />
+<style>
+  .hh-row { display:flex; flex-wrap:wrap; justify-content:center; gap: clamp(1rem,2vw,1.5rem); }
+  .hh-row.videos .hh-tile { width: clamp(160px, 21vw, 260px); }
+  .hh-tile { aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d; border:1px solid rgba(184,149,106,0.22); box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6); }
+  .hh-tile iframe { width:100%; height:100%; border:0; display:block; }
+  @media (max-width: 540px) { .hh-row.videos .hh-tile { width: min(85vw, 320px); } }
+</style>
 </head>
 <body class="font-thai bg-cream">
 <header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
@@ -19,8 +26,8 @@
 <main class="pt-36 pb-20">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
     <a href="Rattiya Clients.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-8 font-medium">← แบรนด์ทั้งหมด</a>
-    <span class="eyebrow block mb-3">Restaurant · อาหาร</span>
-    <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.4rem,5vw,4rem)]">กินอะไร<span class="gold-text">ดี</span></h1>
+    <div class="mb-4"><span class="inline-block border-2 border-[#B8956A] text-brown font-thaihead font-medium text-base px-5 py-2 rounded-full">Restaurant · อาหาร</span></div>
+    <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(1.8rem,4vw,3.8rem)]">กินอะไร<span class="gold-text">ดี</span></h1>
     <div class="gold-rule w-16 mt-6 mb-14"></div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -33,40 +40,45 @@
       </div>
 
       <div class="overflow-hidden rounded-[14px] bg-creamdeep">
-        <img src="assets/kinaraidee/S__97845256.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
-      </div>
-
-      <div class="overflow-hidden rounded-[14px] bg-creamdeep">
-        <img src="assets/kinaraidee/S__97845257.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
-      </div>
-
-      <div class="overflow-hidden rounded-[14px] bg-creamdeep">
         <img src="assets/kinaraidee/S__97845258.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
-      </div>
-
-      <div class="overflow-hidden rounded-[14px] bg-creamdeep">
-        <img src="assets/kinaraidee/S__97845259.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
       </div>
 
       <div class="overflow-hidden rounded-[14px] bg-creamdeep">
         <img src="assets/kinaraidee/S__97845260.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
       </div>
 
-      <div class="overflow-hidden rounded-[14px] bg-creamdeep">
-        <img src="assets/kinaraidee/S__97845261.jpg" alt="Kin Arai Dee" class="w-full h-full object-cover aspect-square" />
-      </div>
-
 
     </div>
 
-    
+    <div class="mt-14">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="gold-rule rule-draw flex-1"></span>
+        <span class="eyebrow whitespace-nowrap">วิดีโอผลงาน</span>
+        <span class="gold-rule rule-draw flex-1"></span>
+      </div>
+      <div class="hh-row videos">
+        <div class="hh-tile">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2362610900916540%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="กินอะไรดี — วิดีโอ 1"></iframe>
+        </div>
+        <div class="hh-tile">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F921026617448995%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="กินอะไรดี — วิดีโอ 2"></iframe>
+        </div>
+        <div class="hh-tile">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1510403994023070%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="กินอะไรดี — วิดีโอ 3"></iframe>
+        </div>
+        <div class="hh-tile">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2073329323257073%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="กินอะไรดี — วิดีโอ 4"></iframe>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 <footer class="bg-brown text-ivory py-10">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
     <a href="Rattiya Clients.html" class="text-ivory/70 hover:text-ivory text-sm transition-colors">← กลับดูแบรนด์ทั้งหมด</a>
     <a href="Rattiya Homepage.html#contact" class="btn btn-primary !py-3 !px-6 text-sm"><span>ปรึกษาครูเป้</span><span class="btn-arrow">→</span></a>
-    <div class="text-xs text-ivory/40">© 2025 Power Branding™</div>
+    <div class="text-xs text-ivory/40">© 2026 Power Branding™</div>
   </div>
 </footer>
 <script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)},{passive:true});</script>
