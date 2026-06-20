@@ -33,42 +33,53 @@
 <style>
 .archive-card {
   background: #fff;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(184,149,106,0.18);
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  padding: 10%;
   transition: transform .4s cubic-bezier(.4,0,.15,1), box-shadow .4s ease, border-color .4s ease;
+  display: flex;
+  flex-direction: column;
 }
 .archive-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px -20px rgba(92,68,53,0.35);
   border-color: rgba(184,149,106,0.5);
 }
-.archive-card img {
+.archive-card-img {
+  width: 100%; aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #EBE0D0;
+  display: flex; align-items: center; justify-content: center;
+}
+.archive-card-img img {
   width: 100%; height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform .6s cubic-bezier(.3,0,.2,1);
 }
-.archive-card:hover img { transform: scale(1.06); }
-
-.archive-placeholder {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic; font-weight: 600;
-  font-size: 2rem;
-  color: rgba(184,149,106,0.3);
-  background: linear-gradient(135deg,#F5EEE5,#EBE0D0);
-  border-radius: 8px;
+.archive-card:hover .archive-card-img img { transform: scale(1.06); }
+.archive-card-info {
+  padding: 0.75rem 1rem 0.9rem;
+  border-top: 1px solid rgba(184,149,106,0.12);
+}
+.archive-card-industry {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #A8827B;
+  font-family: "Kanit", sans-serif;
+  margin-bottom: 0.2rem;
+}
+.archive-card-name {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #4A3B30;
+  line-height: 1.3;
 }
 </style>
 </head>
 
-<body class="font-thai bg-ivory">
+<body class="font-thai bg-cream">
 
 <!-- ============ NAV ============ -->
 <header id="nav" class="nav fixed top-0 inset-x-0 z-50 py-5">
@@ -91,23 +102,23 @@
 </header>
 
 <!-- ============ PAGE HERO ============ -->
-<section class="relative pt-36 pb-16 bg-cream overflow-hidden text-center">
+<section class="relative pt-36 pb-0 bg-cream overflow-hidden text-center">
   <div class="hero-watermark pointer-events-none absolute top-16 left-0 right-0 text-center text-[13vw] lg:text-[10vw] z-0 whitespace-nowrap">
     BRANDS
   </div>
   <div class="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-10">
-    <a href="Rattiya Clients.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-10 font-medium">
+    <a href="Rattiya Clients.html" class="inline-flex items-center gap-2 text-sm text-golddeep hover:text-brown transition-colors mb-4 font-medium">
       <span>←</span><span>กลับผลงานอื่น ๆ</span>
     </a>
     <div class="flex flex-col items-center">
-      <span class="eyebrow mb-5">Brand Archive · Power Branding™</span>
+      <span class="eyebrow mb-3">Brand Archive · Power Branding™</span>
       <h1 class="font-thaihead font-medium text-ink leading-tight text-[clamp(2.6rem,5.5vw,4.8rem)]">
         แบรนด์ที่<span class="gold-text">เคยร่วมงาน</span>
       </h1>
-      <p class="text-ink/60 text-[1.05rem] mt-5 max-w-xl leading-relaxed">
+      <p class="text-ink/60 text-[1.05rem] mt-3 max-w-xl leading-relaxed">
         รวมแบรนด์ที่ครูเป้ได้มีโอกาสร่วมวางกลยุทธ์และสร้างตัวตนมาตลอดหลายปีที่ผ่านมา
       </p>
-      <div class="gold-rule w-24 mt-8"></div>
+      <div class="gold-rule w-24 mt-3"></div>
     </div>
   </div>
 </section>
@@ -116,38 +127,30 @@
 <main class="py-16 lg:py-20">
   <div class="max-w-[1600px] mx-auto px-6 lg:px-10">
 
-    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <!-- Cards will be added here -->
+    </div>
 
-      <div class="archive-card"><img src="assets/clients/aframe.jpg" alt="A-Frame" /></div>
-      <div class="archive-card"><img src="assets/clients/amercook.jpg" alt="AmerCook" /></div>
-      <div class="archive-card"><img src="assets/clients/butterfly.jpg" alt="Butterfly Organic" /></div>
-      <div class="archive-card"><img src="assets/clients/chime.jpg" alt="Chime Homemade" /></div>
-      <div class="archive-card"><img src="assets/clients/cosma-tight.jpg" alt="Cosma Health" /></div>
-      <div class="archive-card"><img src="assets/clients/ddhouse.jpg" alt="DD House" /></div>
-      <div class="archive-card"><img src="assets/clients/elnat.jpg" alt="Einat" /></div>
-      <div class="archive-card"><img src="assets/clients/estate.jpg" alt="ES Estate" /></div>
-      <div class="archive-card"><img src="assets/clients/gala.jpg" alt="Gala" /></div>
-      <div class="archive-card"><img src="assets/clients/genius.jpg" alt="Genius Coaching" /></div>
-      <div class="archive-card"><img src="assets/clients/greenleaf.jpg" alt="Green Leaf" /></div>
-      <div class="archive-card"><img src="assets/clients/handshake.jpg" alt="Handshake" /></div>
-      <div class="archive-card"><img src="assets/clients/hilltribe.jpg" alt="Hilltribe House" /></div>
-      <div class="archive-card"><img src="assets/clients/innercar.jpg" alt="Inner Car" /></div>
-      <div class="archive-card"><img src="assets/clients/kinaraidee.jpg" alt="กินอะไรดี" /></div>
-      <div class="archive-card"><img src="assets/clients/kitchenthai.jpg" alt="Kitchen Thai" /></div>
-      <div class="archive-card"><img src="assets/clients/krumegan.jpg" alt="Kru Megan" /></div>
-      <div class="archive-card"><img src="assets/clients/laocafe-logo.jpg" alt="The Lao Cafe" /></div>
-      <div class="archive-card"><img src="assets/clients/mewaffle.jpg" alt="Me Waffle" /></div>
-      <div class="archive-card"><img src="assets/clients/namprik.jpg" alt="Nam Prik" /></div>
-      <div class="archive-card"><img src="assets/clients/opo.png" alt="Opo" /></div>
-      <div class="archive-card"><img src="assets/clients/panjit.jpg" alt="Dr Panjit" /></div>
-      <div class="archive-card"><img src="assets/clients/paomalee.jpg" alt="Pao Malee" /></div>
-      <div class="archive-card"><img src="assets/clients/preston.jpg" alt="Preston" /></div>
-      <div class="archive-card"><img src="assets/clients/primproper.jpg" alt="Prim &amp; Proper" /></div>
-      <div class="archive-card"><img src="assets/clients/studychula.jpg" alt="Study Chula" /></div>
-      <div class="archive-card"><img src="assets/clients/thezin.jpg" alt="The ZinS" /></div>
-      <div class="archive-card"><img src="assets/clients/unionkk.jpg" alt="Union KK" /></div>
-      <div class="archive-card"><img src="assets/clients/yuxing.jpg" alt="Yu Xing" /></div>
-
+    <!-- Others gallery -->
+    <div class="mt-16 pt-12 border-t border-gold/20">
+      <div class="columns-2 sm:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4">
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/11.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/22.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/24.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466740.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466741.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466742.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466743.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466744.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466745.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466746.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466747.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466758.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466759.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466762.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100466763.jpg" class="w-full object-cover" /></div>
+        <div class="break-inside-avoid overflow-hidden rounded-[14px]"><img src="assets/others/S__100474882.jpg" class="w-full object-cover" /></div>
+      </div>
     </div>
 
   </div>
