@@ -51,6 +51,9 @@
   opacity:0; transition:opacity .4s ease;
 }
 .client-card:hover .client-card-overlay { opacity:1; }
+.client-card { cursor: grab; }
+.sortable-ghost { opacity: 0.3; }
+.sortable-chosen { box-shadow: 0 20px 50px -20px rgba(92,68,53,0.6); border-color: rgba(184,149,106,0.7) !important; }
 .client-card-placeholder {
   width:100%; height:100%; display:flex; align-items:center; justify-content:center;
   font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:600;
@@ -129,10 +132,10 @@
 
     <div class="grid grid-cols-3 lg:grid-cols-5 gap-6">
 
+      <!-- Row 1 -->
       <a href="Chime Homemade.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/chime.jpg" alt="Chime Homemade"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/chime.jpg" alt="Chime Homemade" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">C</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
@@ -144,8 +147,7 @@
 
       <a href="Me Waffle.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/mewaffle.jpg" alt="Me Waffle"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/mewaffle.jpg" alt="Me Waffle" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">M</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
@@ -155,10 +157,32 @@
         </div>
       </a>
 
+      <a href="Prim And Proper.html" class="client-card">
+        <div class="client-card-media">
+          <img src="uploads/S__165847124.jpg" alt="Prim &amp; Proper" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">P&amp;P</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Bakery</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Prim &amp; Proper</div>
+        </div>
+      </a>
+
+      <a href="Nam Prik.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/namprik/profile.jpeg" alt="แม่ตุ๊กกับน้องอาร์ท" class="w-full h-full object-cover" />
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Food</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">แม่ตุ๊กกับน้องอาร์ท</div>
+        </div>
+      </a>
+
       <a href="Kin Arai Dee.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/kinaraidee.jpg" alt="กินอะไรดี"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/kinaraidee.jpg" alt="กินอะไรดี" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">ก</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
@@ -168,23 +192,10 @@
         </div>
       </a>
 
-      <a href="Inner Car.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/clients/innercar.jpg" alt="Inner Car"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">IC</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Automotive</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">INNER Car Dress Up</div>
-        </div>
-      </a>
-
+      <!-- Row 2 -->
       <a href="Khun Bpu.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/coachpuu.jpg" alt="โค้ชปู"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/coachpuu.jpg" alt="โค้ชปู" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">ปู</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
@@ -196,8 +207,7 @@
 
       <a href="Kru Megan.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/krumegan.jpg" alt="ครูเมแกน"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/krumegan.jpg" alt="ครูเมแกน" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">ม</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
@@ -207,118 +217,15 @@
         </div>
       </a>
 
-      <a href="Study Chula.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/clients/studychula.jpg" alt="Study Chula"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">SC</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Education</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ครูโชค StudyChula</div>
-        </div>
-      </a>
-
-      <a href="Genius Coaching.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/clients/genius.jpg" alt="Genius Coaching"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">GC</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Coaching</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Genius Coaching Center</div>
-        </div>
-      </a>
-
-      <a href="Police Training.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/police/profilee.jpeg" alt="Aj.Tidtee"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">ตร.</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Training</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Aj.Tidtee (อ.ธิตินันท์)</div>
-        </div>
-      </a>
-
-      <a href="Fah Life Architecture.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/fahlife/profile_pic.jpeg" alt="ออกแบบชีวิตกับพี่ฟ้า"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">ฟ้า</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Meditation</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ออกแบบชีวิตกับพี่ฟ้า</div>
-        </div>
-      </a>
-
-      <a href="Dog Universe.html" class="client-card">
-        <div class="client-card-media">
-          <img src="assets/doguniverse/profile_pic.jpeg" alt="เดียร์ จักรวาลหมา" class="w-full h-full object-cover" />
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Pet</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">เดียร์ จักรวาลหมา</div>
-        </div>
-      </a>
-
       <a href="Baiteoy.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/clients/greenleaf.jpg" alt="Baiteoy"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/clients/greenleaf.jpg" alt="Baiteoy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">B</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Supplements</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ใบเตย เตชีวา Pimnada</div>
-        </div>
-      </a>
-
-      <a href="The ZinS.html" class="client-card">
-        <div class="client-card-media">
-          <img src="uploads/S__165847123.jpg" alt="The ZinS"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">ZS</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Spa</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">The ZinS สปาระเบิดไขมัน</div>
-        </div>
-      </a>
-
-      <a href="Einat.html" class="client-card">
-        <div class="client-card-media">
-          <img src="uploads/S__97714182.jpg" alt="Einat"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">Ei</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Skincare</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Einat Skin Beauty</div>
-        </div>
-      </a>
-
-      <a href="Prim And Proper.html" class="client-card">
-        <div class="client-card-media">
-          <img src="uploads/S__165847124.jpg" alt="Prim &amp; Proper"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="client-card-placeholder" style="display:none;">P&amp;P</div>
-          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
-        </div>
-        <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Bakery</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Prim &amp; Proper</div>
         </div>
       </a>
 
@@ -333,25 +240,64 @@
         </div>
       </a>
 
-      <a href="Nam Prik.html" class="client-card">
+      <a href="Fah Life Architecture.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/namprik/profile.jpeg" alt="Nam Prik" class="w-full h-full object-cover" />
+          <img src="assets/fahlife/profile_pic.jpeg" alt="ออกแบบชีวิตกับพี่ฟ้า" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">ฟ้า</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Food</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">แม่ตุ๊กกับน้องอาร์ท</div>
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Meditation</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ออกแบบชีวิตกับพี่ฟ้า</div>
         </div>
       </a>
 
-      <a href="P Puk.html" class="client-card">
+      <!-- Row 3 -->
+      <a href="Inner Car.html" class="client-card">
         <div class="client-card-media">
-          <img src="assets/hair/profile.jpg" alt="พี่ปุ๊ก K-two" class="w-full h-full object-cover" />
+          <img src="assets/clients/innercar.jpg" alt="Inner Car" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">IC</div>
           <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
-          <div class="eyebrow text-rosedeep text-[0.68rem]">Hairstylist</div>
-          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">พี่ปุ๊ก K-two</div>
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Automotive</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">INNER Car Dress Up</div>
+        </div>
+      </a>
+
+      <a href="Study Chula.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/clients/studychula.jpg" alt="Study Chula" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">SC</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Education</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ครูโชค StudyChula</div>
+        </div>
+      </a>
+
+      <a href="Genius Coaching.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/clients/genius.jpg" alt="Genius Coaching" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">GC</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Coaching</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Genius Coaching Center</div>
+        </div>
+      </a>
+
+      <a href="Police Training.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/police/profilee.jpeg" alt="Aj.Tidtee" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">ตร.</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Training</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Aj.Tidtee (อ.ธิตินันท์)</div>
         </div>
       </a>
 
@@ -366,6 +312,7 @@
         </div>
       </a>
 
+      <!-- Row 4 -->
       <a href="Blanc.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/blanc/profile.jpg" alt="Blanc" class="w-full h-full object-cover" />
@@ -377,9 +324,56 @@
         </div>
       </a>
 
+      <a href="The ZinS.html" class="client-card">
+        <div class="client-card-media">
+          <img src="uploads/S__165847123.jpg" alt="The ZinS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">ZS</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Spa</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">The ZinS สปาระเบิดไขมัน</div>
+        </div>
+      </a>
+
+      <a href="Einat.html" class="client-card">
+        <div class="client-card-media">
+          <img src="uploads/S__97714182.jpg" alt="Einat" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">Ei</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Skincare</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Einat Skin Beauty</div>
+        </div>
+      </a>
+
+      <a href="P Puk.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/hair/profile.jpg" alt="พี่ปุ๊ก K-two" class="w-full h-full object-cover" />
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Hairstylist</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">พี่ปุ๊ก K-two</div>
+        </div>
+      </a>
+
+      <a href="Dog Universe.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/doguniverse/profile_pic.jpeg" alt="เดียร์ จักรวาลหมา" class="w-full h-full object-cover" />
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Pet</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">เดียร์ จักรวาลหมา</div>
+        </div>
+      </a>
+
     </div>
 
-    <div class="flex justify-end mt-10">
+    <div class="flex justify-between items-center mt-10">
+      <button id="copyOrder" style="background:rgba(184,149,106,0.12);border:1px solid rgba(184,149,106,0.4);color:#9C7B50;padding:0.6rem 1.2rem;border-radius:9999px;font-family:'Kanit',sans-serif;font-size:0.85rem;cursor:pointer;">คัดลอกลำดับ</button>
       <a href="Brand Archive.html" class="btn btn-ghost">
         <span>แบรนด์ที่เคยร่วมงาน</span><span class="btn-arrow">→</span>
       </a>
@@ -405,9 +399,29 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
 <script>
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+
+  const grid = document.querySelector('.grid');
+  Sortable.create(grid, {
+    animation: 180,
+    ghostClass: 'sortable-ghost',
+    chosenClass: 'sortable-chosen',
+    dragClass: 'sortable-drag',
+    onStart() { grid.style.cursor = 'grabbing'; },
+    onEnd()   { grid.style.cursor = ''; },
+  });
+
+  document.getElementById('copyOrder').addEventListener('click', () => {
+    const names = [...grid.querySelectorAll('.client-card-info .font-thaihead')].map(el => el.textContent.trim());
+    navigator.clipboard.writeText(names.join('\n')).then(() => {
+      const btn = document.getElementById('copyOrder');
+      btn.textContent = 'คัดลอกแล้ว ✓';
+      setTimeout(() => { btn.textContent = 'คัดลอกลำดับ'; }, 2000);
+    });
+  });
 </script>
 </body>
 </html>
