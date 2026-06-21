@@ -172,14 +172,16 @@
     .reel-pair .reel { width: calc(50% - 0.375rem); max-width: 190px; }
   }
   @media (max-width: 860px) {
-    .lc-guestrow { flex-direction: column; height: auto; align-items: center; }
-    .lc-guestrow .photo { width: 100%; height: 240px; }
-    .lc-guestrow .reel { width: 267px; max-width: 100%; height: auto; }
-    .lc-guestrow .reel .lc-frame { aspect-ratio: 267 / 476; }
+    .lc-guestrow { flex-direction: row; height: clamp(160px, 38vw, 360px); align-items: stretch; }
+    .lc-guestrow .photo { flex: 1 1 0; min-width: 0; height: 100%; }
+    .lc-guestrow .reel-pair { flex: 1 1 0; min-width: 0; width: auto; height: 100%; align-items: stretch; }
+    .lc-guestrow .reel-pair .reel { flex: 1 1 0; min-width: 0; width: auto; max-width: none; height: 100%; }
+    .lc-guestrow .reel-pair .reel .lc-frame { height: 100%; }
+    .lc-guestrow .reel { flex: 0 0 auto; width: clamp(80px, 20vw, 180px); height: 100%; }
+    .lc-guestrow .reel .lc-frame { height: 100%; aspect-ratio: unset; }
   }
   @media (max-width: 1023px) {
-    .img-sunset-people { object-position: center bottom; }
-    .lc-guestrow .photo:has(.img-sunset-people) { height: 300px; }
+    .img-sunset-people { object-position: 15% center !important; }
   }
 
   /* footer CTA */
@@ -261,7 +263,7 @@
     <div class="lc-guestrow mt-10">
       <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/atmosphere-sunset-1.jpg" alt="บรรยากาศริมทุ่งยามเย็น มองเห็นพระใหญ่ที่ The Lao Cafe" /></div></div>
       <div class="photo rv"><div class="lc-frame"><img src="assets/laocafe/atmosphere-sunset-2.jpg" alt="พระอาทิตย์ตกริมน้ำ เงาไม้และผู้คนที่ The Lao Cafe" class="img-sunset-people" style="object-position:50% center" /></div></div>
-      <div class="photo rv" style="flex: 0 0 auto; width: clamp(140px, 18vw, 220px);"><div class="lc-frame"><img src="assets/laocafe/atmosphere-3.jpg" alt="บรรยากาศ The Lao Cafe" /></div></div>
+      <div class="photo rv" style="flex: 1 1 0; min-width: 0;"><div class="lc-frame"><img src="assets/laocafe/atmosphere-3.jpg" alt="บรรยากาศ The Lao Cafe" /></div></div>
     </div>
 
     <div class="lc-tiktok-head rv mt-14">

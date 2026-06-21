@@ -635,3 +635,45 @@ body {
 @media (max-width: 480px) {
   .svc-card { padding: 2rem 1.5rem 1.75rem; }
 }
+
+/* Client pages — 2×2 grid on mobile */
+@media (max-width: 1023px) {
+  .photo-scroll-wrap {
+    overflow-x: unset;
+    -webkit-overflow-scrolling: unset;
+  }
+  .photo-scroll-wrap.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Client pages — video row: 2-col grid under 1024px, single row above */
+.video-scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+@media (max-width: 1023px) {
+  .video-scroll-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: unset;
+  }
+  .video-scroll-row > * {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* hh-row videos — 2-col grid under 1024px */
+@media (max-width: 1023px) {
+  .hh-row.videos {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    flex-wrap: unset !important;
+  }
+  .hh-row.videos .hh-tile {
+    width: 100% !important;
+  }
+}
+
