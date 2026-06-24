@@ -1,29 +1,40 @@
 (function () {
-  function activate(el) {
-    if (el.dataset.activated === "1") return;
-    el.dataset.activated = "1";
-    var href = el.getAttribute("data-href");
-    if (!href) return;
+  var LOAD_TIMEOUT_MS = 5000;
+
+  function buildIframe(href) {
     var enc = encodeURIComponent(href);
     var iframe = document.createElement("iframe");
+    iframe.className = "fb-lite__frame";
     iframe.src =
       "https://www.facebook.com/plugins/video.php?href=" +
       enc +
-      "&show_text=false&width=267&height=476&autoplay=true&mute=0&t=0";
+      "&show_text=false&width=267&height=476&t=0";
     iframe.setAttribute("scrolling", "no");
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("allowfullscreen", "true");
+    iframe.setAttribute("loading", "lazy");
     iframe.setAttribute(
       "allow",
       "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
     );
-    el.innerHTML = "";
-    el.appendChild(iframe);
+    return iframe;
+  }
+
+  function activateAutoplay(el) {
+    var iframe = el.querySelector("iframe.fb-lite__frame");
+    if (!iframe) return;
+    var src = iframe.src;
+    if (src.indexOf("autoplay=true") === -1) {
+      iframe.src = src + "&autoplay=true";
+    }
   }
 
   function init(el) {
     if (el.dataset.ready === "1") return;
     el.dataset.ready = "1";
+
+    var href = el.getAttribute("data-href");
+    if (!href) return;
 
     var poster = el.getAttribute("data-poster");
     var label = el.getAttribute("data-label") || "▶ Play video";
@@ -49,13 +60,31 @@
     if (!el.getAttribute("aria-label"))
       el.setAttribute("aria-label", "Play Facebook video");
 
+    var iframe = buildIframe(href);
+    var loaded = false;
+    var timer = setTimeout(function () {
+      if (!loaded) el.classList.add("fb-lite--stalled");
+    }, LOAD_TIMEOUT_MS);
+
+    iframe.addEventListener("load", function () {
+      loaded = true;
+      clearTimeout(timer);
+      el.classList.add("fb-lite--loaded");
+    });
+
+    el.appendChild(iframe);
+
+    // Click on the fallback (visible only when stalled or before iframe load) triggers autoplay
     el.addEventListener("click", function () {
-      activate(el);
+      if (el.classList.contains("fb-lite--loaded")) return;
+      activateAutoplay(el);
+      el.classList.add("fb-lite--loaded");
     });
     el.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
+      if ((e.key === "Enter" || e.key === " ") && !el.classList.contains("fb-lite--loaded")) {
         e.preventDefault();
-        activate(el);
+        activateAutoplay(el);
+        el.classList.add("fb-lite--loaded");
       }
     });
   }
