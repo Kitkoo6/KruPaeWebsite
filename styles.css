@@ -775,3 +775,210 @@ body {
   pointer-events: none;
 }
 
+/* ============================================================
+   Class atmosphere — "Power Branding Class" showcase
+   ============================================================ */
+.class-card {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(184, 149, 106, 0.25);
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(219, 192, 154, 0.14) 0%, transparent 55%),
+    linear-gradient(135deg, #6a4f3d 0%, #5C4435 45%, #4a3729 100%);
+  transition: transform .55s cubic-bezier(.4,0,.15,1), box-shadow .55s ease;
+}
+.class-card:hover { transform: translateY(-6px); box-shadow: 0 46px 80px -42px rgba(92,68,53,0.6); }
+
+.class-media { position: relative; min-height: 420px; background: #15110e; }
+.class-media img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+.class-media::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(100deg, transparent 55%, rgba(74,55,41,0.55) 82%, #4a3729 100%);
+}
+.class-media-badge {
+  position: absolute; left: 1.4rem; top: 1.4rem; z-index: 2;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.55rem 1.2rem; border-radius: 999px;
+  background: rgba(21,17,14,0.5); backdrop-filter: blur(8px);
+  border: 1px solid rgba(219,192,154,0.5);
+  color: var(--gold-light); font-family: "Kanit", sans-serif;
+  font-weight: 500; font-size: 0.88rem; letter-spacing: 0.02em;
+}
+.class-media-badge .num { font-family: "Sriracha", cursive; font-size: 1.25rem; color: #fff; line-height: 1; }
+
+.class-body {
+  padding: 3.2rem 3rem;
+  display: flex; flex-direction: column; justify-content: center;
+  color: var(--ivory); position: relative; z-index: 2;
+}
+.class-eyebrow {
+  font-family: "Cormorant Garamond", serif; letter-spacing: 0.34em; text-transform: uppercase;
+  font-size: 0.78rem; color: var(--gold-light); margin-bottom: 0.9rem;
+}
+.class-headline {
+  font-family: "Kanit", sans-serif; font-weight: 500;
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem); line-height: 1.35; color: #fff;
+}
+.class-headline .accent { font-family: "Sriracha", cursive; color: var(--gold-light); }
+.class-intro {
+  margin-top: 1.1rem; color: rgba(251,247,240,0.78);
+  line-height: 1.9; font-weight: 300; font-size: 1.02rem;
+}
+.class-intro strong { color: var(--gold-light); font-weight: 500; }
+
+.class-why {
+  margin-top: 1.9rem;
+  font-family: "Kanit", sans-serif; font-weight: 500; font-size: 1.08rem;
+  color: var(--gold-light); display: flex; align-items: center; gap: 0.55rem;
+}
+.class-features { margin-top: 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.4rem; }
+.class-feature {
+  background: rgba(251,247,240,0.05);
+  border: 1px solid rgba(219,192,154,0.22);
+  border-radius: 14px; padding: 1rem 1.15rem;
+  transition: background .35s ease, border-color .35s ease, transform .35s ease;
+}
+.class-feature:hover { background: rgba(251,247,240,0.09); border-color: rgba(219,192,154,0.45); transform: translateY(-2px); }
+.class-feature-title {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: "Kanit", sans-serif; font-weight: 500; font-size: 0.98rem; color: #fff;
+}
+.class-feature-title .ico {
+  width: 26px; height: 26px; flex: none; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(219,192,154,0.18); border: 1px solid rgba(219,192,154,0.45);
+  color: var(--gold-light); font-size: 0.8rem;
+}
+.class-feature-desc { margin-top: 0.45rem; font-size: 0.86rem; font-weight: 300; line-height: 1.75; color: rgba(251,247,240,0.68); }
+
+.class-quote {
+  margin-top: 2rem; padding-top: 1.7rem;
+  border-top: 1px solid rgba(219,192,154,0.25);
+  position: relative; text-align: center;
+}
+.class-quote-mark {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.4rem; line-height: 0.5;
+  color: var(--gold-light); opacity: 0.85;
+  margin-bottom: 0.55rem;
+}
+.class-quote p {
+  font-family: "Kanit", sans-serif; font-weight: 400;
+  font-size: clamp(1.12rem, 1.7vw, 1.34rem);
+  line-height: 1.85; color: #fff;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+}
+.class-quote .accent {
+  font-family: "Sriracha", cursive;
+  color: var(--gold-light);
+  font-size: 1.12em;
+  padding: 0 0.15em;
+}
+
+/* photo carousel under the card */
+.class-carousel { position: relative; margin-top: 1.6rem; }
+.cc-viewport {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* soft edge fades so the strip melts into the page */
+.cc-viewport::before,
+.cc-viewport::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 56px;
+  z-index: 2; pointer-events: none;
+  transition: opacity .35s ease;
+}
+.cc-viewport::before { left: 0; background: linear-gradient(to right, var(--cream), transparent); opacity: 0; }
+.cc-viewport::after  { right: 0; background: linear-gradient(to left,  var(--cream), transparent); }
+.class-carousel.at-start .cc-viewport::before { opacity: 0; }
+.class-carousel:not(.at-start) .cc-viewport::before { opacity: 1; }
+.class-carousel.at-end .cc-viewport::after { opacity: 0; }
+
+.cc-track {
+  display: flex; gap: 1rem;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.cc-track::-webkit-scrollbar { display: none; }
+.cc-slide {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  scroll-snap-align: start;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(184,149,106,0.28);
+  box-shadow: 0 30px 55px -38px rgba(92,68,53,0.6);
+  aspect-ratio: 16 / 11; background: var(--cream-deep);
+  position: relative;
+}
+.cc-slide::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(74,59,48,0.22), transparent 38%);
+  opacity: 0; transition: opacity .45s ease;
+}
+.cc-slide:hover::after { opacity: 1; }
+.cc-slide img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .8s cubic-bezier(.3,0,.2,1);
+}
+.cc-slide:hover img { transform: scale(1.06); }
+
+.cc-counter {
+  position: absolute; right: 0.9rem; bottom: 0.9rem; z-index: 3;
+  padding: 0.3rem 0.85rem; border-radius: 999px;
+  background: rgba(21,17,14,0.55); backdrop-filter: blur(8px);
+  border: 1px solid rgba(219,192,154,0.45);
+  color: var(--ivory); font-family: "Cormorant Garamond", serif;
+  font-size: 0.92rem; letter-spacing: 0.12em;
+}
+.cc-counter-cur { color: var(--gold-light); }
+
+.cc-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 4; width: 52px; height: 52px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ivory);
+  border: 1px solid rgba(184,149,106,0.45);
+  box-shadow: 0 14px 30px -12px rgba(92,68,53,0.45);
+  color: var(--gold-deep);
+  font-size: 1.75rem; line-height: 1; cursor: pointer;
+  transition: background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.cc-arrow:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  color: #fff; transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 18px 36px -12px rgba(92,68,53,0.6);
+}
+.cc-prev { left: -18px; padding-right: 3px; }
+.cc-next { right: -18px; padding-left: 3px; }
+
+.cc-dots { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1.2rem; }
+.cc-dots button {
+  width: 8px; height: 8px; border-radius: 999px; border: 0; padding: 0;
+  background: rgba(184,149,106,0.32); cursor: pointer;
+  transition: background .35s ease, width .35s ease, transform .35s ease;
+}
+.cc-dots button:hover { background: rgba(184,149,106,0.6); transform: scale(1.2); }
+.cc-dots button.active { background: linear-gradient(90deg, var(--gold), var(--gold-deep)); width: 26px; transform: none; }
+
+@media (max-width: 900px) {
+  .class-card { grid-template-columns: 1fr; }
+  .class-media { min-height: 260px; }
+  .class-media::before { background: linear-gradient(to bottom, transparent 60%, rgba(74,55,41,0.6) 85%, #4a3729 100%); }
+  .class-body { padding: 2.2rem 1.6rem 2.4rem; }
+  .class-features { grid-template-columns: 1fr; }
+  .cc-slide { flex: 0 0 calc((100% - 1rem) / 2); }
+  .cc-prev { left: -8px; }
+  .cc-next { right: -8px; }
+}
+@media (max-width: 560px) {
+  .cc-slide { flex: 0 0 88%; }
+  .cc-arrow { width: 44px; height: 44px; font-size: 1.5rem; }
+}
+

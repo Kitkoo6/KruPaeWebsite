@@ -84,8 +84,9 @@
 
   /* Combined media grid — uniform portrait tiles */
   .hh-row { display:flex; flex-wrap:wrap; justify-content:center; gap: clamp(1rem,2vw,1.5rem); }
-  .hh-row.videos .hh-tile { width: clamp(230px, 26vw, 300px); }
+  .hh-row.videos .hh-tile { width: clamp(220px, 22vw, 270px); }
   .hh-row.pics .hh-tile { width: clamp(180px, 21vw, 250px); }
+  .hh-row.pics-wide .hh-tile { width: clamp(320px, 42vw, 560px); aspect-ratio: 16/10; }
   .hh-tile {
     aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d;
     border:1px solid rgba(184,149,106,0.22);
@@ -98,6 +99,7 @@
   @media (max-width: 540px) {
     .hh-row.videos .hh-tile,
     .hh-row.pics   .hh-tile { width: min(85vw, 320px); }
+    .hh-row.pics-wide .hh-tile { width: min(92vw, 400px); }
   }
 
   .hh-pullquote {
@@ -214,11 +216,18 @@
       <div class="hh-tile">
         <div class="fb-lite" data-href="https://www.facebook.com/reel/1531744565186526/"></div>
       </div>
+      <div class="hh-tile">
+        <div class="fb-lite" data-href="https://www.facebook.com/reel/1007054682296028/"></div>
+      </div>
     </div>
     <div class="hh-row pics mt-5 lg:mt-7" data-reveal-group>
       <div class="hh-tile"><img src="assets/opo/honey.jpg" alt="Opo — ผลิตภัณฑ์ Honey Milk Protein" /></div>
       <div class="hh-tile"><img src="assets/opo/bts.jpg" alt="Opo — เบื้องหลังการถ่ายทำ" /></div>
       <div class="hh-tile"><img src="assets/opo/soap.jpg" alt="Opo — ผลิตภัณฑ์ Bamboo Charcoal & Milk" /></div>
+    </div>
+    <div class="hh-row pics-wide mt-5 lg:mt-7" data-reveal-group>
+      <div class="hh-tile"><img src="assets/opo/S__106176516.jpg" alt="Opo — ประชุมทีมงาน" /></div>
+      <div class="hh-tile"><img src="assets/opo/S__106176517.jpg" alt="Opo — ครูเป้กับทีม Opo" /></div>
     </div>
   </div>
 </section>

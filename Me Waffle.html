@@ -14,6 +14,16 @@
   .hh-tile { aspect-ratio: 9/16; border-radius: 20px; overflow:hidden; background:#16110d; border:1px solid rgba(184,149,106,0.22); box-shadow: 0 30px 58px -38px rgba(92,68,53,0.6); }
   .hh-tile iframe { width:100%; height:100%; border:0; display:block; }
   @media (max-width: 540px) { .hh-row.videos .hh-tile { width: min(85vw, 320px); } }
+  /* TikTok embed needs ≥325px to render its player; scale it down to fit the tile */
+  .hh-tile.tiktok-wrap { position: relative; container-type: inline-size; }
+  .hh-tile.tiktok-wrap .tiktok-embed {
+    position: absolute; top: 0; left: 0;
+    margin: 0 !important; padding: 0 !important;
+    min-width: 0 !important; max-width: none !important;
+    width: 325px !important; height: 578px !important;
+    transform-origin: top left;
+    transform: scale(calc(100cqw / 325px));
+  }
 </style>
 </head>
 <body class="font-thai bg-cream">
@@ -52,8 +62,8 @@
         <span class="gold-rule rule-draw flex-1"></span>
       </div>
       <div class="hh-row videos">
-        <div class="hh-tile">
-          <div class="fb-lite" data-href="https://www.facebook.com/reel/1033598645867606/"></div>
+        <div class="hh-tile tiktok-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@me.waffle.official/video/7663816276862700808" data-video-id="7663816276862700808" style="max-width: 605px;min-width: 325px;"> <section> <a target="_blank" title="@me.waffle.official" href="https://www.tiktok.com/@me.waffle.official?refer=embed">@me.waffle.official</a> เงิน 10 บาท ทำอะไรได้บ้าง? ส่องธุรกิจวาฟเฟิลที่เลี้ยงได้ทั้งครอบครัว! 🧇✨ จำนวนสาขาจะไม่มีความหมายเลย... ถ้าชีวิตของคนร่วมทางยังไม่ดีขึ้น ❤️ หัวใจของการทำธุรกิจสำหรับแอร์ ไม่ใช่แค่การเติบโตของแบรนด์ แต่คือการที่ &#39;ข้ามนมชิ้นละ 10 บาท&#39; นี้ สามารถสร้างอาชีพที่มั่นคงและช่วยดูแลครอบครัวของทุกคนได้อย่างยั่งยืน ถ้าคุณกำลังมองหาพาร์ทเนอร์ที่พร้อมเดินเคียงข้างไปด้วยกันในระยะยาว ให้ Me Waffle ได้ดูแลคุณนะคะ 🤝💸 👉🏻สอบถามรายละเอียดเพิ่มเติม ทักไลน์ @mewaffle โทร.094-2874935 <a title="mewaffle" target="_blank" href="https://www.tiktok.com/tag/mewaffle?refer=embed">#MeWaffle</a> <a title="สร้างอาชีพ" target="_blank" href="https://www.tiktok.com/tag/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E?refer=embed">#สร้างอาชีพ</a> <a title="ธุรกิจแฟรนไชส์" target="_blank" href="https://www.tiktok.com/tag/%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B9%84%E0%B8%8A%E0%B8%AA%E0%B9%8C?refer=embed">#ธุรกิจแฟรนไชส์</a> <a title="แฟรนไชส์วาฟเฟิล" target="_blank" href="https://www.tiktok.com/tag/%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B9%84%E0%B8%8A%E0%B8%AA%E0%B9%8C%E0%B8%A7%E0%B8%B2%E0%B8%9F%E0%B9%80%E0%B8%9F%E0%B8%B4%E0%B8%A5?refer=embed">#แฟรนไชส์วาฟเฟิล</a> <a title="แรงบันดาลใจ" target="_blank" href="https://www.tiktok.com/tag/%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B9%83%E0%B8%88?refer=embed">#แรงบันดาลใจ</a> <a target="_blank" title="♬ เสียงต้นฉบับ  - Me Waffle" href="https://www.tiktok.com/music/เสียงต้นฉบับ-Me-Waffle-7663816340235012885?refer=embed">♬ เสียงต้นฉบับ  - Me Waffle</a> </section> </blockquote>
         </div>
         <div class="hh-tile">
           <div class="fb-lite" data-href="https://www.facebook.com/reel/1520879676198625/"></div>
@@ -78,5 +88,6 @@
 </footer>
 <script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)},{passive:true});</script>
 <script defer src="fb-lite.js"></script>
+<script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>

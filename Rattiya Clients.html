@@ -39,9 +39,6 @@
   transition: transform .5s cubic-bezier(.4,0,.15,1), box-shadow .5s ease, border-color .5s ease;
 }
 .client-card:hover { transform:translateY(-8px); box-shadow:0 38px 64px -38px rgba(92,68,53,0.5); border-color:rgba(184,149,106,0.55); }
-.client-card { cursor: grab; }
-.sortable-ghost { opacity: 0.3; }
-.sortable-chosen { box-shadow: 0 20px 50px -20px rgba(92,68,53,0.6); border-color: rgba(184,149,106,0.7) !important; }
 .client-card-media {
   aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
   padding:10%; position:relative; overflow:hidden; background:#fff;
@@ -194,49 +191,53 @@
       </a>
 
       <!-- Row 2 -->
-      <div class="client-card is-placeholder">
+      <a href="Medeze.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/medeze.jpg" alt="คุณตา Medeze" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">ตา</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Brand</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">คุณตา Medeze</div>
         </div>
-      </div>
+      </a>
 
-      <div class="client-card is-placeholder">
+      <a href="CW Pro.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/cw.png" alt="CW Pro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">CW</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Brand</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">CW Pro</div>
         </div>
-      </div>
+      </a>
 
-      <div class="client-card is-placeholder">
+      <a href="Gala Diamond.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/gala.jpg" alt="Gala Diamond" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">GD</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Jewelry</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Gala Diamond</div>
         </div>
-      </div>
+      </a>
 
-      <div class="client-card is-placeholder">
+      <a href="Kru Air.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/kruair.png" alt="ครูแอร์ Vocal Coach" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">แอร์</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Vocal Coach</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ครูแอร์ Vocal Coach</div>
         </div>
-      </div>
+      </a>
 
       <a href="A Frame.html" class="client-card">
         <div class="client-card-media">
@@ -287,27 +288,29 @@
         </div>
       </a>
 
-      <div class="client-card is-placeholder">
+      <a href="Preston.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/preston.jpg" alt="Preston" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">P</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Brand</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Preston</div>
         </div>
-      </div>
+      </a>
 
-      <div class="client-card is-placeholder">
+      <a href="Ruen Rot.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/rot.jpeg" alt="เรือนรส" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">รส</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Restaurant</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">เรือนรส</div>
         </div>
-      </div>
+      </a>
 
       <!-- Row 4 -->
       <a href="Inner Car.html" class="client-card">
@@ -322,16 +325,17 @@
         </div>
       </a>
 
-      <div class="client-card is-placeholder">
+      <a href="Ya Miew.html" class="client-card">
         <div class="client-card-media">
           <img src="assets/clients/yamiew.jpg" alt="ย่าเหมี่ยว" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <div class="client-card-placeholder" style="display:none;">ย่า</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
         </div>
         <div class="client-card-info">
           <div class="eyebrow text-rosedeep text-[0.68rem]">Brand</div>
           <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">ย่าเหมี่ยว</div>
         </div>
-      </div>
+      </a>
 
       <a href="Mookda.html" class="client-card">
         <div class="client-card-media">
@@ -485,10 +489,21 @@
         </div>
       </a>
 
+      <a href="Amercook.html" class="client-card">
+        <div class="client-card-media">
+          <img src="assets/clients/amercook.jpg" alt="Amercook" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="client-card-placeholder" style="display:none;">AC</div>
+          <div class="client-card-overlay"><span class="font-thaihead text-ivory text-sm flex items-center gap-1">ดูผลงาน →</span></div>
+        </div>
+        <div class="client-card-info">
+          <div class="eyebrow text-rosedeep text-[0.68rem]">Brand</div>
+          <div class="font-thaihead font-medium text-brown text-[1rem] mt-0.5">Amercook</div>
+        </div>
+      </a>
+
     </div>
 
-    <div class="flex justify-between items-center mt-10">
-      <button id="copyOrder" style="background:rgba(184,149,106,0.12);border:1px solid rgba(184,149,106,0.4);color:#9C7B50;padding:0.6rem 1.2rem;border-radius:9999px;font-family:'Kanit',sans-serif;font-size:0.85rem;cursor:pointer;">คัดลอกลำดับ</button>
+    <div class="flex justify-end items-center mt-10">
       <a href="Brand Archive.html" class="btn btn-ghost">
         <span>แบรนด์ที่เคยร่วมงาน</span><span class="btn-arrow">→</span>
       </a>
@@ -514,29 +529,9 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
 <script>
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-
-  const grid = document.querySelector('.grid');
-  Sortable.create(grid, {
-    animation: 180,
-    ghostClass: 'sortable-ghost',
-    chosenClass: 'sortable-chosen',
-    dragClass: 'sortable-drag',
-    onStart() { grid.style.cursor = 'grabbing'; },
-    onEnd()   { grid.style.cursor = ''; },
-  });
-
-  document.getElementById('copyOrder').addEventListener('click', () => {
-    const names = [...grid.querySelectorAll('.client-card-info .font-thaihead')].map(el => el.textContent.trim());
-    navigator.clipboard.writeText(names.join('\n')).then(() => {
-      const btn = document.getElementById('copyOrder');
-      btn.textContent = 'คัดลอกแล้ว ✓';
-      setTimeout(() => { btn.textContent = 'คัดลอกลำดับ'; }, 2000);
-    });
-  });
 </script>
 </body>
 </html>
